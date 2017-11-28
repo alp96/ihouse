@@ -74,7 +74,7 @@
 			}
 			elseif($_POST["password"] == "juniorisep" && $_POST["mail"] == "test@test.com")
 			{
-				die("<script>location.href = 'https://www.ihouse-isep.com/app/test_00001/index.php'</script>");
+				die("<script>location.href = 'https://www.ihouse-isep.com/app/v1/index.php'</script>");
 			}
 		}
 	}
