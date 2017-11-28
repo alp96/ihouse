@@ -8,7 +8,7 @@
 <body>
 
 	<section id="wrap2">
-		<img id="logo_mini" src="iHouse2.png">
+		<img id="logo_mini" src="iHouse_logo_blanc.png">
 		<div class="info">
 			<img id="picture" src="man.png">
 			<?php 
@@ -22,9 +22,9 @@
 
 	<section id="menu_fond">
 		<ul id="menu_icone">
-			<li class="hauteur"><img class="icone" src="panneau.png"></li>
-			<li class="hauteur"><img class="icone" src="camera.png"></li>
-			<li class="hauteur"><img class="icone" src="parametre.png"></li>		
+			<li class="hauteur"><img class="icone" src="icone_panneau.png"></li>
+			<li class="hauteur"><img class="icone" src="icone_camera.png"></li>
+			<li class="hauteur"><img class="icone" src="icone_parametre.png"></li>		
 		</ul>
 
 		<ul id="menu">
