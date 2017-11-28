@@ -1,0 +1,286 @@
+body{
+	margin: 0;
+	font-family: Roboto;
+}
+
+#first_page{
+	background-color: #f1eeed;
+	font-size: 16px;
+	text-align: center;
+
+}
+
+#logo{
+	margin-top: 50px;
+	width: 400px;
+	height: auto;
+	left: auto;
+	right: auto;
+}
+
+#wrap{
+	text-align: center;
+	padding: 0px;
+}
+
+#titre{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 100px;
+	padding-left: 100px;
+	font-weight: bold;
+	border : 0px solid #f1eeed;
+	border-bottom-width: 1px;
+	margin-bottom: 5px;
+
+}
+
+.texte{
+	padding-right: 100px;
+	padding-left: 100px;
+	margin-bottom: 5px;
+	margin-top: 15px;
+
+}
+
+form{
+	display: inline-block;
+	color: white;
+	background-color: #44538a;
+	font-size: 16px;
+	box-shadow: 5px 5px 5px #797878;
+	border-radius: 5px;
+}
+
+input{
+	text-align: center;
+}
+
+#bouton{
+	border-color: #283152;
+	color: white;
+	background-color: #283152;
+	border-radius: 5px;
+	border: 0px;
+	margin: 10px;
+	margin-top: 30px;
+	margin-bottom: 15px;
+	padding: 5px 10px;
+	box-shadow: 2px 2px 20px #1f1f4a;
+	font-size: 16px;
+}
+#bouton:hover{
+	box-shadow: 0px 0px 20px white;
+}
+
+.field{
+	/*margin-bottom: 5px;
+	margin-top: 5px;*/
+	border-radius: 5px;
+	background-color: #C1C5C0;
+	border-style: none;
+	padding: 2px 10px;
+	width:60%;
+}
+
+#forget{
+	margin-top: 10px;
+	font-size: 10px;
+}
+
+.link{
+	text-decoration: none;
+	color: black;
+}
+.link:hover{
+	border-color: #283152;
+	color: white;
+	background-color: #283152;
+	border-radius: 5px;
+	box-shadow: 2px 2px 20px #343435;
+	padding: 2px;
+}
+
+.ok{
+	font-weight: bold;
+	font-size: 20px;
+	color: #007f00 ;
+	background-color: rgba(45, 195, 45, 0.65);
+	border-radius: 5px;
+	display: inline-block;
+	padding: 10px 50px;
+	top: 5%;
+	position: fixed;
+	left: 50%;
+	transform: translateX(-50%);
+	animation-name : fadeInFromNone;
+	animation-delay: 5s;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	transition-timing-function: ease-in-out;
+	opacity: 1;
+}
+
+.error{
+	font-weight: bold;
+	font-size: 20px;
+	color: #cc0000;
+	background-color: rgba(247, 64, 64, 0.42);
+	border-radius: 5px;
+	display: inline-block;
+	padding: 10px 50px;
+	top: 5%;
+	position: fixed;
+	left: 50%;
+	transform: translateX(-50%);
+	animation-name : fadeInFromNone;
+	animation-delay: 5s;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	transition-timing-function: ease-in-out;
+	opacity: 1;
+}
+
+@keyframes fadeInFromNone {
+	from {
+		opacity:1;
+		/*color: #cc0000;*/
+	}
+	to {
+		opacity:0;
+		/*color: #cc0000;*/
+	}
+
+	
+}
+
+.info{
+	text-align: center;
+	color: white;
+	margin-left: 70%;
+	height: 100px;
+	font-size: 13px;
+}
+
+#logout{
+	color : white;
+	text-decoration: none;
+}
+#logout:hover{
+	border-color: #283152;
+	color: white;
+	background-color: #283152;
+	border-radius: 5px;
+	box-shadow: 2px 2px 20px #343435;
+	padding: 0px 3px;
+	font-weight: normal;
+}
+
+#picture{
+	border-radius: 50%;
+	width: 35px;
+	height: auto;
+	border-color: grey;
+	border-style: solid;
+	border-width: 5px;
+}
+
+
+#menu_icone{
+	/*background-color: #cecece;*/
+	list-style-type: none;
+	display: inline-block;
+	white-space: nowrap;
+	padding: 0;
+	margin: 0;
+	width: 63px;
+	position: fixed;
+	left: 0px;
+	top: 120px;
+	height: 2000px;
+}
+
+#menu{
+	/*background-color: #cecece;*/
+	list-style-type: none;
+	display: inline-block;
+	white-space: nowrap;
+	padding: 0;
+	margin: 0;
+	width: 200px;
+	position: fixed;
+	left: 63px;
+	top: 120px;
+	height: 2000px;
+
+}
+
+#menu_isscone > li{
+	text-align: center;
+	padding: 20px 0px;
+	border-width: 2px;
+	border-style : solid;
+	border-color: #283152;
+	border-width: 0px 0px 2px 0px;
+}
+
+#menu > li{
+	text-align: center;
+	padding: 20px 0px;
+	border-width: 2px;
+	border-style : solid;
+	border-color: #283152;
+	border-width: 0px 0px 2px 0px;
+}
+
+#menu > li:hover{
+	background-color: #283152;
+	color : white;
+	box-shadow: 2px 2px 20px #1f1f4a;
+}
+
+#wrap2{
+	height: 100px;
+	/*background-color: #283152;*/
+	background-image: url("motif.png");
+	padding: 10px;
+	position: fixed;
+	width: 100%;
+}
+
+#logo_mini{
+	height: auto;
+	width: 200px;
+	float: left;
+	filter: drop-shadow(5px 5px 7px grey);
+}
+
+#username{
+	font-weight: bold;
+}
+
+#wrap3{
+	display: grid;
+}
+
+.icone{
+	width: 49px;
+	height: 49px;
+	padding: 6px;
+	/*background-color: #cecece;*/
+	border: 0px;
+	border-bottom: 2px;
+	border-right: 2px;
+	border-color: #283152;
+	border-style: solid;
+}
+
+.hauteur{
+	height: 63px;
+}
+
+#menu_fond{
+	background-color: #cecece;
+	width: 263px;
+	height: 2000px;
+}

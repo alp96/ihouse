@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">  
+	<title>Test</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" href="favicon.png" />
+</head>
+
+
+
+<script type="text/javascript">
+	wscreen = window.innerWidth;
+	content_width = (wscreen - 160);
+	document.getElementById("container").style.width = content_width + "px";
+</script>
+
+
+
+<body>
+
+	<div class = "head">
+		<a href="index.html"><img id="imghead" src="iHouse.png" align="left" width="300" height="auto"></a>
+	</div>
+
+	<!-- Menu de navigation du site -->
+	<div class="panel">
+		<ul class="navbar">
+			<li><a href="controle.html"><img src="ihouse/button1.png" class="buttonpanel" width="249" height="auto"></a></li>
+			<li><a href="video.html"><img src="ihouse/button2.png" class="buttonpanel" width="249" height="auto"></a></li>
+			<li><a href="fichiers.html"><img src="ihouse/button3.png" class="buttonpanel" width="249" height="auto"></a></li>
+			<li><a href="parametres.html"><img src="ihouse/button4.png" class="buttonpanel" width="249" height="auto"></a></li>
+		</ul>
+	</div>
+
+
+	<!-- Contenu principal -->
+	<div id="container">
+		<div class="subcontainer">
+
+			Modifier l'adresse e-mail
+			<br>
+			<input type="text" name="email" placeholder="Votre nouvelle adresse e-mail" size="30px">
+			<br>
+			<form>
+				Modifier le mot de passe
+				<br>
+				<input type="password" name="password">
+			</form>
+			<br>
+			Modifier la date de naissance
+			<br>
+			<input type="date" name="birthday">       
+
+		</div>
+	</div>
+
+
+	<div class="foot">
+
+	</div>
+
+	</html>

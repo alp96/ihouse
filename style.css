@@ -1,0 +1,111 @@
+body 
+{
+    font-family: Helvetica, Geneva, Arial,
+    SunSans-Regular, sans-serif ;
+    background-color: #DDDDDD;
+}
+
+a
+{
+    margin:0;
+    padding:0;
+}
+
+li.nospot
+{
+    list-style:None;
+}
+
+ul.navbar 
+{
+  font-size: 0;
+  padding: 0em;
+  margin:left;
+  float:left;
+  width:100%;
+}
+ul.navbar li 
+{
+  margin:0;
+  padding:0px;
+  padding-top: 15px; 
+}
+
+img.buttonpanel
+{
+  margin: 0; 
+  padding: 0;
+  border: 1px solid #D1D1D1;
+}
+
+
+table.cpanel th
+{
+    background: #F5F5F5
+}
+
+
+#imghead
+{
+    padding-left: 0em;
+}
+
+
+.head
+{
+    z-index: 999;
+    position:fixed;
+    top:0px;
+    width:100%;
+    height:10em;
+    left:0em;
+    background: #FFFFFF;
+    border-bottom: 2px solid #C5C5C5;
+}
+
+.foot
+{
+    position:fixed;
+    bottom: 0px;
+    width:100%;
+    height:6em;
+    left:0em;
+    background: #EEEEEE;
+    border-top: 2px solid #C5C5C5;
+}
+
+.panel
+{
+    z-index: 998;
+    overflow: visible;
+    position:fixed;
+    height:100%;
+    left:0px;
+    top:10em;
+    width:250px;
+    
+    background: #F1F1F1;
+    border-top: 2px solid #C5C5C5;
+    border-right: 2px solid #C5C5C5;
+}
+
+img.cpanelimg
+{
+    height: 100px;
+    width:auto;
+}
+
+#container 
+{
+    position: relative;
+    width:100%;
+    height:300px;
+    left:250px;
+
+    top:10em;
+}
+
+.clear
+{
+  clear: both;
+}
