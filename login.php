@@ -30,7 +30,7 @@
 		</form>
 	</div>
 	<div class="wrap">
-		<div id="forget"><a class="link" href="password_lost.php">Identifiants oubliés ?</a></div>
+		<div id="forget"><a class="link" href="password_lost.php">Identifiants TEST oubliés ?</a></div>
 	</div>
 
 	<?php 
