@@ -67,7 +67,7 @@
 			session_register("myusername");
 			$_SESSION['login_user'] = $myusername;
 
-			header("location: welcome.php");
+			die("<script>location.href = 'https://www.ihouse-isep.com/app/v1/index.php'</script>");
 		}else {
 			$error = "Your Login Name or Password is invalid";
 		}
