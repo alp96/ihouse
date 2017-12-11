@@ -46,6 +46,8 @@
 	if($_SERVER["REQUEST_METHOD"] == "POST") {
 		if(isset($_POST["password"]) && isset($_POST["mail"])) {
 
+			$_POST["mail"] = verification($_POST["mail"]);
+			$_POST["password"] = verification($_POST["password"]);
 
 			try {
 				$bdd = new PDO('mysql:host=localhost;dbname=db701520246;charset=utf8', 'root', 'ihousebddISEP');
@@ -57,20 +59,33 @@
 			
 			$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE mail='" . $_POST["mail"] . "'");
 			$donnees = $reponse->fetch();
-			echo $donnees["password"];
 			$reponse->closeCursor();
 
 
 
 			$options = ['cost' => 11,];
-			if (password_verify($_POST["password"], $donnees["password"])) {
-				echo "<br>ok";
+			if($_POST["mail"] == '')
+			{
+				echo '<div class="error">Veuillez renseigner l\'adresse e-mail</div>';
 			}
-			else {
-				echo "<br>erreur mdr";
+			elseif($_POST["password"] == '')
+			{
+				echo '<div class="error">Veuillez renseigner le mot de passe</div>';
+			}
+			elseif (!filter_var($_POST["mail"], FILTER_VALIDATE_EMAIL)) 
+			{
+				echo '<div class="error">Veuillez rentrer une adresse mail valide</div>';
+			}
+			elseif ($_POST["mail"] != '' && $_POST["password"] != '')
+			{
+				if (password_verify($_POST["password"], $donnees["password"])) {
+					die("<script>location.href = 'https://www.ihouse-isep.com/app/v1/index.php'</script>");
+				}
+				else {
+					echo '<div class="error">Mauvais mot de passe / Utilisateur inconnu</div>';
+				}
 			}
 		}
-	}
 
 	/*if(isset($_POST["password"]) && isset($_POST["mail"]))
 	{
