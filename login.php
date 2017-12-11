@@ -55,12 +55,9 @@
 			$myusername = mysqli_real_escape_string($db,$_POST['mail']);
 			$mypassword = mysqli_real_escape_string($db,$_POST['password']); 
 
-			$sql = "SELECT password FROM `Utilisateur` WHERE `mail`= $_POST["mail"]";
+			$sql = "SELECT password FROM `Utilisateur` WHERE `mail`= $_POST['mail']";
 			$result = mysqli_query($db,$sql);
-			$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-			$active = $row['active'];
 
-			$count = mysqli_num_rows($result);
 
 			if ($_POST["password"] == $result) {
 				echo "ok";
@@ -72,7 +69,11 @@
 		/*
 
       // If result matched $myusername and $mypassword, table row must be 1 row
-		
+					$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+			$active = $row['active'];
+
+			$count = mysqli_num_rows($result);
+			
 		if($count == 1) {
 			session_register("myusername");
 			$_SESSION['login_user'] = $myusername;
