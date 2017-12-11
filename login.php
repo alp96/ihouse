@@ -50,20 +50,17 @@
 		echo "Connection failed: " . $e->getMessage();
 	}
 
+
+
+
 	function verification($data){
 		$data = trim($data);
 		$data = stripslashes($data);
 		$data = htmlspecialchars($data);
-
 		return $data;
-
 	}
 
-			$options = [
-			'cost' => 11,
-		];
 
-	echo password_hash("test", PASSWORD_BCRYPT, $options)."\n";
 
 	if(isset($_POST["password"]) && isset($_POST["mail"]))
 	{
@@ -74,6 +71,11 @@
 			'cost' => 11,
 		];
 		$_POST["password"] = password_hash($_POST["password"], PASSWORD_BCRYPT, $options)."\n";
+
+
+		$reponse = $conn->query('SELECT * FROM `Utilisateur` WHERE `mail` LIKE $_POST["mail"]');
+
+		echo $reponse;
 
 		if($_POST["mail"] == '')
 		{
