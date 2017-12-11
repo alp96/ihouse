@@ -204,9 +204,6 @@ input{
     height: 63px;
 }
 
-#menu li{
-    height: 63px;
-}
 
 #menu{
 	/*background-color: #cecece;*/
@@ -219,13 +216,12 @@ input{
 	position: fixed;
 	left: 63px;
 	top: 120px;
-	height: 2000px;
+	height: 100%;
     font-weight: bold;
 }
 
 #menu_isscone > li{
 	text-align: center;
-	padding: 20px 0px;
 	border-width: 2px;
 	border-style : solid;
 	border-color: #283152;
