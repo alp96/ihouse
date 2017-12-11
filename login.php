@@ -75,7 +75,7 @@
 
 		$reponse = $conn->query('SELECT * FROM `Utilisateur` WHERE `mail` LIKE $_POST["mail"]');
 
-		echo $reponse;
+		echo $reponse["password"];
 
 		if($_POST["mail"] == '')
 		{
