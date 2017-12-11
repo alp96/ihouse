@@ -217,7 +217,8 @@ input{
 	left: 63px;
 	top: 120px;
 	height: 100%;
-    font-weight: 550;
+    /*font-weight: 550;*/
+    font-size: 22px;
     vertical-align: middle;
 }
 
