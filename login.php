@@ -60,7 +60,7 @@
 	}
 
 	echo password_hash("test");
-	
+	echo "coucou";
 	if(isset($_POST["password"]) && isset($_POST["mail"]))
 	{
 		$_POST["mail"] = verification($_POST["mail"]);
