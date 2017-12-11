@@ -74,7 +74,7 @@
 
 			$bdd = new PDO('mysql:host=localhost;dbname=db701520246;charset=utf8', 'root', 'ihousebddISEP');
 
-			$reponse = $bdd->query("SELECT password FROM `Utilisateur` WHERE `mail`=".$_POST['mail']."");
+			$reponse = $bdd->query("SELECT * FROM `Utilisateur` WHERE `mail`=".$_POST['mail']."");
 			$donnees = $reponse->fetch();
 			echo $donnees["password"];
 			$reponse->closeCursor();
