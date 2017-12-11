@@ -59,7 +59,7 @@
 			$result = mysqli_query($db,$sql);
 
 
-			if ($_POST["password"] == $result) {
+			if (password_hash($_POST["password"]) == $result) {
 				echo "ok";
 			}
 			else {
