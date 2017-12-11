@@ -39,8 +39,6 @@
 	$password = "ihousebddISEP";
 	$bddname = "db701520246";
 
-	echo password_hash("test");
-
 	try {
 		$conn = new PDO("mysql:host=$servername;dbname=$bddname;charset=utf8;", $username, $password);
     // set the PDO error mode to exception
@@ -61,7 +59,8 @@
 
 	}
 
-
+	echo password_hash("test");
+	
 	if(isset($_POST["password"]) && isset($_POST["mail"]))
 	{
 		$_POST["mail"] = verification($_POST["mail"]);
