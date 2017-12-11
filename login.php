@@ -63,8 +63,8 @@
 
 
 			$options = ['cost' => 11,];
-			if (password_verify(password_hash($_POST["password"],PASSWORD_BCRYPT, $options), $donnees["password"])) {
-				echo "ok";
+			if (password_verify($_POST["password"], $donnees["password"])) {
+				echo "<br>ok";
 			}
 			else {
 				echo "<br>erreur mdr";
