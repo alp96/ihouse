@@ -1,7 +1,7 @@
 	<section id="wrap2">
-		<img id="logo_mini" src="iHouse_logo_blanc.png">
+		<img id="logo_mini" src="images/iHouse_logo_blanc.png">
 		<div class="info">
-			<img id="picture" src="man.png">
+			<img id="picture" src="images/man.png">
 			<?php 
 			$name = 'Perrier';
 			echo '<div id="username">Bonjour M. ' . $name . '</div>';
