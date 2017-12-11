@@ -47,7 +47,7 @@
 	define('DB_USERNAME', 'root');
 	define('DB_PASSWORD', 'ihousebddISEP');
 	define('DB_DATABASE', 'db701520246');
-	$db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
+	/*$db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);*/
 
 	if($_SERVER["REQUEST_METHOD"] == "POST") {
 		if(isset($_POST["password"]) && isset($_POST["mail"])) {
@@ -73,10 +73,7 @@
 			echo gettype($result);*/
 
 			$bdd = new PDO('mysql:host=localhost;dbname=db701520246;charset=utf8', 'root', 'ihousebddISEP');
-			catch (Exception $e)
-			{
-				die('Erreur : ' . $e->getMessage());
-			}
+
 			$reponse = $bdd->query("SELECT password FROM `Utilisateur` WHERE `mail`=".$_POST['mail']."");
 			$donnees = $reponse->fetch();
 			echo $donnees["password"];
