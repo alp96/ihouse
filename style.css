@@ -242,7 +242,7 @@ input{
 #wrap2{
 	height: 100px;
 	/*background-color: #283152;*/
-	background-image: url("pattern_header.png");
+	background-image: url("images/pattern_header.png");
 	padding: 10px;
 	position: fixed;
 	width: 100%;
