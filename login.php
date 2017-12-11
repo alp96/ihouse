@@ -36,9 +36,6 @@
 	<?php 
 	include("template/connexionbdd.php");
 
-
-
-
 	function verification($data){
 		$data = trim($data);
 		$data = stripslashes($data);
