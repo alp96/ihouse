@@ -5,8 +5,10 @@
 </head>
 <body>
 
-	<input type="text" name="password">
-	<input type="submit" name="">
+	<form method="post" id='connexion' action="generation.php">
+		<input type="text" name="password">
+		<input type="submit" name="">
+	</form>
 
 	<?php
 	$options = [
