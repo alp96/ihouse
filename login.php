@@ -63,7 +63,7 @@
 			}
 			else
 			{
-				echo "erreur";
+				echo "erreur mdr";
 			}
 		/*$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 		$active = $row['active'];
