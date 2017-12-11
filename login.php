@@ -56,7 +56,17 @@
 			$mypassword = mysqli_real_escape_string($db,$_POST['password']); 
 
 			$sql = "SELECT password FROM `Utilisateur` WHERE `mail`=".$_POST['mail']."";
-			$result = mysqli_query($db,$sql);
+			/*$result = mysqli_query($db,$sql);*/
+			$result = $conn->query($sql);
+
+			if ($result->num_rows > 0) {
+    			// output data of each row
+				while($row = $result->fetch_assoc()) {
+					echo "password: " . $row["password"];
+				}
+			} else {
+				echo "0 results";
+			}
 
 			echo gettype($result);
 
