@@ -55,15 +55,14 @@
 			$myusername = mysqli_real_escape_string($db,$_POST['mail']);
 			$mypassword = mysqli_real_escape_string($db,$_POST['password']); 
 
-			$sql = "SELECT password FROM `Utilisateur` WHERE `mail`= $_POST['mail']";
+			$sql = "SELECT password FROM `Utilisateur` WHERE `mail`=".$_POST['mail']."";
 			$result = mysqli_query($db,$sql);
 
 
 			if ($_POST["password"] == $result) {
 				echo "ok";
 			}
-			else
-			{
+			else {
 				echo "erreur mdr";
 			}
 		/*
@@ -73,7 +72,7 @@
 			$active = $row['active'];
 
 			$count = mysqli_num_rows($result);
-			
+
 		if($count == 1) {
 			session_register("myusername");
 			$_SESSION['login_user'] = $myusername;
