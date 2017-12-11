@@ -200,6 +200,14 @@ input{
 	height: 2000px;
 }
 
+#menu_icone li{
+    height: 63px;
+}
+
+#menu li{
+    height: 63px;
+}
+
 #menu{
 	/*background-color: #cecece;*/
 	list-style-type: none;
@@ -212,7 +220,7 @@ input{
 	left: 63px;
 	top: 120px;
 	height: 2000px;
-
+    font-weight: bold;
 }
 
 #menu_isscone > li{
