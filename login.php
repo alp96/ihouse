@@ -50,7 +50,7 @@
 		echo "Connection failed: " . $e->getMessage();
 	}
 
-		function verification($data){
+	function verification($data){
 		$data = trim($data);
 		$data = stripslashes($data);
 		$data = htmlspecialchars($data);
@@ -60,7 +60,12 @@
 	}
 
 	echo password_hash("test");
+	$options = [
+		'cost' => 11,
+	];
+	echo password_hash("rasmuslerdorf", PASSWORD_BCRYPT, $options)."\n";
 	echo "coucou";
+
 	if(isset($_POST["password"]) && isset($_POST["mail"]))
 	{
 		$_POST["mail"] = verification($_POST["mail"]);
