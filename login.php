@@ -2,14 +2,14 @@
 <html id='first_page'>
 <head>
 	<title>Se connecter - iHouse</title>
-	<link rel="stylesheet" href="style_login.css">
-	<link rel="icon" href="favicon.png" />
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" href="images/favicon.png" />
 	<meta charset="UTF-8">
 </head>
 <body>
 
 	<div class="wrap">
-		<img id="logo" src="iHouse.png">
+		<img id="logo" src="images/iHouse.png">
 	</div>
 
 
