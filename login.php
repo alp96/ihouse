@@ -34,8 +34,8 @@
 	</div>
 
 	<?php 
-	$servername = "db701520246.db.1and1.com";
-	$username = "db701520246";
+	$servername = "localhost";
+	$username = "root";
 	$password = "ihousebddISEP";
 	$bddname = "db701520246";
 
