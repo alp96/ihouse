@@ -1,16 +1,11 @@
 <?php 
-$servername = "localhost";
-$username = "root";
-$password = "ihousebddISEP";
-$bddname = "db701520246";
-
-try {
-	$conn = new PDO("mysql:host=$servername;dbname=$bddname;charset=utf8;", $username, $password);
-    // set the PDO error mode to exception
-	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
-catch(PDOException $e)
+try 
 {
-	echo "Connection failed: " . $e->getMessage();
+	$bdd = new PDO('mysql:host=localhost;dbname=db701520246;charset=utf8', 'root', 'ihousebddISEP');
+	$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} 
+catch (PDOException $e) 
+{
+	echo 'Échec lors de la connexion : ' . $e->getMessage();
 }
 ?>

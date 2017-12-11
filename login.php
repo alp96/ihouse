@@ -34,6 +34,7 @@
 	</div>
 
 	<?php 
+	session_start();
 	include("template/connexionbdd.php");
 
 	function verification($data)
@@ -51,16 +52,7 @@
 			$_POST["mail"] = verification($_POST["mail"]);
 			$_POST["password"] = verification($_POST["password"]);
 
-			try 
-			{
-				$bdd = new PDO('mysql:host=localhost;dbname=db701520246;charset=utf8', 'root', 'ihousebddISEP');
-				$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			} 
-			catch (PDOException $e) 
-			{
-				echo 'Échec lors de la connexion : ' . $e->getMessage();
-			}
-
+			include("template/connexionbdd.php");
 			
 			$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE mail='" . $_POST["mail"] . "'");
 			$donnees = $reponse->fetch();
@@ -85,6 +77,7 @@
 			{
 				if (password_verify($_POST["password"], $donnees["password"]))
 				{
+					$_SESSION['user'] = $_POST['mail'];
 					die("<script>location.href = 'https://www.ihouse-panel.com/git/default.php'</script>");
 				}
 				else 
@@ -95,7 +88,7 @@
 		}
 	}
 
-?>
+	?>
 
 </body>
 </html>

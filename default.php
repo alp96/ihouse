@@ -7,11 +7,11 @@
 </head>
 <body>
 
-<?php
+	<?php
+	session_start();
+	include("template/connexionbdd.php");
 	include("template/header.php");
 	include("template/nav.php");
-	include("template/connexionbdd.php");
-	
-?>
+	?>
 </body>
 </html>
