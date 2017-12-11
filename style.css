@@ -219,7 +219,6 @@ input{
 	height: 100%;
     font-weight: bold;
     vertical-align: middle;
-    line-height: 100%;
 }
 
 #menu_isscone > li{
@@ -237,6 +236,7 @@ input{
 	border-color: #283152;
     border-width: 0px 0px 2px 0px;
     height: 61px;
+    line-height: 61px;
 }
 
 #menu > li:hover{
