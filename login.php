@@ -50,15 +50,17 @@
 
 		$_POST["mail"] = verification($_POST["mail"]);
 		$_POST["password"] = verification($_POST["password"]);
+
 		$options = [
 			'cost' => 11,
 		];
+
 		$_POST["password"] = password_hash($_POST["password"], PASSWORD_BCRYPT, $options)."\n";
 
+		$req = $conn->prepare('SELECT mail, password FROM Utilisateur WHERE mail = ?');
+		$req->execute(array($_GET['mail']));
 
-		$reponse = $conn->query('SELECT * FROM `Utilisateur` WHERE `mail` LIKE $_POST["mail"]');
-
-		echo $reponse["password"];
+		echo $_GET['password'];
 
 		if($_POST["mail"] == '')
 		{
