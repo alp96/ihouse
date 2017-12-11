@@ -95,52 +95,6 @@
 		}
 	}
 
-	/*if(isset($_POST["password"]) && isset($_POST["mail"]))
-	{
-
-		$_POST["mail"] = verification($_POST["mail"]);
-		$_POST["password"] = verification($_POST["password"]);
-
-		$options = [
-			'cost' => 11,
-		];
-
-		$_POST["password"] = password_hash($_POST["password"], PASSWORD_BCRYPT, $options)."\n";
-
-		$req = $conn->prepare('SELECT mail, password FROM Utilisateur WHERE mail = ?');
-		$req->execute(array($_GET['mail']));
-
-		echo $_GET['mail'];
-
-		if($_POST["mail"] == '')
-		{
-			echo '<div class="error">Veuillez renseigner l\'adresse e-mail</div>';
-		}
-		elseif($_POST["password"] == '')
-		{
-			echo '<div class="error">Veuillez renseigner le mot de passe</div>';
-		}
-		elseif (!filter_var($_POST["mail"], FILTER_VALIDATE_EMAIL)) 
-		{
-			echo '<div class="error">Veuillez rentrer une adresse mail valide</div>';
-		}
-		elseif ($_POST["mail"] != '' && $_POST["password"] != '')
-		{
-			if($_POST["mail"] != "test@test.com")
-			{
-				echo '<div class="error">Utilisateur inconnu</div>';
-			}
-			elseif($_POST["password"] != "juniorisep")
-			{
-				echo '<div class="error">Mauvais mot de passe</div>';
-			}
-			elseif($_POST["password"] == "juniorisep" && $_POST["mail"] == "test@test.com")
-			{
-				die("<script>location.href = 'https://www.ihouse-isep.com/app/v1/index.php'</script>");
-			}
-		}
-	}
-}*/
 ?>
 
 </body>
