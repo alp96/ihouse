@@ -60,7 +60,7 @@
 		$req = $conn->prepare('SELECT mail, password FROM Utilisateur WHERE mail = ?');
 		$req->execute(array($_GET['mail']));
 
-		echo $_GET['password'];
+		echo $_GET['mail'];
 
 		if($_POST["mail"] == '')
 		{
