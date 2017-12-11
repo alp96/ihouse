@@ -44,19 +44,28 @@
 	}
 
 	define('DB_SERVER', 'localhost');
-   define('DB_USERNAME', 'root');
-   define('DB_PASSWORD', 'ihousebddISEP');
-   define('DB_DATABASE', 'db701520246');
-   $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
+	define('DB_USERNAME', 'root');
+	define('DB_PASSWORD', 'ihousebddISEP');
+	define('DB_DATABASE', 'db701520246');
+	$db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
 
 	if($_SERVER["REQUEST_METHOD"] == "POST") {
+		if(isset($_POST["password"]) && isset($_POST["mail"])) {
 
-		$myusername = mysqli_real_escape_string($db,$_POST['mail']);
-		$mypassword = mysqli_real_escape_string($db,$_POST['password']); 
+			$myusername = mysqli_real_escape_string($db,$_POST['mail']);
+			$mypassword = mysqli_real_escape_string($db,$_POST['password']); 
 
-		$sql = "SELECT id_utilisateur FROM Utilisateur WHERE mail = '$myusername' and passcode = '$mypassword'";
-		$result = mysqli_query($db,$sql);
-		$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+			$sql = "SELECT password FROM `Utilisateur` WHERE `mail`= $_POST["mail"]";
+			$result = mysqli_query($db,$sql);
+
+			if ($_POST["password"] == $result) {
+				echo "ok";
+			}
+			else
+			{
+				echo "erreur";
+			}
+		/*$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 		$active = $row['active'];
 
 		$count = mysqli_num_rows($result);
@@ -70,8 +79,10 @@
 			die("<script>location.href = 'https://www.ihouse-isep.com/app/v1/index.php'</script>");
 		}else {
 			$error = "Your Login Name or Password is invalid";
-		}
+		}*/
+
 	}
+}
 
 	/*if(isset($_POST["password"]) && isset($_POST["mail"]))
 	{
