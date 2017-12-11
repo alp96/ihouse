@@ -14,6 +14,6 @@
 			?>
 
 			<div id="ID">ID client : FR 09 67 34 2C</div>
-			<a href="#" id="logout">Se déconnecter</a>
+			<a href="logout.php" id="logout">Se déconnecter</a>
 		</div>
 	</section>
