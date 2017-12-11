@@ -58,11 +58,11 @@
 			$sql = "SELECT password FROM `Utilisateur` WHERE `mail`=".$_POST['mail']."";
 			$result = mysqli_query($db,$sql);
 
-			echo $result;
+			echo gettype($result);
 
 
 			$options = ['cost' => 11,];
-			if (password_hash($_POST["password"], PASSWORD_BCRYPT, $options) == $result) {
+			if (password_verify(password_hash($_POST["password"],PASSWORD_BCRYPT, $options), $result)) {
 				echo "ok";
 			}
 			else {
