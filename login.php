@@ -59,17 +59,17 @@
 
 	}
 
-	echo password_hash("test");
-	$options = [
-		'cost' => 11,
-	];
-	echo password_hash("rasmuslerdorf", PASSWORD_BCRYPT, $options)."\n";
-	echo "coucou";
+	echo password_hash("test", PASSWORD_BCRYPT, 11)."\n";
 
 	if(isset($_POST["password"]) && isset($_POST["mail"]))
 	{
+
 		$_POST["mail"] = verification($_POST["mail"]);
 		$_POST["password"] = verification($_POST["password"]);
+		$options = [
+			'cost' => 11,
+		];
+		$_POST["password"] = password_hash($_POST["password"], PASSWORD_BCRYPT, $options)."\n";
 
 		if($_POST["mail"] == '')
 		{
