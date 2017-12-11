@@ -67,7 +67,7 @@
 				echo "ok";
 			}
 			else {
-				echo "erreur mdr";
+				echo "<br>erreur mdr";
 			}
 		}
 	}
