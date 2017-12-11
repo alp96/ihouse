@@ -52,11 +52,13 @@
 	if($_SERVER["REQUEST_METHOD"] == "POST") {
 		if(isset($_POST["password"]) && isset($_POST["mail"])) {
 
+
+/*
 			$myusername = mysqli_real_escape_string($db,$_POST['mail']);
 			$mypassword = mysqli_real_escape_string($db,$_POST['password']); 
 
 			$sql = "SELECT password FROM `Utilisateur` WHERE `mail`=".$_POST['mail']."";
-			/*$result = mysqli_query($db,$sql);*/
+			$result = mysqli_query($db,$sql);
 			$result = $conn->query($sql);
 
 			if ($result->num_rows > 0) {
@@ -68,11 +70,22 @@
 				echo "0 results";
 			}
 
-			echo gettype($result);
+			echo gettype($result);*/
+
+			$bdd = new PDO('mysql:host=localhost;dbname=db701520246;charset=utf8', DB_USERNAME, DB_PASSWORD);
+			catch (Exception $e)
+			{
+				die('Erreur : ' . $e->getMessage());
+			}
+			$reponse = $bdd->query("SELECT password FROM `Utilisateur` WHERE `mail`=".$_POST['mail']."");
+			$donnees = $reponse->fetch();
+			echo $donnees["password"];
+			$reponse->closeCursor();
+
 
 
 			$options = ['cost' => 11,];
-			if (password_verify(password_hash($_POST["password"],PASSWORD_BCRYPT, $options), $result)) {
+			if (password_verify(password_hash($_POST["password"],PASSWORD_BCRYPT, $options), $reponse)) {
 				echo "ok";
 			}
 			else {
