@@ -59,7 +59,8 @@
 			$result = mysqli_query($db,$sql);
 
 
-			if (password_hash($_POST["password"]) == $result) {
+			$options = ['cost' => 11,];
+			if (password_hash($_POST["password"], PASSWORD_BCRYPT, $options) == $result) {
 				echo "ok";
 			}
 			else {
