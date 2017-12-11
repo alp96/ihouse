@@ -43,38 +43,13 @@
 		return $data;
 	}
 
-	define('DB_SERVER', 'localhost');
-	define('DB_USERNAME', 'root');
-	define('DB_PASSWORD', 'ihousebddISEP');
-	define('DB_DATABASE', 'db701520246');
-	/*$db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);*/
-
 	if($_SERVER["REQUEST_METHOD"] == "POST") {
 		if(isset($_POST["password"]) && isset($_POST["mail"])) {
 
 
-/*
-			$myusername = mysqli_real_escape_string($db,$_POST['mail']);
-			$mypassword = mysqli_real_escape_string($db,$_POST['password']); 
-
-			$sql = "SELECT password FROM `Utilisateur` WHERE `mail`=".$_POST['mail']."";
-			$result = mysqli_query($db,$sql);
-			$result = $conn->query($sql);
-
-			if ($result->num_rows > 0) {
-    			// output data of each row
-				while($row = $result->fetch_assoc()) {
-					echo "password: " . $row["password"];
-				}
-			} else {
-				echo "0 results";
-			}
-
-			echo gettype($result);*/
-
 			$bdd = new PDO('mysql:host=localhost;dbname=db701520246;charset=utf8', 'root', 'ihousebddISEP');
 
-			$reponse = $bdd->query("SELECT * FROM `Utilisateur` WHERE `mail`=".$_POST['mail']."");
+			$reponse = $bdd->query("SELECT * FROM 'Utilisateur' WHERE 'mail'=".$_POST['mail']);
 			$donnees = $reponse->fetch();
 			echo $donnees["password"];
 			$reponse->closeCursor();
@@ -88,25 +63,8 @@
 			else {
 				echo "erreur mdr";
 			}
-		/*
-
-      // If result matched $myusername and $mypassword, table row must be 1 row
-					$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-			$active = $row['active'];
-
-			$count = mysqli_num_rows($result);
-
-		if($count == 1) {
-			session_register("myusername");
-			$_SESSION['login_user'] = $myusername;
-
-			die("<script>location.href = 'https://www.ihouse-isep.com/app/v1/index.php'</script>");
-		}else {
-			$error = "Your Login Name or Password is invalid";
-		}*/
-
+		}
 	}
-}
 
 	/*if(isset($_POST["password"]) && isset($_POST["mail"]))
 	{
