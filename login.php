@@ -59,7 +59,11 @@
 
 	}
 
-	echo password_hash("test", PASSWORD_BCRYPT, 11)."\n";
+			$options = [
+			'cost' => 11,
+		];
+
+	echo password_hash("test", PASSWORD_BCRYPT, $options)."\n";
 
 	if(isset($_POST["password"]) && isset($_POST["mail"]))
 	{
