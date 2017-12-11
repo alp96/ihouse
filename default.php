@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="style_login.css">
+	<link rel="stylesheet" href="style.css">
 	<link rel="icon" href="favicon.png" />
 	<meta charset="UTF-8">
 </head>
