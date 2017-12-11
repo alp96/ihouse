@@ -72,7 +72,7 @@
 
 			echo gettype($result);*/
 
-			$bdd = new PDO('mysql:host=localhost;dbname=db701520246;charset=utf8', DB_USERNAME, DB_PASSWORD);
+			$bdd = new PDO('mysql:host=localhost;dbname=db701520246;charset=utf8', 'root', 'ihousebddISEP');
 			catch (Exception $e)
 			{
 				die('Erreur : ' . $e->getMessage());
