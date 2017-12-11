@@ -197,7 +197,7 @@ input{
 	position: fixed;
 	left: 0px;
 	top: 120px;
-	height: 2000px;
+	height: 100%;
 }
 
 #menu_icone li{
@@ -234,7 +234,8 @@ input{
 	border-width: 2px;
 	border-style : solid;
 	border-color: #283152;
-	border-width: 0px 0px 2px 0px;
+    border-width: 0px 0px 2px 0px;
+    height: 63px;
 }
 
 #menu > li:hover{
