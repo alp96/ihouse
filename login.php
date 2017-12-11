@@ -36,23 +36,28 @@
 	<?php 
 	include("template/connexionbdd.php");
 
-	function verification($data){
+	function verification($data)
+	{
 		$data = trim($data);
 		$data = stripslashes($data);
 		$data = htmlspecialchars($data);
 		return $data;
 	}
 
-	if($_SERVER["REQUEST_METHOD"] == "POST") {
-		if(isset($_POST["password"]) && isset($_POST["mail"])) {
-
+	if($_SERVER["REQUEST_METHOD"] == "POST") 
+	{
+		if(isset($_POST["password"]) && isset($_POST["mail"])) 
+		{
 			$_POST["mail"] = verification($_POST["mail"]);
 			$_POST["password"] = verification($_POST["password"]);
 
-			try {
+			try 
+			{
 				$bdd = new PDO('mysql:host=localhost;dbname=db701520246;charset=utf8', 'root', 'ihousebddISEP');
 				$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			} catch (PDOException $e) {
+			} 
+			catch (PDOException $e) 
+			{
 				echo 'Échec lors de la connexion : ' . $e->getMessage();
 			}
 
@@ -78,10 +83,12 @@
 			}
 			elseif ($_POST["mail"] != '' && $_POST["password"] != '')
 			{
-				if (password_verify($_POST["password"], $donnees["password"])) {
-					die("<script>location.href = 'https://www.ihouse-isep.com/app/v1/index.php'</script>");
+				if (password_verify($_POST["password"], $donnees["password"]))
+				{
+					die("<script>location.href = 'https://www.ihouse-panel.com/git/default.php'</script>");
 				}
-				else {
+				else 
+				{
 					echo '<div class="error">Mauvais mot de passe / Utilisateur inconnu</div>';
 				}
 			}
