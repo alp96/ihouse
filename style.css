@@ -293,7 +293,8 @@ input{
 }
 
 #create_user{
-	position: absolute;
-	top: 200px;
+	position: fixed;
+	top: 150px;
 	left: 50%;
+	text-align: center;
 }
