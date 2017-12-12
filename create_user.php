@@ -20,7 +20,7 @@
 	include("template/nav.php");
 	?>
 
-	<form method="post" id='connexion' action="login.php">
+	<form method="post" id='create_user' action="#">
 
 		<div id="titre">Création de compte</div>
 
@@ -45,7 +45,7 @@
 		</select>
 
 		<br>
-		<input id="bouton" type="submit" value="Se connecter">
+		<input id="bouton" type="submit" value="Créer un utilisateur">
 	</form>
 
 </body>
