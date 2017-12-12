@@ -291,3 +291,9 @@ input{
 	width: 263px;
 	height: 2000px;
 }
+
+#create_user{
+	position: absolute;
+	top: 200px;
+	left: 50%;
+}
