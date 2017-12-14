@@ -7,7 +7,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 	$nom = verification($_POST["champs_nom"]);
 
 	if ($nom != "") {
-		$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE nom LIKE '$nom'");
+		$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE nom LIKE '$nom' . '%'");
 		while ($donnees = $reponse->fetch())
 		{
 			echo $donnees['nom'];
