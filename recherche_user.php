@@ -27,8 +27,6 @@
 				<?php 
 				if($_SERVER["REQUEST_METHOD"] == "POST") 
 				{
-					include("template/connexionbdd.php");
-
 					if (isset($_POST["champs_nom"])) {
 						$nom = verification($_POST["champs_nom"]);
 						if ($nom != "") {
