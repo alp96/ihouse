@@ -8,7 +8,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
 	if ($nom != "") {
 		$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE nom LIKE '$nom'");
-		$donnees = $reponse->fetch();
 		while ($donnees = $reponse->fetch())
 		{
 			echo $donnees['nom'];
