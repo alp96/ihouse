@@ -15,7 +15,6 @@
 	{
 		die("<script>location.href = 'https://www.ihouse-panel.com/git/login.php'</script>");
 	}
-	include("template/connexionbdd.php");
 	include("template/header.php");
 	?>
 	<div id='wrap4'>

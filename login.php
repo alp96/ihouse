@@ -37,14 +37,6 @@
 	session_start();
 	include("template/connexionbdd.php");
 
-	function verification($data)
-	{
-		$data = trim($data);
-		$data = stripslashes($data);
-		$data = htmlspecialchars($data);
-		return $data;
-	}
-
 	if($_SERVER["REQUEST_METHOD"] == "POST") 
 	{
 		if(isset($_POST["password"]) && isset($_POST["mail"])) 
