@@ -32,22 +32,25 @@
 					<form method="post" action="recherche_user.php">
 						Nom :
 						<br>
-						<input type="text" name="champs_nom">
-						<input type="submit" name="valider_nom" value="Rechercher !">
+						<input class="field" type="text" name="champs_nom">
+						<br>
+						<input id="bouton" type="submit" name="valider_nom" value="Rechercher !">
 						<br>
 					</form>
 					<form method="post" action="recherche_user.php">
 						Prénom :
 						<br>
-						<input type="text" name="champs_prenom">
-						<input type="submit" name="valider_prenom" value="Rechercher !">
+						<input class="field" type="text" name="champs_prenom">
+						<br>
+						<input id="bouton" type="submit" name="valider_prenom" value="Rechercher !">
 						<br>
 					</form>
 					<form method="post" action="recherche_user.php">
 						Mail :
 						<br>
-						<input type="text" name="champs_mail">
-						<input type="submit" name="valider_mail" value="Rechercher !">
+						<input class="field" type="text" name="champs_mail">
+						<br>
+						<input id="bouton" type="submit" name="valider_mail" value="Rechercher !">
 						<br>
 					</form>
 
