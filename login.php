@@ -78,7 +78,7 @@
 				if (password_verify($_POST["password"], $donnees["password"]))
 				{
 					$_SESSION['user'] = $_POST['mail'];
-					die("<script>location.href = 'https://www.ihouse-panel.com/git/default.php'</script>");
+					die("<script>location.href = 'https://www.ihouse-panel.com/git/create_user.php'</script>");
 				}
 				else 
 				{
