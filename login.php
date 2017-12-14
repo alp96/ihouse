@@ -14,7 +14,7 @@
 
 
 	<div class="wrap">
-		<form method="post" id='connexion' action="login.php">
+		<form method="post" class="formulaire" id='connexion' action="login.php">
 
 			<div id="titre">Espace personnel</div>
 

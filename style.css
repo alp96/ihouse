@@ -43,7 +43,7 @@ body{
 
 }
 
-form{
+.formulaire{
 	display: inline-block;
 	color: white;
 	background-color: #44538a;

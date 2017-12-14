@@ -28,28 +28,30 @@
 		?>
 
 		<div id="content">
-			<form method="post" id='modif_email' action="parametre.php">
+			<div class="formulaire">
+				<form method="post" id='modif_email' action="parametre.php">
 
-				<div id="titre">Paramètres</div>
+					<div id="titre">Paramètres</div>
 
-				<div class="texte">Adresse e-mail actuelle :
+					<div class="texte">Adresse e-mail actuelle :
+						<br>
+						<?php echo $donnees["mail"]; ?>
+					</div>
+					<input class="field" type="text" name="mail">
+
 					<br>
-					<?php echo $donnees["mail"]; ?>
-				</div>
-				<input class="field" type="text" name="mail">
-
-				<br>
-				<input id="bouton" type="submit" value="Modifier Email">
-			</form>
-			<form method="post" id='modif_email' action="parametre.php">
-				<div class="texte">Numéro de téléphone actuel :
+					<input id="bouton" type="submit" value="Modifier Email">
+				</form>
+				<form method="post" id='modif_email' action="parametre.php">
+					<div class="texte">Numéro de téléphone actuel :
+						<br>
+						<?php echo $donnees["telephone"]; ?>
+					</div>
+					<input class="field" type="text" name="phone">
 					<br>
-					<?php echo $donnees["telephone"]; ?>
-				</div>
-				<input class="field" type="text" name="phone">
-				<br>
-				<input id="bouton" type="submit" value="Modifier le numéro">
-			</form>
+					<input id="bouton" type="submit" value="Modifier le numéro">
+				</form>
+			</div>
 		</div>
 	</div>
 	<?php
