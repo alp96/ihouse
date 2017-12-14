@@ -75,13 +75,20 @@
 					$donnees = $reponse->fetch();
 					$reponse->closeCursor();
 					$_SESSION['user'] = $new_mail;
-					//$name = $donnees["nom"];
 
 					die("<script>location.href = 'https://www.ihouse-panel.com/git/parametre.php'</script>");
 				}
 			}
 			if (isset($_POST["phone"])) {
-				$_POST["mail"] = verification($_POST["mail"]);
+				$_POST["phone"] = verification($_POST["phone"]);
+				if($_POST["phone"] == '')
+				{
+					echo '<div class="error">Veuillez renseigner votre numéro</div>';
+				}
+				else{
+					$new_phone = $_POST["phone"];
+					$bdd->exec("UPDATE Utilisateur SET phone = '$new_phone' WHERE mail = '$mail'");
+				}
 			}
 
 		}
