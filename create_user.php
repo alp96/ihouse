@@ -24,7 +24,7 @@
 		?>
 
 		<div id="content">
-			<form method="post" id='create_user' action="#">
+			<form method="post" id='create_user' action="create_user_bdd.php">
 
 				<div id="titre">Création de compte</div>
 

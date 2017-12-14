@@ -201,7 +201,7 @@ input{
 }
 
 #menu_icone li{
-    height: 63px;
+	height: 63px;
 }
 
 
@@ -217,9 +217,9 @@ input{
 	left: 63px;
 	top: 120px;
 	height: 100%;
-    /*font-weight: 550;*/
-    font-size: 19px;
-    vertical-align: middle;
+	/*font-weight: 550;*/
+	font-size: 19px;
+	vertical-align: middle;
 }
 
 #menu_isscone > li{
@@ -235,9 +235,9 @@ input{
 	border-width: 2px;
 	border-style : solid;
 	border-color: #283152;
-    border-width: 0px 0px 2px 0px;
-    height: 61px;
-    line-height: 61px;
+	border-width: 0px 0px 2px 0px;
+	height: 61px;
+	line-height: 61px;
 }
 
 #menu > li:hover{
@@ -299,13 +299,15 @@ input{
 	left: 50%;*/
 	text-align: center;
 	margin: 0 auto;
-    height: 408px;
-    width: 354px;
+	height: 408px;
+	width: 354px;
+	margin-top: 20px;
 
 }
 #content{
 	margin-left: 263px;
 	padding-top: 120px;
+	text-align: center;
 }
 
 #wrap4{

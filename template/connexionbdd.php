@@ -8,4 +8,12 @@ catch (PDOException $e)
 {
 	echo 'Échec lors de la connexion : ' . $e->getMessage();
 }
+
+function verification($data)
+	{
+		$data = trim($data);
+		$data = stripslashes($data);
+		$data = htmlspecialchars($data);
+		return $data;
+	}
 ?>
