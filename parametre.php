@@ -87,7 +87,7 @@
 				}
 				else{
 					$new_phone = $_POST["phone"];
-					$bdd->exec("UPDATE Utilisateur SET phone = '$new_phone' WHERE mail = '$mail'");
+					$bdd->exec("UPDATE Utilisateur SET telephone = '$new_phone' WHERE mail = '$mail'");
 				}
 			}
 
