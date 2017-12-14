@@ -74,8 +74,8 @@
 					$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE mail='$mail'");
 					$donnees = $reponse->fetch();
 					$reponse->closeCursor();
-
-					$name = $donnees["nom"];
+					$_SESSION['user'] = $mail;
+					//$name = $donnees["nom"];
 
 					die("<script>location.href = 'https://www.ihouse-panel.com/git/parametre.php'</script>");
 				}
