@@ -29,7 +29,6 @@
 					<div id="titre">Recherche</div>
 					<div id="filling">Veuillez renseigner un champ pour lancer la recherche :</div>
 					<br>
-					<br>
 					<form method="post" action="recherche_user.php">
 						Nom :
 						<br>
