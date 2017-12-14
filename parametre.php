@@ -2,7 +2,7 @@
 <html>
 <head>
 	<link rel="stylesheet" href="style.css">
-	<link rel="icon" href="favicon.png" />
+	<link rel="icon" href="images/favicon.png" />
 	<meta charset="UTF-8">
 	<title>Paramètres</title>
 </head>
