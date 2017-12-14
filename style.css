@@ -290,15 +290,23 @@ input{
 	background-color: #cecece;
 	width: 263px;
 	height: 2000px;
+	float: left;
 }
 
 #create_user{
-	position: fixed;
+	/*position: fixed;
 	top: 150px;
-	left: 50%;
+	left: 50%;*/
 	text-align: center;
+	margin: 0 auto;
+    height: 408px;
+    width: 354px;
+
+}
+#content{
+	margin-left: 263px;
 }
 
-#wrapper3{
+#wrap4{
 	width: 100%;
 }

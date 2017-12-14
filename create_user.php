@@ -17,38 +17,42 @@
 	}
 	include("template/connexionbdd.php");
 	include("template/header.php");
-	echo "<div id='wrapper3'>";
-	include("template/nav.php");
 	?>
+	<div id='wrap4'>
+		<?php
+		include("template/nav.php");
+		?>
 
-	<form method="post" id='create_user' action="#">
+		<div id="content">
+			<form method="post" id='create_user' action="#">
 
-		<div id="titre">Création de compte</div>
+				<div id="titre">Création de compte</div>
 
-		<div class="texte">Nom</div>
-		<input class="field" type="text" name="name">
+				<div class="texte">Nom</div>
+				<input class="field" type="text" name="name">
 
-		<div class="texte">Prénom</div>
-		<input class="field" type="text" name="last_name">
+				<div class="texte">Prénom</div>
+				<input class="field" type="text" name="last_name">
 
-		<div class="texte">Adresse e-mail</div>
-		<input class="field" type="text" name="mail">
+				<div class="texte">Adresse e-mail</div>
+				<input class="field" type="text" name="mail">
 
-		<div class="texte">Numéro de téléphone</div>
-		<input class="field" type="text" name="phone">
+				<div class="texte">Numéro de téléphone</div>
+				<input class="field" type="text" name="phone">
 
-		<div class="texte">Type de compte</div>
-		<select name="account_type" size="1">
-			<option>Client</option>
-			<option>Technicien</option>
-			<option>Maintenance</option>
-			<option>Administrateur</option>
-		</select>
+				<div class="texte">Type de compte</div>
+				<select name="account_type" size="1">
+					<option>Client</option>
+					<option>Technicien</option>
+					<option>Maintenance</option>
+					<option>Administrateur</option>
+				</select>
 
-		<br>
-		<input id="bouton" type="submit" value="Créer un utilisateur">
-	</form>
-</div>
+				<br>
+				<input id="bouton" type="submit" value="Créer un utilisateur">
+			</form>
+		</div>
+	</div>
 
 </body>
 </html>
