@@ -23,7 +23,7 @@
 		?>
 		<div id="content">
 
-			<video src="http://webcam01.bigskyresort.com/mjpg/video.mjpg">Votre navigateur ne supporte pas les flux vidéos.</video>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/2VvhWJJLV2g" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
 		</div>
 	</div>
