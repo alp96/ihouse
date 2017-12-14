@@ -28,7 +28,7 @@
 		?>
 
 		<div id="content">
-			<div class="formulaire">
+			<div class="formulaire marge_haut">
 				<form method="post" id='modif_email' action="parametre.php">
 
 					<div id="titre">Paramètres</div>

@@ -321,3 +321,7 @@ input{
 .link_nav:hover{
 	color: white;
 }
+
+.marge_haut{
+	margin-top: 20px;
+}
