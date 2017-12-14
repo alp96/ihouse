@@ -68,7 +68,7 @@
 					echo '<div class="error">Veuillez rentrer une adresse mail valide</div>';
 				}
 				elseif ($_POST["mail"] != '') {
-					$bdd->exec("UPDATE Utilisateur SET telephone = '$_POST["phone"]' WHERE mail = '$donnees["mail"]'");
+					$bdd->exec("UPDATE Utilisateur SET mail = '$_POST["mail"]' WHERE mail = '$donnees["mail"]'");
 
 					die("<script>location.href = 'https://www.ihouse-panel.com/git/parametre.php'</script>");
 				}
