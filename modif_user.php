@@ -40,6 +40,7 @@
 					</form>
 					<form method="post" action="recherche_user.php">
 						Prénom :
+						<br>
 						<input class="field" type="text" name="champs_prenom">
 						<br>
 						<input id="bouton" class="no_marge" type="submit" name="valider_prenom" value="Rechercher !">
