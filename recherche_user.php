@@ -32,11 +32,11 @@
 						if ($nom != "") {
 							$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE nom LIKE '$nom%'");
 							$counter = 0;
-							echo "Résultat de la recherche pour le nom " . $nom . "\n";
+							echo "<div class='title'>Résultat de la recherche pour le nom " . $nom . "</div><br>";
 							while ($donnees = $reponse->fetch())
 							{
 								$counter = $counter + 1;
-								echo $counter . ') ' . $donnees['nom'] . ' ' . $donnees['prenom'] . ' ' . $donnees['mail'];
+								echo $counter . ')   ' . $donnees['nom'] . '   ' . $donnees['prenom'] . '   ' . $donnees['mail'];
 								echo '<br>';
 							}
 							$reponse->closeCursor();

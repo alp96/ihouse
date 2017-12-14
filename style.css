@@ -325,3 +325,8 @@ input{
 .marge_haut{
 	margin-top: 20px;
 }
+
+.title{
+	font-weight: bold;
+	margin: 5px;
+}
