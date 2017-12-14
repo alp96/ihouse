@@ -71,10 +71,10 @@
 				elseif ($_POST["mail"] != '') {
 					$new_mail = $_POST["mail"];
 					$bdd->exec("UPDATE Utilisateur SET mail = '$new_mail' WHERE mail = '$mail'");
-					$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE mail='$mail'");
+					$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE mail='$new_mail'");
 					$donnees = $reponse->fetch();
 					$reponse->closeCursor();
-					$_SESSION['user'] = $mail;
+					$_SESSION['user'] = $new_mail;
 					//$name = $donnees["nom"];
 
 					die("<script>location.href = 'https://www.ihouse-panel.com/git/parametre.php'</script>");
