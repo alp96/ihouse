@@ -18,7 +18,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 	}
 
 	if (isset($_POST["champs_prenom"])) {
-		$prenom = verification($_POST["champs_prenom"])
+		$prenom = verification($_POST["champs_prenom"]);
 		if ($prenom != "") {
 			$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE prenom LIKE '$prenom%'");
 			while ($donnees = $reponse->fetch())
@@ -31,7 +31,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 	}
 
 	if (isset($_POST["champs_mail"])) {
-		$mail = verification($_POST["champs_mail"])
+		$mail = verification($_POST["champs_mail"]);
 		if ($mail != "") {
 			$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE mail LIKE '$mail%'");
 			while ($donnees = $reponse->fetch())
