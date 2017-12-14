@@ -4,6 +4,7 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="icon" href="favicon.png" />
 	<meta charset="UTF-8">
+	<title>Page d'accueil</title>
 </head>
 <body>
 

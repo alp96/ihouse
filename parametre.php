@@ -75,8 +75,6 @@
 					$donnees = $reponse->fetch();
 					$reponse->closeCursor();
 					$_SESSION['user'] = $new_mail;
-
-					die("<script>location.href = 'https://www.ihouse-panel.com/git/parametre.php'</script>");
 				}
 			}
 			if (isset($_POST["phone"])) {
