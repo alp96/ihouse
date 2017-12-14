@@ -1,4 +1,5 @@
 	<div id="wrap2">
+		<link rel="icon" href="images/favicon.png" />
 		<img id="logo_mini" src="images/iHouse_logo_blanc.png">
 		<div class="info">
 			<img id="picture" src="images/man.png">
