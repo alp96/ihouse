@@ -15,7 +15,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 		$password = password_hash("test", PASSWORD_BCRYPT, $options);
 		$id_house = '0';
 
-		$reponse = $bdd->exec('INSERT INTO Utilisateur(id_utilisateur, nom, prenom, mail, password, telephone, type_compte, id_maison) VALUES (DEFAULT, $name, $last_name, $mail, $password, $phone, $account_type, $id_house)');
+		$bdd->exec("INSERT INTO Utilisateur(id_utilisateur, nom, prenom, mail, password, telephone, type_compte, id_maison) VALUES (DEFAULT, '$name', '$last_name', '$mail', '$password', '$phone', '$account_type', '$id_house')");
 
 		die("<script>location.href = 'https://www.ihouse-panel.com/git/create_user.php'</script>");
 
