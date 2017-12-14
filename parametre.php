@@ -57,44 +57,29 @@
 	{
 		if(isset($_POST["phone"]) OR isset($_POST["mail"])) 
 		{
+			if (isset($_POST["mail"])) {
+				$_POST["mail"] = verification($_POST["mail"]);
+				if($_POST["mail"] == '')
+				{
+					echo '<div class="error">Veuillez renseigner l\'adresse e-mail</div>';
+				}
+				elseif (!filter_var($_POST["mail"], FILTER_VALIDATE_EMAIL)) 
+				{
+					echo '<div class="error">Veuillez rentrer une adresse mail valide</div>';
+				}
+				elseif ($_POST["mail"] != '') {
+					$bdd->exec("UPDATE Utilisateur SET telephone = '$_POST["phone"]' WHERE mail = '$donnees["mail"]'");
+
+					die("<script>location.href = 'https://www.ihouse-panel.com/git/parametre.php'</script>");
+				}
+			}
 			if (isset($_POST["phone"])) {
-				$_POST["phone"] = verification($_POST["phone"]);
+				$_POST["mail"] = verification($_POST["mail"]);
 			}
-			$_POST["mail"] = verification($_POST["mail"]);
-			
-			
-			
 
-
-
-			$options = ['cost' => 11,];
-			if($_POST["mail"] == '')
-			{
-				echo '<div class="error">Veuillez renseigner l\'adresse e-mail</div>';
-			}
-			elseif($_POST["password"] == '')
-			{
-				echo '<div class="error">Veuillez renseigner le mot de passe</div>';
-			}
-			elseif (!filter_var($_POST["mail"], FILTER_VALIDATE_EMAIL)) 
-			{
-				echo '<div class="error">Veuillez rentrer une adresse mail valide</div>';
-			}
-			elseif ($_POST["mail"] != '' && $_POST["password"] != '')
-			{
-				if (password_verify($_POST["password"], $donnees["password"]))
-				{
-					$_SESSION['user'] = $_POST['mail'];
-					die("<script>location.href = 'https://www.ihouse-panel.com/git/create_user.php'</script>");
-				}
-				else 
-				{
-					echo '<div class="error">Mauvais mot de passe / Utilisateur inconnu</div>';
-				}
-			}
 		}
 	}
-	?>
+?>
 
 </body>
 </html>

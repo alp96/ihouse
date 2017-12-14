@@ -8,6 +8,6 @@
 	<ul id="menu">
 		<li>Panneau de contrôle</li>
 		<li>Vidéosurveillance</li>
-		<li>Gestion du compte</li>
+		<li><a href="parametre.php">Gestion du compte</a></li>
 	</ul>
 </div>
