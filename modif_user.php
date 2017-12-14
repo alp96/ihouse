@@ -25,7 +25,8 @@
 			?>
 			<div id="content">
 
-				<div id="recherche">
+				<div id="recherche" class="formulaire marge_haut">
+					<div id="titre">Recherche</div>
 					Veuillez renseigner au moins un champ pour lancer la recherche :
 					<br>
 					<form method="post" action="recherche_user.php">
