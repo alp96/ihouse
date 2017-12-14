@@ -47,9 +47,12 @@
 						$prenom = verification($_POST["champs_prenom"]);
 						if ($prenom != "") {
 							$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE prenom LIKE '$prenom%'");
+							$counter = 0;
+							echo "<div class='titre_recherche'>Résultat de la recherche pour le prénom " . $prenom . "</div><br>";
 							while ($donnees = $reponse->fetch())
 							{
-								echo $donnees['prenom'];
+								$counter = $counter + 1;
+								echo $counter . ')   ' . $donnees['prenom'] . '   ' . $donnees['nom'] . '   ' . $donnees['mail'];
 								echo '<br>';
 							}
 							$reponse->closeCursor();
@@ -60,11 +63,13 @@
 						$mail = verification($_POST["champs_mail"]);
 						if ($mail != "") {
 							$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE mail LIKE '$mail%'");
+							$counter = 0;
+							echo "<div class='titre_recherche'>Résultat de la recherche pour le mail " . $prenom . "</div><br>";
 							while ($donnees = $reponse->fetch())
 							{
-								echo $donnees['mail'];
+								$counter = $counter + 1;
+								echo $counter . ')   ' . $donnees['mail'] . '   ' . $donnees['nom'] . '   ' . $donnees['prenom'];
 								echo '<br>';
-							}
 							$reponse->closeCursor();
 						}
 					}
