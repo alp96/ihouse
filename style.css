@@ -313,3 +313,11 @@ input{
 #wrap4{
 	width: 100%;
 }
+
+.link_nav{
+	text-decoration: none;
+	color: black;
+}
+.link_nav:hover{
+	color: white;
+}
