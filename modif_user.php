@@ -27,7 +27,7 @@
 
 				<div id="recherche" class="formulaire marge_haut">
 					<div id="titre">Recherche</div>
-					Veuillez renseigner un champ pour lancer la recherche :
+					<div id="filling">Veuillez renseigner un champ pour lancer la recherche :</div>
 					<br>
 					<br>
 					<form method="post" action="recherche_user.php">

@@ -334,3 +334,7 @@ input{
 .no_marge{
 	margin-top: 10px !important;
 }
+
+#filling{
+	padding: 0 20px;
+}
