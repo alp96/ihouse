@@ -43,8 +43,6 @@
 		{
 			$_POST["mail"] = verification($_POST["mail"]);
 			$_POST["password"] = verification($_POST["password"]);
-
-			include("template/connexionbdd.php");
 			
 			$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE mail='" . $_POST["mail"] . "'");
 			$donnees = $reponse->fetch();
