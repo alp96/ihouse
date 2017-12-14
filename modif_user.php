@@ -34,21 +34,23 @@
 						Nom :
 						<br>
 						<input class="field" type="text" name="champs_nom">
-						<input id="bouton" type="submit" name="valider_nom" value="Rechercher !">
+						<br>
+						<input id="bouton" class="no_marge" type="submit" name="valider_nom" value="Rechercher !">
 						<br>
 					</form>
 					<form method="post" action="recherche_user.php">
 						Prénom :
-						<br>
 						<input class="field" type="text" name="champs_prenom">
-						<input id="bouton" type="submit" name="valider_prenom" value="Rechercher !">
+						<br>
+						<input id="bouton" class="no_marge" type="submit" name="valider_prenom" value="Rechercher !">
 						<br>
 					</form>
 					<form method="post" action="recherche_user.php">
 						Mail :
 						<br>
 						<input class="field" type="text" name="champs_mail">
-						<input id="bouton" type="submit" name="valider_mail" value="Rechercher !">
+						<br>
+						<input id="bouton" class="no_marge" type="submit" name="valider_mail" value="Rechercher !">
 						<br>
 					</form>
 
