@@ -7,6 +7,9 @@
 			if ($donnees["type_compte"] == 'Administrateur') {
 				echo "<li class='hauteur'><img class='icone' src='images/icone_create_user.png'></li>";
 			}
+			if ($donnees["type_compte"] == 'Administrateur' OR $donnees["type_compte"] == 'Maintenance') {
+				echo "<li class='hauteur'><img class='icone' src='images/icone_modif_user.png'></li>";
+			}
 		 ?>		
 	</ul>
 
@@ -17,6 +20,9 @@
 		<?php 
 			if ($donnees["type_compte"] == 'Administrateur') {
 				echo "<li><a href='create_user.php' class='link_nav'>Création utilisateur</a></li>";
+			}
+			if ($donnees["type_compte"] == 'Administrateur' OR $donnees["type_compte"] == 'Maintenance') {
+				echo "<li><a href='modif_user.php' class='link_nav'>Modification utilisateurs</a></li>";
 			}
 		 ?>
 	</ul>
