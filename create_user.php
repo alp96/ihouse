@@ -17,6 +17,7 @@
 	}
 	include("template/connexionbdd.php");
 	include("template/header.php");
+	echo "<div id='wrapper3'>";
 	include("template/nav.php");
 	?>
 
@@ -47,6 +48,7 @@
 		<br>
 		<input id="bouton" type="submit" value="Créer un utilisateur">
 	</form>
+</div>
 
 </body>
 </html>
