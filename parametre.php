@@ -57,6 +57,7 @@
 	{
 		if(isset($_POST["phone"]) OR isset($_POST["mail"])) 
 		{
+			$mail = $donnees["mail"];
 			if (isset($_POST["mail"])) {
 				$_POST["mail"] = verification($_POST["mail"]);
 				if($_POST["mail"] == '')
@@ -68,7 +69,7 @@
 					echo '<div class="error">Veuillez rentrer une adresse mail valide</div>';
 				}
 				elseif ($_POST["mail"] != '') {
-					$bdd->exec("UPDATE Utilisateur SET mail = '$_POST["mail"]' WHERE mail = '$donnees["mail"]'");
+					$bdd->exec("UPDATE Utilisateur SET mail = '$_POST["mail"]' WHERE mail = '$mail'");
 
 					die("<script>location.href = 'https://www.ihouse-panel.com/git/parametre.php'</script>");
 				}
