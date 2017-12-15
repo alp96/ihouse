@@ -114,8 +114,6 @@
 				$_POST["mdp2"] = verification($_POST["mdp2"]);
 				$options = ['cost' => 11,];
 
-				echo password_verify($_POST["mdp_old"], $donnees["password"]) ? 'true' : 'false';
-
 				if($_POST["mdp_old"] == '' OR $_POST["mdp1"] == '' OR $_POST["mdp2"] == '')
 				{
 					echo '<div class="error">Veuillez renseigner vos mots de passe</div>';
