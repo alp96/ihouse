@@ -47,11 +47,13 @@
 						$prenom = verification($_POST["champs_prenom"]);
 						if ($prenom != "") {
 							$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE prenom LIKE '$prenom%'");
+							echo $reponse;
 							$counter = 0;
 							echo "<div class='titre_recherche'>Résultat de la recherche pour le prénom " . $prenom . "</div><br>";
-							echo "<table><tr><td class='cellule titre'>N°</td><td class='cellule titre'>Prénom</td><td class='cellule titre'>Nom</td><td class='cellule titre'>Adresse email</td>";
+							echo "<table><tr><td class='cellule gras'>N°</td><td class='cellule gras'>Prénom</td><td class='cellule gras'>Nom</td><td class='cellule gras'>Adresse email</td>";
 							while ($donnees = $reponse->fetch())
 							{
+								echo $donnees;
 								$counter = $counter + 1;
 								echo "<tr><td class='cellule'>";
 								echo $counter . "</td><td class='cellule'>" . $donnees['prenom'] . "</td><td class='cellule'>" . $donnees['nom'] . "</td><td class='cellule'>" . $donnees['mail'];
