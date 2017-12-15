@@ -122,8 +122,8 @@
 		function resize(foo)
 		{
 			wscreen = window.innerWidth;
-			content_width = (wscreen - 290);
-			//if(content_width < 850)content_width=850;
+			content_width = (wscreen - 310);
+			if(content_width < 500)content_width=500;
 			document.getElementById("container").style.width = content_width + "px";
 		}
 		resize();
