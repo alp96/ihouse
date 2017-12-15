@@ -54,7 +54,7 @@
 							{
 								$counter = $counter + 1;
 								echo "<tr><td class='cellule'>";
-								echo $counter . '</td><td class='cellule'>' . $donnees['prenom'] . '</td><td class='cellule'>' . $donnees['nom'] . '</td><td class='cellule'>' . $donnees['mail'];
+								echo $counter . "</td><td class='cellule'>" . $donnees['prenom'] . "</td><td class='cellule'>" . $donnees['nom'] . "</td><td class='cellule'>" . $donnees['mail'];
 								echo '</td></tr>';
 							}
 							echo "</table>";
