@@ -63,7 +63,7 @@
 				<?php 
 			}
 			else {
-				echo "Merci de ne pas tenter de modifier les URL à des fins malveillantes.";
+				echo "<div class='error'>Merci de ne pas tenter de modifier les URL à des fins malveillantes.</div>";
 			} ?>
 		</div>
 		<?php
