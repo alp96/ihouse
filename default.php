@@ -55,6 +55,7 @@
 		<?php	
 		if($_SERVER["REQUEST_METHOD"] == "POST") 
 		{
+			/*
 			foreach ($_POST as $key => $value) {
 				echo "<tr>";
 				echo "<td>";
@@ -64,7 +65,7 @@
 				echo $value;
 				echo "</td>";
 				echo "</tr>";
-			}
+			}*/
 			if(isset($_POST["action"])) 
 			{
 					$_POST["submit"] = verification($_POST["submit"]);
@@ -99,7 +100,7 @@
 					<div class=\"piece\">
 					<div class=\"titresalle\">$nom : 
 					<span class=\"right\">
-						<input id=\"$id\" type=\"image\" src=\"images/cross.png\" height=\"20px\" name=\"submit\" value=\"$id\" onclick=\"return confirm('Voulez-vous vraiment supprimer cette salle?')\">
+						<input id=\"$id\" class=\"submitcross\" type=\"submit\" name=\"submit\" value=\"$id\" onclick=\"return confirm('Voulez-vous vraiment supprimer cette salle?')\">
 					</span>	
 					</div>
 					<div class=\"capteurbox\">

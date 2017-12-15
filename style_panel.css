@@ -70,3 +70,12 @@
     font-size: 1.2em;
     font-weight:bold;
 }
+
+.submit1{
+    border:none;
+    background-image:url('images/cross.png');
+    background-repeat:no-repeat;
+    background-position:top left;
+    width: 20px;
+    height: 20px;
+}
