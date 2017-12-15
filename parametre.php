@@ -113,30 +113,31 @@
 				$_POST["mdp1"] = verification($_POST["mdp1"]);
 				$_POST["mdp2"] = verification($_POST["mdp2"]);
 				$options = ['cost' => 11,];
-				echo $_POST["mdp_old"];
-				echo $_POST["mdp1"];
-				echo $_POST["mdp2"];
+
+				echo $password_verify($_POST["mdp_old"], $donnees["password"]) ? 'true' : 'false';
 
 				if($_POST["mdp_old"] == '' OR $_POST["mdp1"] == '' OR $_POST["mdp2"] == '')
 				{
 					echo '<div class="error">Veuillez renseigner vos mots de passe</div>';
 				}
-				elseif (password_verify($_POST["mdp_old"], $donnees["password"]) == FALSE)
-				{
-					echo '<div class="error">Mot de passe erroné</div>';
-				}				}
-				elseif ($_POST["mdp1"] != $_POST["mdp2"]) 
-				{
-					echo '<div class="error">Vos nouveaux mots de passe ne sont pas identiques</div>';
-				}
-				elseif ($_POST["mdp1"] == $_POST["mdp2"] AND password_verify($_POST["mdp_old"], $donnees["password"]))
-				{
-					$new_password = password_hash($_POST["mdp1"], PASSWORD_BCRYPT, $options);
-					$bdd->exec("UPDATE Utilisateur SET password = '$new_password' WHERE mail = '$mail'");
-					echo '<div class="ok">Mot de passe changé avec succès</div>';
+				else{
+					if (password_verify($_POST["mdp_old"], $donnees["password"]) == FALSE)
+					{
+						echo '<div class="error">Mot de passe erroné</div>';
+					}				}
+					elseif ($_POST["mdp1"] != $_POST["mdp2"]) 
+					{
+						echo '<div class="error">Vos nouveaux mots de passe ne sont pas identiques</div>';
+					}
+					elseif ($_POST["mdp1"] == $_POST["mdp2"] AND password_verify($_POST["mdp_old"], $donnees["password"]))
+					{
+						$new_password = password_hash($_POST["mdp1"], PASSWORD_BCRYPT, $options);
+						$bdd->exec("UPDATE Utilisateur SET password = '$new_password' WHERE mail = '$mail'");
+						echo '<div class="ok">Mot de passe changé avec succès</div>';
+					}
 				}
 			}
 		}
-?>
-</body>
-</html>
+		?>
+	</body>
+	</html>
