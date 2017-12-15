@@ -113,6 +113,9 @@
 				$_POST["mdp1"] = verification($_POST["mdp1"]);
 				$_POST["mdp2"] = verification($_POST["mdp2"]);
 				$options = ['cost' => 11,];
+				echo $_POST["mdp_old"];
+				echo $_POST["mdp1"];
+				echo $_POST["mdp2"];
 
 				if($_POST["mdp_old"] == '' OR $_POST["mdp1"] == '' OR $_POST["mdp2"] == '')
 				{
