@@ -105,7 +105,7 @@
 					$bdd->exec("UPDATE Utilisateur SET telephone = '$new_phone' WHERE mail = '$mail'");
 				}
 			}
-			if (isset($_POST["mdp_old"]) AND isset($_POST["mdp1"]) AND isset($_POST["mdp2"])) 
+			if (isset($_POST["mdp_old"]) AND isset($_POST["mdp1"]) AND isset($_POST["mdp2"]))
 			{
 				$_POST["mdp_old"] = verification($_POST["mdp_old"]);
 				$_POST["mdp1"] = verification($_POST["mdp1"]);
@@ -131,7 +131,6 @@
 				}
 			}
 		}
-	}
-	?>
+?>
 </body>
 </html>
