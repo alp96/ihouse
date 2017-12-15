@@ -338,3 +338,17 @@ input{
 #filling{
 	padding: 0 20px;
 }
+
+.cellule{
+	border: 1px solid black;
+	padding: 5px;
+}
+
+table {
+	border-collapse: collapse;
+	display: inline-block;
+}
+
+.gras{
+	font-weight: bold;
+}
