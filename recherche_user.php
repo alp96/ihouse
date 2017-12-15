@@ -52,7 +52,7 @@
 							echo "<table><tr><td class='cellule gras'>N°</td><td class='cellule gras'>Prénom</td><td class='cellule gras'>Nom</td><td class='cellule gras'>Adresse email</td>";
 							while ($donnees = $reponse->fetch())
 							{
-								echo $donnees;
+								echo '<pre>'; print_r($donnees); echo '</pre>';
 								$counter = $counter + 1;
 								echo "<tr><td class='cellule'>";
 								echo $counter . "</td><td class='cellule'>" . $donnees['prenom'] . "</td><td class='cellule'>" . $donnees['nom'] . "</td><td class='cellule'>" . $donnees['mail'];
