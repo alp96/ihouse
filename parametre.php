@@ -124,7 +124,7 @@
 					if (password_verify($_POST["mdp_old"], $donnees["password"]) == FALSE)
 					{
 						echo '<div class="error">Mot de passe erroné</div>';
-					}				}
+					}
 					elseif ($_POST["mdp1"] != $_POST["mdp2"]) 
 					{
 						echo '<div class="error">Vos nouveaux mots de passe ne sont pas identiques</div>';
