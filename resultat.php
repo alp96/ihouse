@@ -22,43 +22,49 @@
 		<div id='wrap4'>
 			<?php
 			include("template/nav.php");
+			if (is_numeric($_GET["id_user"])) 
+			{
+				$id_user = $_GET["id_user"];
 
-			$id_user = $_GET["id_user"];
+				$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE id_utilisateur='" . $id_user . "'");
+				$donnees = $reponse->fetch();
+				$reponse->closeCursor();
+				?>
 
-			$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE id_utilisateur='" . $id_user . "'");
-			$donnees = $reponse->fetch();
-			$reponse->closeCursor();
-			?>
+				<div id="content">
+					<div class="formulaire marge_haut">
+						<form method="post" id='modif_user' action="#">
 
-			<div id="content">
-				<div class="formulaire marge_haut">
-					<form method="post" id='modif_user' action="#">
+							<div id="titre">Modifier</div>
+							<div class="texte">Nom :
+								<br>
+								<?php echo $donnees["nom"]; ?>
+							</div>
+							<div class="texte">Prénom :
+								<br>
+								<?php echo $donnees["prenom"]; ?>
+							</div>
+							<div class="texte">Adresse e-mail :
+								<br>
+								<?php echo $donnees["mail"]; ?>
+							</div>
+							<div class="texte">Numéro de téléphone :
+								<br>
+								<?php echo $donnees["telephone"]; ?>
+							</div>
+							<div class="texte">Type de compte :
+								<br>
+								<?php echo $donnees["type_compte"]; ?>
+							</div>
 
-						<div id="titre">Modifier</div>
-						<div class="texte">Nom :
-							<br>
-							<?php echo $donnees["nom"]; ?>
-						</div>
-						<div class="texte">Prénom :
-							<br>
-							<?php echo $donnees["prenom"]; ?>
-						</div>
-						<div class="texte">Adresse e-mail :
-							<br>
-							<?php echo $donnees["mail"]; ?>
-						</div>
-						<div class="texte">Numéro de téléphone :
-							<br>
-							<?php echo $donnees["telephone"]; ?>
-						</div>
-						<div class="texte">Type de compte :
-							<br>
-							<?php echo $donnees["type_compte"]; ?>
-						</div>
-
-					</form>
+						</form>
+					</div>
 				</div>
-			</div>
+				<?php 
+			}
+			else {
+				echo "Merci de ne pas tenter de modifier les URL à des fins malveillantes.";
+			} ?>
 		</div>
 		<?php
 	}
