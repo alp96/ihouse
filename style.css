@@ -346,4 +346,9 @@ input{
 
 table {
 	border-collapse: collapse;
+	display: inline-block;
+}
+
+.gras{
+	font-weight: bold;
 }
