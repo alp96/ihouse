@@ -55,7 +55,7 @@
 		<?php	
 		if($_SERVER["REQUEST_METHOD"] == "POST") 
 		{
-			echo($_POST["action"]);
+			echo($_POST);
 			if(isset($_POST["action"])) 
 			{
 					$_POST["submit"] = verification($_POST["submit"]);
