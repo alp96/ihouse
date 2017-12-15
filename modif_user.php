@@ -25,32 +25,28 @@
 			?>
 			<div id="content">
 
-				<div id="recherche" class="formulaire marge_haut">
-					<div id="titre">Recherche</div>
-					<div id="filling">Veuillez renseigner un champ pour lancer la recherche :</div>
+				<div id="recherche">
+					Veuillez renseigner au moins un champ pour lancer la recherche :
 					<br>
 					<form method="post" action="recherche_user.php">
 						Nom :
 						<br>
-						<input class="field" type="text" name="champs_nom">
-						<br>
-						<input id="bouton" class="no_marge" type="submit" name="valider_nom" value="Rechercher !">
+						<input type="text" name="champs_nom">
+						<input type="submit" name="valider_nom" value="Rechercher !">
 						<br>
 					</form>
 					<form method="post" action="recherche_user.php">
 						Prénom :
 						<br>
-						<input class="field" type="text" name="champs_prenom">
-						<br>
-						<input id="bouton" class="no_marge" type="submit" name="valider_prenom" value="Rechercher !">
+						<input type="text" name="champs_prenom">
+						<input type="submit" name="valider_prenom" value="Rechercher !">
 						<br>
 					</form>
 					<form method="post" action="recherche_user.php">
 						Mail :
 						<br>
-						<input class="field" type="text" name="champs_mail">
-						<br>
-						<input id="bouton" class="no_marge" type="submit" name="valider_mail" value="Rechercher !">
+						<input type="text" name="champs_mail">
+						<input type="submit" name="valider_mail" value="Rechercher !">
 						<br>
 					</form>
 

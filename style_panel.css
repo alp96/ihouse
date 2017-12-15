@@ -1,0 +1,72 @@
+#container{
+    display: inline-block;
+    position: absolute;
+    width:100%;
+    height:auto;
+    left:275px;
+    top:120px;
+}
+
+#menu_fond{
+    position:fixed;
+    height:100%;
+    z-index:4;
+}
+
+#wrap2
+{
+    z-index:5;
+}
+
+.piece
+{
+    border-radius: 10px;
+    background: rgb(80, 90, 124);
+    padding: 15px; 
+    padding-top:5px;
+    color:white;
+    margin-bottom:20px;
+}
+
+.capteurbox
+{
+    border-radius: 10px;
+    background: rgb(180, 191, 228);
+    padding: 10px; 
+    color:black;
+    width:100%;
+    height:50px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    
+}
+
+
+.capteur
+{
+    height:100%;
+    margin-left: auto;
+}
+
+.big
+{
+    font-size: 1.5em;
+    font-weight:bold;
+}
+
+.right{
+    margin-left:auto;
+}
+
+#ajoutsallebox{
+    display: flex;
+    align-items: center;
+}
+
+.titresalle{
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight:bold;
+}

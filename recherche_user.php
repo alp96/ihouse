@@ -64,14 +64,13 @@
 						if ($mail != "") {
 							$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE mail LIKE '$mail%'");
 							$counter = 0;
-							echo "<div class='titre_recherche'>Résultat de la recherche pour le mail " . $mail . "</div><br>";
+							echo "<div class='titre_recherche'>Résultat de la recherche pour le mail " . $prenom . "</div><br>";
 							while ($donnees = $reponse->fetch())
 							{
 								$counter = $counter + 1;
 								echo $counter . ')   ' . $donnees['mail'] . '   ' . $donnees['nom'] . '   ' . $donnees['prenom'];
 								echo '<br>';
-								$reponse->closeCursor();
-							}
+							$reponse->closeCursor();
 						}
 					}
 				}
