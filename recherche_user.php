@@ -49,12 +49,12 @@
 							$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE prenom LIKE '$prenom%'");
 							$counter = 0;
 							echo "<div class='titre_recherche'>Résultat de la recherche pour le prénom " . $prenom . "</div><br>";
-							echo "<table><tr><td>N°</td><td>Prénom</td><td>Nom</td><td>Adresse email</td>";
+							echo "<table><tr><td class='cellule'>N°</td><td class='cellule'>Prénom</td><td class='cellule'>Nom</td><td class='cellule'>Adresse email</td>";
 							while ($donnees = $reponse->fetch())
 							{
 								$counter = $counter + 1;
-								echo "<tr><td>";
-								echo $counter . '</td><td>' . $donnees['prenom'] . '</td><td>' . $donnees['nom'] . '</td><td>' . $donnees['mail'];
+								echo "<tr><td class='cellule'>";
+								echo $counter . '</td><td class='cellule'>' . $donnees['prenom'] . '</td><td class='cellule'>' . $donnees['nom'] . '</td><td class='cellule'>' . $donnees['mail'];
 								echo '</td></tr>';
 							}
 							echo "</table>";

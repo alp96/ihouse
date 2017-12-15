@@ -338,3 +338,7 @@ input{
 #filling{
 	padding: 0 20px;
 }
+
+.cellule{
+	border: 1px solid black;
+}
