@@ -52,12 +52,9 @@
 							echo "<table><tr><td class='cellule gras'>N°</td><td class='cellule gras'>Prénom</td><td class='cellule gras'>Nom</td><td class='cellule gras'>Adresse email</td><td class='cellule'></td>";
 							while ($donnees = $reponse->fetch())
 							{
-								echo '<pre>'; print_r($donnees); echo '</pre>';
 								$counter = $counter + 1;
 
 								$tableau = array('id_user' => $donnees['id_utilisateur']);
-
-								print_r($tableau);
 
 								$url = "http://ihouse-panel.com/git/resultat.php?" . http_build_query($tableau, '', "&");
 
