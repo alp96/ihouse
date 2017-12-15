@@ -73,9 +73,11 @@
 
 .submitcross{
     border:none;
+    background: url('images/cross.png') 0 0 transparent;
     background-image:url('images/cross.png');
     background-repeat:no-repeat;
     background-position:top left;
     width: 20px;
     height: 20px;
+    color: transparent;
 }
