@@ -90,6 +90,7 @@
 					$donnees = $reponse->fetch();
 					$reponse->closeCursor();
 					$_SESSION['user'] = $new_mail;
+					echo '<div class="ok">Adresse mail changée avec succès</div>';
 				}
 			}
 			if (isset($_POST["phone"])) 
@@ -103,6 +104,7 @@
 				{
 					$new_phone = $_POST["phone"];
 					$bdd->exec("UPDATE Utilisateur SET telephone = '$new_phone' WHERE mail = '$mail'");
+					echo '<div class="ok">Téléphone avec succès</div>';
 				}
 			}
 			if (isset($_POST["mdp_old"]) AND isset($_POST["mdp1"]) AND isset($_POST["mdp2"]))
@@ -128,6 +130,7 @@
 				{
 					$new_password = password_hash($_POST["mdp1"], PASSWORD_BCRYPT, $options);
 					$bdd->exec("UPDATE Utilisateur SET password = '$new_password' WHERE mail = '$mail'");
+					echo '<div class="ok">Mot de passe changé avec succès</div>';
 				}
 			}
 		}
