@@ -51,6 +51,10 @@
 							<br>
 							<?php echo $donnees["telephone"]; ?>
 						</div>
+						<div class="texte">Type de compte :
+							<br>
+							<?php echo $donnees["type_compte"]; ?>
+						</div>
 
 					</form>
 				</div>
