@@ -19,7 +19,6 @@
 				echo "Mme ";	
 			}
 			echo $name . '</div>';
-			}
 			?>
 
 			<div id="ID">ID client : FR 09 67 34 2C</div>
