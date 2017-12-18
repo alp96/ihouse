@@ -39,6 +39,10 @@
 							<div class="texte">Nom :
 								<br>
 								<?php echo $donnees["nom"]; ?>
+								<br>
+								<input type="text" name="new_name">
+								<br>
+								<input type="submit" name="validate_new_name">
 							</div>
 							<div class="texte">Prénom :
 								<br>
