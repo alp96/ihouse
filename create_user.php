@@ -29,6 +29,12 @@
 
 					<div id="titre">Création de compte</div>
 
+					<div class="texte">Genre</div>
+					<select name="genre" size = "1">
+						<option>Homme</option>
+						<option>Femme</option>
+					</select>
+
 					<div class="texte">Nom</div>
 					<input class="field" type="text" name="name">
 
