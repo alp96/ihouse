@@ -360,3 +360,8 @@ table {
 .gras{
 	font-weight: bold;
 }
+
+.selection{
+	background-color: #C1C5C0;
+    color: black;
+}
