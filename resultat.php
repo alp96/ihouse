@@ -42,24 +42,42 @@
 								<br>
 								<input type="text" name="new_name">
 								<br>
-								<input type="submit" name="validate_new_name">
 							</div>
 							<div class="texte">Prénom :
 								<br>
 								<?php echo $donnees["prenom"]; ?>
+								<br>
+								<input type="text" name="new_name">
+								<br>
 							</div>
 							<div class="texte">Adresse e-mail :
 								<br>
 								<?php echo $donnees["mail"]; ?>
+								<br>
+								<input type="text" name="new_name">
+								<br>
 							</div>
 							<div class="texte">Numéro de téléphone :
 								<br>
 								<?php echo $donnees["telephone"]; ?>
+								<br>
+								<input type="text" name="new_name">
+								<br>
 							</div>
 							<div class="texte">Type de compte :
 								<br>
 								<?php echo $donnees["type_compte"]; ?>
+								<br>
+								<select name="account_type" size="1">
+									<option>Client</option>
+									<option>Technicien</option>
+									<option>Maintenance</option>
+									<option>Administrateur</option>
+								</select>
+								<br>
+
 							</div>
+							<input type="submit" name="validate">
 
 						</form>
 					</div>
