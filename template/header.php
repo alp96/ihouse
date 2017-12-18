@@ -1,7 +1,6 @@
 	<div id="wrap2">
 		<img id="logo_mini" src="images/iHouse_logo_blanc.png">
 		<div class="info">
-			<img id="picture" src="images/man.png">
 
 			<?php 
 			include("template/connexionbdd.php");
@@ -9,7 +8,15 @@
 			$donnees = $reponse->fetch();
 			$reponse->closeCursor();
 
+
 			$name = $donnees["nom"];
+			if ($donnees["genre"] == "homme") {
+				echo '<img id="picture" src="images/man.png">';
+			}
+			else
+			{
+				echo '<img id="picture" src="images/woman.png">';
+			}
 			echo '<div id="username">Bonjour ';
 			if ($donnees["genre"] == "homme") {
 				echo "M. ";
