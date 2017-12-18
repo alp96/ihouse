@@ -10,7 +10,16 @@
 			$reponse->closeCursor();
 
 			$name = $donnees["nom"];
-			echo '<div id="username">Bonjour M. ' . $name . '</div>';
+			echo '<div id="username">Bonjour';
+			if ($donnees["genre"] == "homme") {
+				echo "M. ";
+			}
+			else
+			{
+				echo "Mme ";	
+			}
+			echo $name . '</div>';
+			}
 			?>
 
 			<div id="ID">ID client : FR 09 67 34 2C</div>
