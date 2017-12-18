@@ -10,7 +10,7 @@
 			$reponse->closeCursor();
 
 			$name = $donnees["nom"];
-			echo '<div id="username">Bonjour';
+			echo '<div id="username">Bonjour ';
 			if ($donnees["genre"] == "homme") {
 				echo "M. ";
 			}
