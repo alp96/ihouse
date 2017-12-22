@@ -30,10 +30,11 @@
 
 					function recherche($champs_recherche, $colonne){
 						$bdd = new PDO('mysql:host=localhost;dbname=db701520246;charset=utf8', 'root', 'ihousebddISEP');
-						echo $colonne;
 						if (isset($champs_recherche)) {
 							$champs = verification($champs_recherche);
 							if ($champs != "") {
+								$test = "SELECT * FROM Utilisateur WHERE '$colonne' LIKE '$champs%'";
+								echo $test;
 								$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE '$colonne' LIKE '$champs%'");
 								$counter = 0;
 								echo "<div class='titre_recherche'>Résultat de la recherche pour le " . $colonne . " " . $champs . "</div><br>";
