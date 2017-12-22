@@ -54,7 +54,7 @@
 						}
 					}
 
-					recherche($_POST["champs_nom"], "nom")
+					recherche($_POST["champs_nom"], "nom");
 
 					/*if (isset($_POST["champs_nom"])) {
 						$nom = verification($_POST["champs_nom"]);
