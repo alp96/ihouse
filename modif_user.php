@@ -30,20 +30,13 @@
 					<div id="filling">Veuillez renseigner un champ pour lancer la recherche :</div>
 					<br>
 					<form method="post" action="recherche_user.php">
-						Nom :
-						<br>
+						<div class="texte">Nom :</div>
 						<input class="field" type="text" name="champs_nom">
-						<br>
-						Prénom :
-						<br>
+						<div class="texte">Prénom :</div>
 						<input class="field" type="text" name="champs_prenom">
-						<br>
-						Mail :
-						<br>
+						<div class="texte">Mail :</div>
 						<input class="field" type="text" name="champs_mail">
-						<br>
 						<input id="bouton" class="no_marge" type="submit" name="valider" value="Rechercher">
-						<br>
 					</form>
 
 				</div>
