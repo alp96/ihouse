@@ -33,8 +33,6 @@
 						if (isset($champs_recherche)) {
 							$champs = verification($champs_recherche);
 							if ($champs != "") {
-								$test = "SELECT * FROM Utilisateur WHERE $colonne LIKE '$champs%'";
-								echo $test;
 								$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE $colonne LIKE '$champs%'");
 								$counter = 0;
 								echo "<div class='titre_recherche'>Résultat de la recherche pour le " . $colonne . " " . $champs . "</div><br>";
@@ -59,6 +57,10 @@
 
 					recherche($_POST["champs_nom"], "nom");
 
+					recherche($_POST["champs_prenom"], "nom");
+
+					recherche($_POST["champs_mail"], "nom");
+
 					/*if (isset($_POST["champs_nom"])) {
 						$nom = verification($_POST["champs_nom"]);
 						if ($nom != "") {
@@ -81,7 +83,7 @@
 							echo "</table>";
 							$reponse->closeCursor();
 						}
-					}*/
+					}
 
 					if (isset($_POST["champs_prenom"])) {
 						$prenom = verification($_POST["champs_prenom"]);
@@ -126,7 +128,7 @@
 							echo "</table>";
 							$reponse->closeCursor();
 						}
-					}
+					}*/
 				}
 
 				?>
