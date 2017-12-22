@@ -42,6 +42,7 @@
 								echo "<table><tr><td class='cellule gras'>N°</td><td class='cellule gras'>Nom</td><td class='cellule gras'>Prénom</td><td class='cellule gras'>Adresse email</td><td class='cellule'></td>";
 								while ($donnees = $reponse->fetch())
 								{
+									echo($donnees);
 									$counter = $counter + 1;
 
 									$tableau = array('id_user' => $donnees['id_utilisateur']);
