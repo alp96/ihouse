@@ -35,7 +35,7 @@
 						<div class="texte">Prénom :</div>
 						<input class="field" type="text" name="champs_prenom">
 						<div class="texte">Mail :</div>
-						<input class="field" type="text" name="champs_mail">
+						<input class="field" type="text" name="champs_mail" style="margin-bottom: 20px;">
 						<br>
 						<input id="bouton" class="no_marge" type="submit" name="valider" value="Rechercher">
 					</form>
