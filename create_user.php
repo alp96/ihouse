@@ -61,7 +61,6 @@
 			</div>
 		</div>
 		<?php 
-		<?php 
 
 		if($_SERVER["REQUEST_METHOD"] == "POST") 
 		{
@@ -90,7 +89,6 @@
 				}
 			}
 		}
-		?>
 	}
 	else{
 	die("<script>location.href = 'https://www.ihouse-panel.com/git/default.php'</script>");
