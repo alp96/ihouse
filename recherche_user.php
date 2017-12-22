@@ -29,6 +29,7 @@
 				{
 
 					function recherche($champs_recherche, $colonne){
+						$bdd = new PDO('mysql:host=localhost;dbname=db701520246;charset=utf8', 'root', 'ihousebddISEP');
 						if (isset($champs_recherche)) {
 							$champs = verification($champs_recherche);
 							if ($champs != "") {
