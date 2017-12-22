@@ -41,7 +41,7 @@
 						Mail :
 						<br>
 						<input class="field" type="text" name="champs_mail">
-						<br
+						<br>
 						<input id="bouton" class="no_marge" type="submit" name="valider" value="Rechercher">
 						<br>
 					</form>
