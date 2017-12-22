@@ -27,7 +27,36 @@
 				<?php 
 				if($_SERVER["REQUEST_METHOD"] == "POST") 
 				{
-					if (isset($_POST["champs_nom"])) {
+
+					function recherche($champs_recherche, $colonne){
+						if (isset($champs_recherche)) {
+							$champs = verification($champs_recherche);
+							if ($champs != "") {
+								$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE '$colonne' LIKE '$champs%'");
+								$counter = 0;
+								echo "<div class='titre_recherche'>Résultat de la recherche pour le nom " . $champs . "</div><br>";
+								echo "<table><tr><td class='cellule gras'>N°</td><td class='cellule gras'>Nom</td><td class='cellule gras'>Prénom</td><td class='cellule gras'>Adresse email</td><td class='cellule'></td>";
+								while ($donnees = $reponse->fetch())
+								{
+									$counter = $counter + 1;
+
+									$tableau = array('id_user' => $donnees['id_utilisateur']);
+
+									$url = "http://ihouse-panel.com/git/resultat.php?" . http_build_query($tableau, '', "&");
+
+									echo "<tr><td class='cellule'>";
+									echo $counter . "</td><td class='cellule'>" . $donnees['nom'] . "</td><td class='cellule'>" . $donnees['prenom'] . "</td><td class='cellule'>" . $donnees['mail'] . "</td><td class='cellule'><a href='" . $url . "'>Modifier</a>";
+									echo '</td></tr>';
+								}
+								echo "</table>";
+								$reponse->closeCursor();
+							}
+						}
+					}
+
+					recherche($_POST["champs_nom"], "nom")
+
+					/*if (isset($_POST["champs_nom"])) {
 						$nom = verification($_POST["champs_nom"]);
 						if ($nom != "") {
 							$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE nom LIKE '$nom%'");
@@ -49,7 +78,7 @@
 							echo "</table>";
 							$reponse->closeCursor();
 						}
-					}
+					}*/
 
 					if (isset($_POST["champs_prenom"])) {
 						$prenom = verification($_POST["champs_prenom"]);
