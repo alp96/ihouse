@@ -29,7 +29,7 @@
 				}
 				else
 				{
-					$id_user = $_SESSION["id_transmis"];
+					$_SESSION["id_transmis"] = $id_user;
 				}
 
 				$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE id_utilisateur='" . $id_user . "'");
