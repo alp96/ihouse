@@ -67,7 +67,6 @@
 			if (isset($_POST["name"]) AND isset($_POST["last_name"]) AND isset($_POST["mail"]) AND isset($_POST["phone"]) AND isset($_POST["account_type"]) AND isset($_POST["genre"])) {
 
 				if ($_POST["name"] != "" AND $_POST["last_name"] != "" AND $_POST["mail"] != "" AND $_POST["phone"] != ""){
-					include("template/connexionbdd.php");
 
 					$name = verification($_POST["name"]);
 					$genre = verification($_POST["genre"]);
@@ -81,7 +80,7 @@
 
 					$bdd->exec("INSERT INTO Utilisateur(id_utilisateur, nom, prenom, genre, mail, password, telephone, type_compte, id_maison) VALUES (DEFAULT, '$name', '$last_name', '$genre','$mail', '$password', '$phone', '$account_type', '$id_house')");
 
-					echo '<div class="ok">Utilisateur crée avec succès</div>';
+					echo '<div class="ok">Utilisateur crée avec succès !</div>';
 				}
 				else
 				{
