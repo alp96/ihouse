@@ -33,7 +33,9 @@
 
 				<div id="content">
 					<div class="formulaire marge_haut">
-						<form method="post" id='modif_user' action="#">
+						<form method="post" id='modif_user' action="resultat.php">
+
+							<?php $_SESSION["id_transmis"] = $id_user ?>
 
 							<div id="titre">Modifier</div>
 							<div class="texte">Nom :
@@ -47,28 +49,28 @@
 								<br>
 								<?php echo $donnees["prenom"]; ?>
 								<br>
-								<input class="field" type="text" name="new_name">
+								<input class="field" type="text" name="new_lastname">
 								<br>
 							</div>
 							<div class="texte">Adresse e-mail :
 								<br>
 								<?php echo $donnees["mail"]; ?>
 								<br>
-								<input class="field" type="text" name="new_name">
+								<input class="field" type="text" name="new_mail">
 								<br>
 							</div>
 							<div class="texte">Numéro de téléphone :
 								<br>
 								<?php echo $donnees["telephone"]; ?>
 								<br>
-								<input class="field" type="text" name="new_name">
+								<input class="field" type="text" name="new_telephone">
 								<br>
 							</div>
 							<div class="texte">Type de compte :
 								<br>
 								<?php echo $donnees["type_compte"]; ?>
 								<br>
-								<select name="account_type" size="1">
+								<select name="account_type" size="1" class="selection">
 									<option disabled selected value>Pas de modification</option>
 									<option>Client</option>
 									<option>Technicien</option>
@@ -84,6 +86,57 @@
 					</div>
 				</div>
 				<?php 
+				if($_SERVER["REQUEST_METHOD"] == "POST") 
+					{if (isset($_POST["new_name"]) OR isset($_POST["new_lastname"]) OR isset($_POST["new_mail"]) OR isset($_POST["new_telephone"]) OR isset($_POST["account_type"])) {
+
+						$id_user = $_SESSION["id_transmis"];
+						
+						//regarde quelles sont les données à modifier dans la bdd
+						if ($_POST["new_name"] != $donnees["nom"] AND $_POST["new_name"] != "") {
+							$modif_name = $_POST["new_name"];
+						}
+						elseif ($_POST["new_name"] == "" OR $_POST["new_name"] == $donnees["nom"]) {
+							$modif_name = $donnees["nom"];
+						}
+
+						if ($_POST["new_lastname"] != $donnees["prenom"] AND $_POST["new_lastname"] != "") {
+							$modif_lastname = $_POST["new_lastname"];
+						}
+						elseif ($_POST["new_lastname"] == "" OR $_POST["new_lastname"] == $donnees["prenom"]) {
+							$modif_lastname = $donnees["prenom"];
+						}
+
+						if ($_POST["new_mail"] != $donnees["mail"] AND $_POST["new_mail"] != "") {
+							$modif_mail = $_POST["new_mail"];
+						}
+						elseif ($_POST["new_mail"] == "" OR $_POST["new_mail"] == $donnees["mail"]) {
+							$modif_mail = $donnees["mail"];
+						}
+
+						if ($_POST["new_telephone"] != $donnees["telephone"] AND $_POST["new_telephone"] != "") {
+							$modif_telephone = $_POST["new_telephone"];
+						}
+						elseif ($_POST["new_telephone"] == "" OR $_POST["new_telephone"] == $donnees["telephone"]) {
+							$modif_telephone = $donnees["telephone"];
+						}
+
+						if ($_POST["account_type"] != $donnees["type_compte"] AND $_POST["account_type"] != "") {
+							$modif_telephone = $_POST["account_type"];
+						}
+						elseif ($_POST["account_type"] == "" OR $_POST["account_type"] == $donnees["type_compte"]) {
+							$modif_account = $donnees["type_compte"];
+						}
+
+						$modif_name = verification($modif_name);
+						$modif_lastname = verification($modif_lastname);
+						$modif_telephone = verification($modif_telephone);
+						$modif_mail = verification($modif_mail);
+						$modif_account = verification($modif_account);
+
+						$bdd->exec("UPDATE Utilisateur SET nom = '$modif_mail', prenom = '$modif_lastname', mail = '$modif_mail', telephone = '$modif_telephone', type_compte = '$modif_account' WHERE id_utilisateur='" . $id_user . "'");
+						echo '<div class="ok">Utilisateur modifié avec succès</div>';
+					}
+				}
 			}
 			else {
 				echo "<div class='error'>Merci de ne pas tenter de modifier les URL à des fins malveillantes.</div>";
