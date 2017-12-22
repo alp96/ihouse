@@ -4,7 +4,7 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="icon" href="images/favicon.png" />
 	<meta charset="UTF-8">
-	<title>Résultat recherche</title>
+	<title>Résultat de la recherche</title>
 </head>
 <body>
 
