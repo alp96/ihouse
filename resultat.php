@@ -22,9 +22,15 @@
 		<div id='wrap4'>
 			<?php
 			include("template/nav.php");
-			if (is_numeric($_GET["id_user"])) 
+			if (is_numeric($_GET["id_user"]) OR isset($_SESSION["id_transmis"])) 
 			{
-				$id_user = $_GET["id_user"];
+				if (isset($_GET["id_user"])) {
+					$id_user = $_GET["id_user"];
+				}
+				else
+				{
+					$id_user = $_SESSION["id_transmis"];
+				}
 
 				$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE id_utilisateur='" . $id_user . "'");
 				$donnees = $reponse->fetch();
@@ -34,8 +40,6 @@
 				<div id="content">
 					<div class="formulaire marge_haut">
 						<form method="post" id='modif_user' action="resultat.php">
-
-							<?php $_SESSION["id_transmis"] = $id_user ?>
 
 							<div id="titre">Modifier</div>
 							<div class="texte">Nom :
