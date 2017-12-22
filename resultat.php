@@ -117,7 +117,7 @@
 						$modif_telephone = verification($modif_telephone);
 						$modif_mail = verification($modif_mail);
 
-						$bdd->exec("UPDATE Utilisateur SET nom = '$modif_nom', prenom = '$modif_lastname', mail = '$modif_mail', telephone = '$modif_telephone' WHERE id_utilisateur='" . $id_user . "'");
+						$bdd->exec("UPDATE Utilisateur SET nom = '$modif_name', prenom = '$modif_lastname', mail = '$modif_mail', telephone = '$modif_telephone' WHERE id_utilisateur='" . $id_user . "'");
 						echo '<div class="ok">Utilisateur modifié avec succès</div>';
 					}
 				}
