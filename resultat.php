@@ -72,20 +72,6 @@
 								<input class="field" type="text" name="new_telephone">
 								<br>
 							</div>
-							<div class="texte">Type de compte :
-								<br>
-								<?php echo $donnees["type_compte"]; ?>
-								<br>
-								<select name="account_type" size="1" class="selection">
-									<option disabled selected value>Pas de modification</option>
-									<option>Client</option>
-									<option>Technicien</option>
-									<option>Maintenance</option>
-									<option>Administrateur</option>
-								</select>
-								<br>
-
-							</div>
 							<input id="bouton" type="submit" value="Modifier les données">
 
 						</form>
@@ -126,20 +112,12 @@
 							$modif_telephone = $donnees["telephone"];
 						}
 
-						if ($_POST["account_type"] != $donnees["type_compte"] AND $_POST["account_type"] != "") {
-							$modif_telephone = $_POST["account_type"];
-						}
-						elseif ($_POST["account_type"] == "" OR $_POST["account_type"] == $donnees["type_compte"]) {
-							$modif_account = $donnees["type_compte"];
-						}
-
 						$modif_name = verification($modif_name);
 						$modif_lastname = verification($modif_lastname);
 						$modif_telephone = verification($modif_telephone);
 						$modif_mail = verification($modif_mail);
-						$modif_account = verification($modif_account);
 
-						$bdd->exec("UPDATE Utilisateur SET nom = '$modif_mail', prenom = '$modif_lastname', mail = '$modif_mail', telephone = '$modif_telephone', type_compte = '$modif_account' WHERE id_utilisateur='" . $id_user . "'");
+						$bdd->exec("UPDATE Utilisateur SET nom = '$modif_mail', prenom = '$modif_lastname', mail = '$modif_mail', telephone = '$modif_telephone' WHERE id_utilisateur='" . $id_user . "'");
 						echo '<div class="ok">Utilisateur modifié avec succès</div>';
 					}
 				}
