@@ -32,49 +32,58 @@
 						$bdd = new PDO('mysql:host=localhost;dbname=db701520246;charset=utf8', 'root', 'ihousebddISEP');
 						
 						$champs = verification($champs_recherche);
-						if ($champs != "") {
+						if ($champs != "") 
+						{
 							$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE $colonne LIKE '$champs%'");
-							$counter = 0;
-							echo "<div class='titre_recherche'>Résultat de la recherche pour le " . $colonne . " " . $champs . "</div><br>";
-							echo "<table><tr><td class='cellule gras'>N°</td><td class='cellule gras'>Nom</td><td class='cellule gras'>Prénom</td><td class='cellule gras'>Adresse email</td><td class='cellule'></td>";
-							while ($donnees = $reponse->fetch())
+							if ($reponse->fetch() > 0)
 							{
-								$counter = $counter + 1;
+								$counter = 0;
+								echo "<div class='titre_recherche'>Résultat de la recherche pour le " . $colonne . " " . $champs . "</div><br>";
+								echo "<table><tr><td class='cellule gras'>N°</td><td class='cellule gras'>Nom</td><td class='cellule gras'>Prénom</td><td class='cellule gras'>Adresse email</td><td class='cellule'></td>";
+								while ($donnees = $reponse->fetch())
+								{
+									$counter = $counter + 1;
 
-								$tableau = array('id_user' => $donnees['id_utilisateur']);
+									$tableau = array('id_user' => $donnees['id_utilisateur']);
 
-								$url = "http://ihouse-panel.com/git/resultat.php?" . http_build_query($tableau, '', "&");
+									$url = "http://ihouse-panel.com/git/resultat.php?" . http_build_query($tableau, '', "&");
 
-								echo "<tr><td class='cellule'>";
-								echo $counter . "</td><td class='cellule'>" . $donnees['nom'] . "</td><td class='cellule'>" . $donnees['prenom'] . "</td><td class='cellule'>" . $donnees['mail'] . "</td><td class='cellule'><a href='" . $url . "'>Modifier</a>";
-								echo '</td></tr>';
+									echo "<tr><td class='cellule'>";
+									echo $counter . "</td><td class='cellule'>" . $donnees['nom'] . "</td><td class='cellule'>" . $donnees['prenom'] . "</td><td class='cellule'>" . $donnees['mail'] . "</td><td class='cellule'><a href='" . $url . "'>Modifier</a>";
+									echo '</td></tr>';
+								}
+								echo "</table>";
 							}
-							echo "</table>";
-							$reponse->closeCursor();
-						}
-					}
-
-					if (isset($_POST["champs_nom"])) {
-						recherche($_POST["champs_nom"], "nom");
-					}
-
-					if (isset($_POST["champs_prenom"])) {
-						recherche($_POST["champs_prenom"], "prenom");
-					}
-
-					if (isset($_POST["champs_mail"])) {
-						recherche($_POST["champs_mail"], "mail");
+							else
+							{
+								echo "<div class='titre_recherche'>Résultat de la recherche pour le " . $colonne . " " . $champs . "</div><br>";
+								echo "<div class='titre_recherche'>Aucun résultat !</div>";
+							}
+						$reponse->closeCursor();
 					}
 				}
 
-				?>
+				if (isset($_POST["champs_nom"])) {
+					recherche($_POST["champs_nom"], "nom");
+				}
 
-			</div>
+				if (isset($_POST["champs_prenom"])) {
+					recherche($_POST["champs_prenom"], "prenom");
+				}
+
+				if (isset($_POST["champs_mail"])) {
+					recherche($_POST["champs_mail"], "mail");
+				}
+			}
+
+			?>
+
 		</div>
-		<?php 
-	}
-	else{
-		die("<script>location.href = 'https://www.ihouse-panel.com/git/default.php'</script>");
-	}	?>
+	</div>
+	<?php 
+}
+else{
+	die("<script>location.href = 'https://www.ihouse-panel.com/git/default.php'</script>");
+}	?>
 </body>
 </html>
