@@ -24,7 +24,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 		else
 		{
 			echo '<div class="error">Champ vide !</div>';
-			die("<script>location.href = 'https://www.ihouse-panel.com/git/create_user.php'</script>");
 		}
 	}
 }
