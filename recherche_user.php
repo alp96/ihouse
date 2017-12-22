@@ -33,7 +33,7 @@
 						if (isset($champs_recherche)) {
 							$champs = verification($champs_recherche);
 							if ($champs != "") {
-								$test = "SELECT * FROM Utilisateur WHERE '$colonne' LIKE '$champs%'";
+								$test = "SELECT * FROM Utilisateur WHERE $colonne LIKE '$champs%'";
 								echo $test;
 								$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE $colonne LIKE '$champs%'");
 								$counter = 0;
