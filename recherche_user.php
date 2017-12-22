@@ -34,7 +34,7 @@
 						$champs = verification($champs_recherche);
 						if ($champs != "") 
 						{
-							$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE $colonne LIKE '$champs%'");
+							$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE $colonne LIKE '$champs%' ORDER BY $colonne");
 							if (is_array($reponse->fetch()))
 							{
 								$counter = 0;
