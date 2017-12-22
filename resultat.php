@@ -26,10 +26,12 @@
 			{
 				if (isset($_GET["id_user"])) {
 					$id_user = $_GET["id_user"];
+					echo $id_user;
+					$_SESSION["id_transmis"] = $id_user;
 				}
 				else
 				{
-					$_SESSION["id_transmis"] = $id_user;
+					$id_user = $_SESSION["id_transmis"];
 				}
 
 				$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE id_utilisateur='" . $id_user . "'");
