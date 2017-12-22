@@ -35,7 +35,7 @@
 						if ($champs != "") 
 						{
 							$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE $colonne LIKE '$champs%'");
-							if ($reponse->fetch() > 0)
+							if (is_array($reponse)
 							{
 								$counter = 0;
 								echo "<div class='titre_recherche'>Résultat de la recherche pour le " . $colonne . " " . $champs . "</div><br>";
