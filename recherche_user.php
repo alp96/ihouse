@@ -30,36 +30,41 @@
 
 					function recherche($champs_recherche, $colonne){
 						$bdd = new PDO('mysql:host=localhost;dbname=db701520246;charset=utf8', 'root', 'ihousebddISEP');
-						if (isset($champs_recherche)) {
-							$champs = verification($champs_recherche);
-							if ($champs != "") {
-								$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE $colonne LIKE '$champs%'");
-								$counter = 0;
-								echo "<div class='titre_recherche'>Résultat de la recherche pour le " . $colonne . " " . $champs . "</div><br>";
-								echo "<table><tr><td class='cellule gras'>N°</td><td class='cellule gras'>Nom</td><td class='cellule gras'>Prénom</td><td class='cellule gras'>Adresse email</td><td class='cellule'></td>";
-								while ($donnees = $reponse->fetch())
-								{
-									$counter = $counter + 1;
+						
+						$champs = verification($champs_recherche);
+						if ($champs != "") {
+							$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE $colonne LIKE '$champs%'");
+							$counter = 0;
+							echo "<div class='titre_recherche'>Résultat de la recherche pour le " . $colonne . " " . $champs . "</div><br>";
+							echo "<table><tr><td class='cellule gras'>N°</td><td class='cellule gras'>Nom</td><td class='cellule gras'>Prénom</td><td class='cellule gras'>Adresse email</td><td class='cellule'></td>";
+							while ($donnees = $reponse->fetch())
+							{
+								$counter = $counter + 1;
 
-									$tableau = array('id_user' => $donnees['id_utilisateur']);
+								$tableau = array('id_user' => $donnees['id_utilisateur']);
 
-									$url = "http://ihouse-panel.com/git/resultat.php?" . http_build_query($tableau, '', "&");
+								$url = "http://ihouse-panel.com/git/resultat.php?" . http_build_query($tableau, '', "&");
 
-									echo "<tr><td class='cellule'>";
-									echo $counter . "</td><td class='cellule'>" . $donnees['nom'] . "</td><td class='cellule'>" . $donnees['prenom'] . "</td><td class='cellule'>" . $donnees['mail'] . "</td><td class='cellule'><a href='" . $url . "'>Modifier</a>";
-									echo '</td></tr>';
-								}
-								echo "</table>";
-								$reponse->closeCursor();
+								echo "<tr><td class='cellule'>";
+								echo $counter . "</td><td class='cellule'>" . $donnees['nom'] . "</td><td class='cellule'>" . $donnees['prenom'] . "</td><td class='cellule'>" . $donnees['mail'] . "</td><td class='cellule'><a href='" . $url . "'>Modifier</a>";
+								echo '</td></tr>';
 							}
+							echo "</table>";
+							$reponse->closeCursor();
 						}
 					}
 
-					recherche($_POST["champs_nom"], "nom");
+					if (isset($_POST["champs_nom"])) {
+						recherche($_POST["champs_nom"], "nom");
+					}
 
-					recherche($_POST["champs_prenom"], "nom");
+					if (isset($_POST["champs_prenom"])) {
+						recherche($_POST["champs_prenom"], "prenom");
+					}
 
-					recherche($_POST["champs_mail"], "nom");
+					if (isset($_POST["champs_mail"])) {
+						recherche($_POST["champs_mail"], "mail");
+					}
 
 					/*if (isset($_POST["champs_nom"])) {
 						$nom = verification($_POST["champs_nom"]);
