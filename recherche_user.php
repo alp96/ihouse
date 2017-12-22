@@ -40,9 +40,9 @@
 								$counter = 0;
 								echo "<div class='titre_recherche'>Résultat de la recherche pour le " . $colonne . " " . $champs . "</div><br>";
 								echo "<table><tr><td class='cellule gras'>N°</td><td class='cellule gras'>Nom</td><td class='cellule gras'>Prénom</td><td class='cellule gras'>Adresse email</td><td class='cellule'></td>";
-								while ($donnees = $reponse->fetch())
+								echo($donnees);
+								do 
 								{
-									echo($donnees);
 									$counter = $counter + 1;
 
 									$tableau = array('id_user' => $donnees['id_utilisateur']);
@@ -52,7 +52,7 @@
 									echo "<tr><td class='cellule'>";
 									echo $counter . "</td><td class='cellule'>" . $donnees['nom'] . "</td><td class='cellule'>" . $donnees['prenom'] . "</td><td class='cellule'>" . $donnees['mail'] . "</td><td class='cellule'><a href='" . $url . "'>Modifier</a>";
 									echo '</td></tr>';
-								}
+								}while($donnees = $reponse->fetch());
 								echo "</table>";
 							}
 							else
