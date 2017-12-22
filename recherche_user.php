@@ -35,7 +35,7 @@
 							if ($champs != "") {
 								$test = "SELECT * FROM Utilisateur WHERE '$colonne' LIKE '$champs%'";
 								echo $test;
-								$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE '$colonne' LIKE '$champs%'");
+								$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE $colonne LIKE '$champs%'");
 								$counter = 0;
 								echo "<div class='titre_recherche'>Résultat de la recherche pour le " . $colonne . " " . $champs . "</div><br>";
 								echo "<table><tr><td class='cellule gras'>N°</td><td class='cellule gras'>Nom</td><td class='cellule gras'>Prénom</td><td class='cellule gras'>Adresse email</td><td class='cellule'></td>";
