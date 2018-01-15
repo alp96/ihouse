@@ -23,6 +23,8 @@
 		?>
 		<div id="content">
 
+			<div>Vos caméras de surveillance disponibles :</div>
+
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/5DgFlQD5CNY" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 		</div>
 	</div>
