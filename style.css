@@ -241,7 +241,7 @@ input{
 	height: 100px;
 	line-height: 100px;
 	padding: 0px 20px;
-	font-size: 12px;
+	font-size: 1.5em;
 }
 
 #menu > li:hover{
@@ -263,7 +263,7 @@ input{
 	position: fixed;
 	width: 100%;
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 }
 
 #logo_mini{

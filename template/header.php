@@ -21,7 +21,7 @@
 			</ul>
 		</div>
 
-		<div class="info">
+		<div class="info" style="margin-right:  10px;">
 			<?php 
 			$name = $donnees["nom"];
 			if ($donnees["genre"] == "homme") {
