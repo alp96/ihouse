@@ -1,17 +1,17 @@
 <div id="menu_fond">
-	<ul id="menu_icone">
+	<!--<ul id="menu_icone">
 		<li class="hauteur"><img class="icone" src="images/icone_panneau.png"></li>
 		<li class="hauteur"><img class="icone" src="images/icone_camera.png"></li>
 		<li class="hauteur"><img class="icone" src="images/icone_parametre.png"></li>
-		<?php 
+		<?php /*
 			if ($donnees["type_compte"] == 'Administrateur') {
 				echo "<li class='hauteur'><img class='icone' src='images/icone_create_user.png'></li>";
 			}
 			if ($donnees["type_compte"] == 'Administrateur' OR $donnees["type_compte"] == 'Maintenance') {
 				echo "<li class='hauteur'><img class='icone' src='images/icone_modif_user.png'></li>";
-			}
+			*/}
 		 ?>		
-	</ul>
+	</ul>-->
 
 	<ul id="menu">
 		<li><a href="default.php" class="link_nav">Panneau de contrôle</a></li>
