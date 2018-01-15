@@ -7,6 +7,10 @@
 				<li><a href="camera.php" class="link_nav">Vidéosurveillance</a></li>
 				<li><a href="parametre.php" class="link_nav">Gestion du compte</a></li>
 				<?php 
+				include("template/connexionbdd.php");
+				$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE mail='" . $_SESSION["user"] . "'");
+				$donnees = $reponse->fetch();
+				$reponse->closeCursor();
 				if ($donnees["type_compte"] == 'Administrateur') {
 					echo "<li><a href='create_user.php' class='link_nav'>Création utilisateur</a></li>";
 				}
@@ -15,14 +19,8 @@
 				}
 				?>
 			</ul>
-			
+
 			<?php 
-			include("template/connexionbdd.php");
-			$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE mail='" . $_SESSION["user"] . "'");
-			$donnees = $reponse->fetch();
-			$reponse->closeCursor();
-
-
 			$name = $donnees["nom"];
 			if ($donnees["genre"] == "homme") {
 				echo '<img id="picture" src="images/man.png">';
