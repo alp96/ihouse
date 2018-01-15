@@ -2,6 +2,20 @@
 		<img id="logo_mini" src="images/iHouse_logo_blanc.png">
 		<div class="info">
 
+			<ul id="menu">
+				<li><a href="default.php" class="link_nav">Panneau de contrôle</a></li>
+				<li><a href="camera.php" class="link_nav">Vidéosurveillance</a></li>
+				<li><a href="parametre.php" class="link_nav">Gestion du compte</a></li>
+				<?php 
+				if ($donnees["type_compte"] == 'Administrateur') {
+					echo "<li><a href='create_user.php' class='link_nav'>Création utilisateur</a></li>";
+				}
+				if ($donnees["type_compte"] == 'Administrateur' OR $donnees["type_compte"] == 'Maintenance') {
+					echo "<li><a href='modif_user.php' class='link_nav'>Modification utilisateur</a></li>";
+				}
+				?>
+			</ul>
+			
 			<?php 
 			include("template/connexionbdd.php");
 			$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE mail='" . $_SESSION["user"] . "'");
