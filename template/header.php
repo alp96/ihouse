@@ -40,9 +40,10 @@
 				}
 				echo $name . '</div>';
 				?>
-			</div>
 
-			<div id="ID">ID client : FR 09 67 34 2C</div>
-			<a href="logout.php" id="logout">Se déconnecter</a>
+
+				<div id="ID">ID client : FR 09 67 34 2C</div>
+				<a href="logout.php" id="logout">Se déconnecter</a>
+			</div>
 		</div>
 	</div>
