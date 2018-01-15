@@ -16,6 +16,7 @@
 		die("<script>location.href = 'https://www.ihouse-panel.com/git/login.php'</script>");
 	}
 	include("template/header.php");
+	$id_user = $_SESSION['user'];
 	?>
 	<div id='wrap4'>
 		<?php
@@ -26,6 +27,33 @@
 			<div>Vos caméras de surveillance disponibles :</div>
 
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/5DgFlQD5CNY" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
+			<div>Désactiver vos caméras</div>
+			<div>Merci de tapper votre mot de passe pour confirmer</div>
+			<form method="post" action="camera.php">
+				<input type="password" name="mdp" id="bouton">
+				<input type="submit" name="submi" value="Valider">
+			</form>
+
+			<?php 
+
+			if ($_SERVER["REQUEST_METHOD"] == "POST") {
+				if (empty($_POST["mdp"])) {
+					echo '<div class="error">Merci de saisir votre mot de passe</div>';
+				}
+				else
+				{
+					$password = verification($_POST["mdp"]);
+					$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE id_utilisateur='" . $id_user . "'");
+					$donnees = $reponse->fetch();
+					$reponse->closeCursor();
+					if (password_verify($password, $donnees["password"])) {
+						$camera = "off";
+					}
+				}
+			}
+
+			?>
 		</div>
 	</div>
 </body>
