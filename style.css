@@ -206,21 +206,21 @@ input{
 
 
 #menu{
-justify-content: center;
-    /* text-align: center; */
-    /* background-color: #cecece; */
-    list-style-type: none;
-    display: flex;
-    padding: 0;
-    margin: 0;
-    /* width: 100%; */
-    /* position: fixed; */
-    /* left: 63px; */
-    top: 120px;
-    height: 100%;
-    /* font-weight: 550; */
-    font-size: 10px;
-    vertical-align: middle;
+	justify-content: center;
+	/* text-align: center; */
+	/* background-color: #cecece; */
+	list-style-type: none;
+	display: flex;
+	padding: 0;
+	margin: 0;
+	/* width: 100%; */
+	/* position: fixed; */
+	/* left: 63px; */
+	top: 120px;
+	height: 100%;
+	/* font-weight: 550; */
+	font-size: 10px;
+	vertical-align: middle;
 }
 }
 
@@ -233,14 +233,15 @@ justify-content: center;
 }
 
 #menu > li{
-    text-align: center;
-    border-width: 2px;
-    border-style: solid;
-    border-color: #283152;
-    border-width: 0px 0px 2px 0px;
-    height: 61px;
-    line-height: 61px;
-    padding: 0px 20px;
+	text-align: center;
+	/* border-width: 2px; */
+	/* border-style: solid; */
+	/* border-color: #283152; */
+	/* border-width: 0px 0px 2px 0px; */
+	height: 100px;
+	line-height: 100px;
+	padding: 0px 20px;
+	font-size: 12px;
 }
 
 #menu > li:hover{
