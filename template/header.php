@@ -20,25 +20,27 @@
 				?>
 			</ul>
 
-			<?php 
-			$name = $donnees["nom"];
-			if ($donnees["genre"] == "homme") {
-				echo '<img id="picture" src="images/man.png">';
-			}
-			else
-			{
-				echo '<img id="picture" src="images/woman.png">';
-			}
-			echo '<div id="username">Bonjour ';
-			if ($donnees["genre"] == "homme") {
-				echo "M. ";
-			}
-			else
-			{
-				echo "Mme ";	
-			}
-			echo $name . '</div>';
-			?>
+			<div id="bonhomme">
+				<?php 
+				$name = $donnees["nom"];
+				if ($donnees["genre"] == "homme") {
+					echo '<img id="picture" src="images/man.png">';
+				}
+				else
+				{
+					echo '<img id="picture" src="images/woman.png">';
+				}
+				echo '<div id="username">Bonjour ';
+				if ($donnees["genre"] == "homme") {
+					echo "M. ";
+				}
+				else
+				{
+					echo "Mme ";	
+				}
+				echo $name . '</div>';
+				?>
+			</div>
 
 			<div id="ID">ID client : FR 09 67 34 2C</div>
 			<a href="logout.php" id="logout">Se déconnecter</a>
