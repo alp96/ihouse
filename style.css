@@ -243,17 +243,17 @@ input{
 	padding: 0px 20px;
 	font-size: 1.5em;
 }
-
+/*
 #menu > li:hover{
 	/*background-color: #283152;
 	color : white;
-	box-shadow: 2px 2px 20px #1f1f4a;*/
+	box-shadow: 2px 2px 20px #1f1f4a;
 }
 #menu > li:active{
-	/*background-color: #283152;
+	background-color: #283152;
 	color : white;
-	box-shadow: 2px 2px 20px #1f1f4a;*/
-}
+	box-shadow: 2px 2px 20px #1f1f4a;
+}*/
 
 #wrap2{
 	height: 100px;
@@ -337,12 +337,12 @@ input{
 	padding: 5px;
 	border-radius: 5px;
 }
-.link_nav:active{
+/*.link_nav:active{
 	background-color: #283152;
 	color: white;
 	box-shadow: 2px 2px 20px #1f1f4a;
 	padding: 5px;
-	border-radius: 5px;
+	border-radius: 5px;*/
 }
 
 a:active{
