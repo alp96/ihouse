@@ -17,7 +17,7 @@
 		die("<script>location.href = 'https://www.ihouse-panel.com/git/login.php'</script>");
 	}
 	include("template/header.php");
-	include("template/nav.php");
+	//include("template/nav.php");
 	?>
 	<div id="container">
 		
