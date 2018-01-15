@@ -245,14 +245,14 @@ input{
 }
 
 #menu > li:hover{
-	background-color: #283152;
+	/*background-color: #283152;
 	color : white;
-	box-shadow: 2px 2px 20px #1f1f4a;
+	box-shadow: 2px 2px 20px #1f1f4a;*/
 }
 #menu > li:active{
-	background-color: #283152;
+	/*background-color: #283152;
 	color : white;
-	box-shadow: 2px 2px 20px #1f1f4a;
+	box-shadow: 2px 2px 20px #1f1f4a;*/
 }
 
 #wrap2{
@@ -328,12 +328,19 @@ input{
 .link_nav{
 	text-decoration: none;
 	color: white;
+	padding: 5px;
 }
 .link_nav:hover{
+	background-color: #283152;
 	color: white;
+	box-shadow: 2px 2px 20px #1f1f4a;
+	padding: 5px;
 }
 .link_nav:active{
+	background-color: #283152;
 	color: white;
+	box-shadow: 2px 2px 20px #1f1f4a;
+	padding: 5px;
 }
 
 .marge_haut{
