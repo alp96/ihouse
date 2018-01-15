@@ -157,7 +157,7 @@ input{
 .info{
 	text-align: center;
 	color: white;
-	margin-left: 70%;
+	/*margin-left: 70%;*/
 	height: 100px;
 	font-size: 13px;
 	display: flex;
