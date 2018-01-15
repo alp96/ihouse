@@ -10,7 +10,7 @@
 			if ($donnees["type_compte"] == 'Administrateur' OR $donnees["type_compte"] == 'Maintenance') {
 				echo "<li class='hauteur'><img class='icone' src='images/icone_modif_user.png'></li>";
 			*/}
-		 ?>		
+		 ?>		  
 	</ul>-->
 
 	<ul id="menu">
