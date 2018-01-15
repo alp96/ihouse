@@ -206,18 +206,19 @@ input{
 
 
 #menu{
-	/*background-color: #cecece;*/
+	justify-content: center;
+	text-align: center;
+	/* background-color: #cecece; */
 	list-style-type: none;
-	display: inline-block;
-	white-space: nowrap;
+	display: flex;
 	padding: 0;
 	margin: 0;
-	width: 200px;
+	width: 100%;
 	position: fixed;
-	left: 63px;
+	/* left: 63px; */
 	top: 120px;
 	height: 100%;
-	/*font-weight: 550;*/
+	/* font-weight: 550; */
 	font-size: 19px;
 	vertical-align: middle;
 }
@@ -231,13 +232,14 @@ input{
 }
 
 #menu > li{
-	text-align: center;
-	border-width: 2px;
-	border-style : solid;
-	border-color: #283152;
-	border-width: 0px 0px 2px 0px;
-	height: 61px;
-	line-height: 61px;
+    text-align: center;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #283152;
+    border-width: 0px 0px 2px 0px;
+    height: 61px;
+    line-height: 61px;
+    padding: 0px 20px;
 }
 
 #menu > li:hover{
@@ -363,5 +365,5 @@ table {
 
 .selection{
 	background-color: #C1C5C0;
-    color: black;
+	color: black;
 }
