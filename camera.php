@@ -19,7 +19,7 @@
 	?>
 	<div id='wrap4'>
 		<?php
-		include("template/nav.php");
+		//include("template/nav.php");
 		?>
 		<div id="content">
 

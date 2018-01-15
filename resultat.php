@@ -21,7 +21,7 @@
 		?>
 		<div id='wrap4'>
 			<?php
-			include("template/nav.php");
+			//include("template/nav.php");
 			if (is_numeric($_GET["id_user"]) OR isset($_SESSION["id_transmis"])) 
 			{
 				if (isset($_GET["id_user"])) {

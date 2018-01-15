@@ -20,7 +20,7 @@
 
 	<div id='wrap4'>
 		<?php
-		include("template/nav.php");
+		//include("template/nav.php");
 
 		$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE mail='" . $donnees["mail"] . "'");
 		$donnees = $reponse->fetch();
