@@ -26,6 +26,17 @@
 
 			<div>Vos caméras de surveillance disponibles :</div>
 
+			<?php 
+
+			$reponse = $bdd->query("SELECT * FROM camera WHERE id_utilisateur='" . $id_user . "'");
+			while($donnees = $reponse->fetch())
+			{
+				echo '<iframe width="560" height="315" src="' . $donnees["url"] . '" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>';
+			}
+			$reponse->closeCursor();
+
+			 ?>
+
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/5DgFlQD5CNY" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
 			<div>Désactiver vos caméras</div>
