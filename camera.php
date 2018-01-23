@@ -86,13 +86,14 @@
 				$compteur ++;
 				if($donnees["active"] == 'false')
 				{
+					$desactive++
 					echo '<div class="ligne">Caméra n°' . $compteur . '   <a href="/git/camera.php?activate=' . $donnees["id_camera"] . '"><input type="button"  id="bouton" name="activate" value="Activer"></a></div></br>';
 				}
 			}
 
 			if ($desactive == 0) 
 			{
-				echo '<br><i>Aucune caméra n\'est désactivée pour le moment.</i>';
+				echo '<i>Aucune caméra n\'est désactivée pour le moment.</i><br>';
 			}
 
 			$reponse->closeCursor();
