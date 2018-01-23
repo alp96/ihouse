@@ -90,7 +90,7 @@
                         </div>';
             }
         }else{ //Le client est un technicien
-            $rep = $bdd->query('SELECT type_compte FROM utilisateur WHERE id_utilisateur='.$donnees['id_utilisateur'].'');
+            $rep = $bdd->query('SELECT type_compte FROM Utilisateur WHERE id_utilisateur='.$donnees['id_utilisateur'].'');
             $data = $rep->fetch();
             $rep->closeCursor();
             if ($data["type_compte"] != 'Administrateur') {
