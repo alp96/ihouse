@@ -74,7 +74,7 @@
 			}
 			if ($active == 0) 
 			{
-				echo '<i>Aucune caméra n\'est activée pour le moment.</i><br>';
+				echo '<i>Aucune caméra n\'est activée pour le moment.</i><br><br>';
 			}
 			$reponse->closeCursor();
 
