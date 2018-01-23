@@ -32,11 +32,13 @@
 			<?php 
 
 			$reponse = $bdd->query("SELECT * FROM camera WHERE id_utilisateur='" . $id_user . "'");
+			$compteur = 0;
 			while($donnees = $reponse->fetch())
 			{
+				$compteur ++;
 				if ($donnees["active"] == 'true') 
 				{
-					echo '<div class="ligne"><iframe class="camera" width="560" height="315" src="' . $donnees["url"] . '" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></div>';
+					echo '<div class="ligne">' . $compteur . '<iframe class="camera" width="560" height="315" src="' . $donnees["url"] . '" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></div>';
 
 				}
 			}
