@@ -16,7 +16,10 @@
 		die("<script>location.href = 'https://www.ihouse-panel.com/git/login.php'</script>");
 	}
 	include("template/header.php");
-	$id_user = $_SESSION['id'];
+	$id_user = $_SESSION['user'];
+	$reponse2 = $bdd->query("SELECT * FROM Utilisateur WHERE mail= '" . $id_user . "'");
+	$donnees2 = $reponse2->fetch();
+	$id_user = $donnees2["id_utilisateur"]
 	?>
 	<div id='wrap4'>
 		<?php
