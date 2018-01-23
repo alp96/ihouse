@@ -38,7 +38,7 @@
 				$compteur ++;
 				if ($donnees["active"] == 'true') 
 				{
-					echo '<div class="ligne">' . $compteur . '<iframe class="camera" width="560" height="315" src="' . $donnees["url"] . '" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></div>';
+					echo '<div class="ligne">Caméra ' . $compteur . '<br><iframe class="camera" width="560" height="315" src="' . $donnees["url"] . '" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></div>';
 
 				}
 			}
