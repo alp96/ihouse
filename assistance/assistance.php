@@ -97,7 +97,7 @@
 
 			<!--Affichage des messages en ajax-->
 			<div id="MessageHint">
-				Selectionner un sujet pour afficher les messages
+				<!--Selectionner un sujet pour afficher les messages-->
 			</div>
 
 		</div>
