@@ -39,7 +39,7 @@ function ticket_clic(ticket_number)
             document.getElementById("messageTitle").innerHTML =document.getElementById("ticket_"+ticket_number).innerHTML;
         }
     }
-	ajax_send("POST","getMessage.php","ticket="+ticket_number);
+	ajax_send("POST","assistance/getMessage.php","ticket="+ticket_number);
 }	
 
 
@@ -54,7 +54,7 @@ function post_message() {
        		ticket_clic(0);
        	}
     }
-    ajax_send("POST","message_post.php","message="+document.getElementById("message").value);
+    ajax_send("POST","assistance/message_post.php","message="+document.getElementById("message").value);
 }
 
 
@@ -69,7 +69,7 @@ function post_sujet() {
         	location.reload();
         }
     }				
-	ajax_send("POST","ticket_post.php","sujet_ticket="+document.getElementById("ticket_inbox").value);
+	ajax_send("POST","assistance/ticket_post.php","sujet_ticket="+document.getElementById("ticket_inbox").value);
 }
 
 
@@ -88,6 +88,6 @@ function resolve_ticket(ticket_number)
 				ticket_clic(0);
 			}
 		}
-		ajax_send("POST","ticket_resolve.php","id_ticket="+ticket_number);
+		ajax_send("POST","assistance/ticket_resolve.php","id_ticket="+ticket_number);
 	}
 }
