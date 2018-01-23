@@ -53,6 +53,12 @@
   		}	
 
 		#container{
+			display: inline-block;
+			position: absolute;
+			width:100%;
+			height:auto;
+			left:0px;
+			top:140px;
 		    	display: flex;
     			justify-content: space-around;
 		}
