@@ -77,22 +77,24 @@
 
 			<?php 
 
-			$reponse = $bdd->query("SELECT * FROM camera WHERE id_utilisateur='" . $id_user . "' AND active='false'");
-			$reponse4 = $bdd->query("SELECT * FROM camera WHERE id_utilisateur='" . $id_user . "' AND active='false'");
+			$reponse = $bdd->query("SELECT * FROM camera WHERE id_utilisateur='" . $id_user . "'");
 			$compteur = 0;
+			$desactive = 0;
 
-			if ($reponse4->fetchAll() === false) 
+			while($donnees = $reponse->fetch())
 			{
-				echo "vide";
-			}
-			else
-			{
-				while($donnees = $reponse->fetch())
+				$compteur ++;
+				if($donnees["active"] == 'false')
 				{
-					$compteur ++;
 					echo '<div class="ligne">Caméra n°' . $compteur . '   <a href="/git/camera.php?activate=' . $donnees["id_camera"] . '"><input type="button"  id="bouton" name="activate" value="Activer"></a></div></br>';
 				}
 			}
+
+			if ($desactive == 0) 
+			{
+				echo '<br><i>Aucune caméra n\'est désactivée pour le moment.</i>';
+			}
+
 			$reponse->closeCursor();
 
 			if ($_SERVER["REQUEST_METHOD"] == "POST") {
