@@ -1,11 +1,9 @@
 <?php
 	session_start();
 
-	//$_SESSION['id_utilisateur'] = 12;
-
 	//include("../template/connexionbdd.php");
 
-/*Cette fonction vérifie le type de compte du client (simple-user ou technicien/admin)*//*
+/*Cette fonction vérifie le type de compte du client (simple-user ou technicien/admin)*/
 	$reponse = $bdd->query('SELECT type_compte FROM Utilisateur WHERE id_utilisateur='.$_SESSION['id_utilisateur'].'');
 					$donnees = $reponse->fetch();
 					$reponse->closeCursor();
@@ -14,8 +12,8 @@
 					}
 					if ($donnees["type_compte"] == 'Administrateur' OR $donnees["type_compte"] == 'Technicien') {
 						$_SESSION['droit_maintenance'] = 1;
-					}*/
-echo 'id = '.$_SESSION['id_utilisateur'].'';
+					}
+echo 'droit= '.$_SESSION['droit_maintenance'].'';
 ?>
 
 <!DOCTYPE html>
