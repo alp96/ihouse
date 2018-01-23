@@ -40,8 +40,6 @@
 
 			 ?>
 
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/5DgFlQD5CNY" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-
 			<div>Désactiver vos caméras</div>
 			<div>Merci de tapper votre mot de passe pour confirmer</div>
 			<form method="post" action="camera.php">
