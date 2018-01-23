@@ -34,7 +34,7 @@
 			$reponse = $bdd->query("SELECT * FROM camera WHERE id_utilisateur='" . $id_user . "'");
 			while($donnees = $reponse->fetch())
 			{
-				echo '<div class="camera"><iframe width="560" height="315" src="' . $donnees["url"] . '" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></div>';
+				echo '<iframe class="camera" width="560" height="315" src="' . $donnees["url"] . '" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>';
 			}
 			$reponse->closeCursor();
 
