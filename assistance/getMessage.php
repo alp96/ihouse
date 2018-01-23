@@ -20,7 +20,7 @@
                 //Si le ticket n'appartient pas à l'utilisateur, ticket à afficher => plus récent ticket créer
                 $reponse = $bdd->query('SELECT id_ticket FROM ticket WHERE id_utilisateur='.$_SESSION['id_utilisateur'].' ORDER BY id_ticket DESC LIMIT 0, 1');
                 $donnees = $reponse->fetch();                
-                if(isset($donnees['id_ticket'])
+                if(isset($donnees['id_ticket']))
                 {
                     $_SESSION['dernier_ticket_consulte']=$donnees['id_ticket'];
                 }else
