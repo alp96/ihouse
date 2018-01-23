@@ -32,7 +32,6 @@
 			<?php 
 
 			$reponse = $bdd->query("SELECT * FROM camera WHERE id_utilisateur='" . $id_user . "'");
-			echo $id_user . 'ok';
 			while($donnees = $reponse->fetch())
 			{
 				echo $id_user;
