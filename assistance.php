@@ -98,14 +98,14 @@ echo $_SESSION['droit_maintenance'];
 
 			<!--Affichage des messages en ajax-->
 			<div id="MessageHint">
-				<!--Selectionner un sujet pour afficher les messages-->
+				Selectionner un sujet pour afficher les messages
 			</div>
 
 		</div>
 
 		<script>
 			//On simule un clique au chargement de la page pour que ajax charge les messages du dernier ticket consulté
-			//ticket_clic(0);
+			ticket_clic(0);
 		</script>
 
 	</body>
