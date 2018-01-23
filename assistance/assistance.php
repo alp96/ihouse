@@ -5,7 +5,7 @@
 
 	//include("../template/connexionbdd.php");
 
-/*Cette fonction vérifie le type de compte du client (simple-user ou technicien/admin)*/
+/*Cette fonction vérifie le type de compte du client (simple-user ou technicien/admin)*//*
 	$reponse = $bdd->query('SELECT type_compte FROM Utilisateur WHERE id_utilisateur='.$_SESSION['id_utilisateur'].'');
 					$donnees = $reponse->fetch();
 					$reponse->closeCursor();
