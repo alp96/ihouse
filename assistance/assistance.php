@@ -23,8 +23,8 @@
 		<title>Assistance</title>
 		<meta charset="utf-8" />
 
-		<link rel="stylesheet" href="style.css">
-		<link rel="stylesheet" href="style_panel.css">
+		<link rel="stylesheet" href="../style.css">
+		<link rel="stylesheet" href="../style_panel.css">
 		<link rel="stylesheet" href="style_Boite_Message.css">
 		<link rel="stylesheet" href="style_Boite_ticket.css">
 
@@ -60,7 +60,7 @@
 	<body>
 
 		<?php
-			include("template/header.php");
+			include("../template/header.php");
 			//include("../template/nav.php");
 		?>
 
