@@ -70,7 +70,7 @@
 			while($donnees = $reponse->fetch())
 			{
 				$compteur ++;
-				echo '<div class="ligne">Caméra n°' . $compteur . '   <a href="/camera.php?activate=' . $donnees["id_camera"] . '"><input type="button" name="activate" value="Activer"></a></div></br>';
+				echo '<div class="ligne">Caméra n°' . $compteur . '   <a href="/git/camera.php?activate=' . $donnees["id_camera"] . '"><input type="button" name="activate" value="Activer"></a></div></br>';
 			}
 			$reponse->closeCursor();
 
