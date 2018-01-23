@@ -1,12 +1,12 @@
 <?php
 	session_start();
 
-	$_SESSION['id_utilisateur'] = 666;
+	$_SESSION['id_utilisateur'] = 11;
 
 	include("../template/connexionbdd.php");
 
 /*Cette fonction vérifie le type de compte du client (simple-user ou technicien/admin)*/
-	$reponse = $bdd->query('SELECT type_compte FROM utilisateur WHERE id_utilisateur='.$_SESSION['id_utilisateur'].'');
+	$reponse = $bdd->query('SELECT type_compte FROM Utilisateur WHERE id_utilisateur='.$_SESSION['id_utilisateur'].'');
 					$donnees = $reponse->fetch();
 					$reponse->closeCursor();
 					if ($donnees["type_compte"] != 'Administrateur') {
@@ -62,8 +62,8 @@
 	<body>
 
 		<?php
-			include("../template/header.php");
-			include("../template/nav.php");
+			//include("../template/header.php");
+			//include("../template/nav.php");
 		?>
 
 		<div id="container">
