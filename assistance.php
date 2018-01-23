@@ -13,6 +13,7 @@
 					if ($donnees["type_compte"] == 'Administrateur' OR $donnees["type_compte"] == 'Technicien') {
 						$_SESSION['droit_maintenance'] = 1;
 					}
+echo $_SESSION['droit_maintenance'];
 ?>
 
 <!DOCTYPE html>
@@ -60,7 +61,7 @@
 	<body>
 
 		<?php
-			include("template/header.php");
+			//include("template/header.php");
 			//include("../template/nav.php");
 		?>
 
@@ -89,7 +90,7 @@
 				</thead>
 				<tbody id="tbodysujet">		
 					<?php
-						include("assistance/getTicket.php");
+						//include("assistance/getTicket.php");
 					?>
 			    </tbody>
 			</table>
