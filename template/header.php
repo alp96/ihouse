@@ -8,7 +8,9 @@
 				<li><a href="parametre.php" class="link_nav">Gestion du compte</a></li>
 				<li><a href="assistance.php" class="link_nav">Assistance</a></li>
 				<?php 
-				include("template/connexionbdd.php");
+				if(!@include_once('template/connexionbdd.php')) {
+  						include("template/connexionbdd.php");
+					}				
 				$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE mail='" . $_SESSION["user"] . "'");
 				$donnees = $reponse->fetch();
 				$reponse->closeCursor();
