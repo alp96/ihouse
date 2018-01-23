@@ -54,12 +54,11 @@
 
 		#container{
 			display: inline-block;
-			border: 1px solid black;
 			position: absolute;
 			width:100%;
 			height:auto;
 			left:0px;
-			top:120px;
+			top:140px;
 		    	display: flex;
     			justify-content: space-around;
 		}
