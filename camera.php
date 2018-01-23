@@ -56,7 +56,7 @@
 	<div id='wrap4'>
 		<div id="content">
 
-			<div style="padding: 20px;">Vos caméras de surveillance disponibles :</div>
+			<div class="titre_cam">Vos caméras de surveillance disponibles :</div>
 
 			<?php 
 
@@ -79,7 +79,7 @@
 			$reponse->closeCursor();
 
 			?>
-			<div style="padding: 20px;">Vos caméras désactivées :</div>
+			<div class="titre_cam">Vos caméras désactivées :</div>
 
 			<?php 
 

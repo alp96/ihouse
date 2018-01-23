@@ -400,3 +400,10 @@ table {
 {
 	display: inline-block;
 }
+
+.titre_cam
+{
+	padding: 20px;
+    font-weight: bold;
+    font-size: 1.3em;
+}
