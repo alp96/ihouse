@@ -90,7 +90,7 @@ echo $_SESSION['droit_maintenance'];
 				</thead>
 				<tbody id="tbodysujet">		
 					<?php
-						//include("assistance/getTicket.php");
+						include("assistance/getTicket.php");
 					?>
 			    </tbody>
 			</table>
