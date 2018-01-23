@@ -13,7 +13,7 @@
 					if ($donnees["type_compte"] == 'Administrateur' OR $donnees["type_compte"] == 'Technicien') {
 						$_SESSION['droit_maintenance'] = 1;
 					}
-echo $_SESSION['droit_maintenance'];
+/*echo $_SESSION['droit_maintenance'];*/
 ?>
 
 <!DOCTYPE html>
