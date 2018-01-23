@@ -20,11 +20,27 @@
 	$reponse2 = $bdd->query("SELECT * FROM Utilisateur WHERE mail= '" . $id_user . "'");
 	$donnees2 = $reponse2->fetch();
 	$id_user = $donnees2["id_utilisateur"]
+
+
+	if ($_SERVER["REQUEST_METHOD"] == "GET") 
+	{
+		if (!empty($_GET["activate"])) 
+		{
+			if (is_numeric($_GET["activate"])) 
+			{
+				$id_camera = $_GET["activate"];
+				$reponse3 = $bdd->query("SELECT * FROM camera WHERE id_utilisateur='" . $id_user . "' AND id_camera = '" . $id_camera . "' AND active = 'false'");
+				$donnees3 = ($reponse3->fetchColumn()==0)?1:0;
+				if ($donnees3 == 0) 
+				{
+					$new_camera = $bdd->query("UPDATE camera SET active = 'true' WHERE id_camera ='$id_camera'");
+				}
+			}
+		}
+	}
+
 	?>
 	<div id='wrap4'>
-		<?php
-		//include("template/nav.php");
-		?>
 		<div id="content">
 
 			<div style="padding: 20px;">Vos caméras de surveillance disponibles :</div>
@@ -54,7 +70,7 @@
 			while($donnees = $reponse->fetch())
 			{
 				$compteur ++;
-				echo '<div class="ligne">Caméra n°' . $compteur . '   <input type="button" name="' . $compteur . '" value="Activer"></div></br>';
+				echo '<div class="ligne">Caméra n°' . $compteur . '   <a href="/camera.php?activate=' . $donnees["id_camera"] . '"><input type="button" name="activate" value="Activer"></a></div></br>';
 			}
 			$reponse->closeCursor();
 
