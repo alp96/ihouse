@@ -80,6 +80,9 @@
 			$reponse = $bdd->query("SELECT * FROM camera WHERE id_utilisateur='" . $id_user . "' AND active='false'");
 			$compteur = 0;
 
+			if ($reponse->fetchAll() !== false) {
+				echo "vide";
+			}
 			while($donnees = $reponse->fetch())
 			{
 				$compteur ++;
