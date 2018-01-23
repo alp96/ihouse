@@ -36,11 +36,25 @@
 			while($donnees = $reponse->fetch())
 			{
 				$compteur ++;
-				if ($donnees["active"] == 'true') 
+				if($donnees["active"] == 'true')
 				{
-					echo '<div class="ligne">Caméra ' . $compteur . '<br><iframe class="camera" width="560" height="315" src="' . $donnees["url"] . '" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></div>';
-
+					echo '<div class="ligne">Caméra n°' . $compteur . '<br><iframe class="camera" width="560" height="315" src="' . $donnees["url"] . '" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></div>';
 				}
+			}
+			$reponse->closeCursor();
+
+			?>
+			<div style="padding: 20px;">Vos caméras désactivés :</div>
+
+			<?php 
+
+			$reponse = $bdd->query("SELECT * FROM camera WHERE id_utilisateur='" . $id_user . "' AND active='false'");
+			$compteur = 0;
+
+			while($donnees = $reponse->fetch())
+			{
+				$compteur ++;
+				echo '<div class="ligne">Caméra n°' . $compteur . '<input type="button" name="activate" value="' . $compteur . '"></div></br>';
 			}
 			$reponse->closeCursor();
 
