@@ -398,5 +398,5 @@ table {
 
 .ligne
 {
-	display: inline;
+	display: inline-block;
 }
