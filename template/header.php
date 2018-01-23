@@ -2,18 +2,22 @@
 		<img id="logo_mini" src="images/iHouse_logo_blanc.png">
 		<div class="info">
 
+			<?php 
+			if(!@include_once('template/connexionbdd.php')) 
+			{
+				include("template/connexionbdd.php");
+			}				 
+			$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE mail='" . $_SESSION["user"] . "'");
+			$donnees = $reponse->fetch();
+			$reponse->closeCursor();
+			?>
+
 			<ul id="menu">
-				<li><a href="default.php" class="link_nav">Panneau de contrôle</a></li>
-				<li><a href="camera.php" class="link_nav">Vidéosurveillance</a></li>
-				<li><a href="parametre.php" class="link_nav">Gestion du compte</a></li>
-				<li><a href="assistance.php" class="link_nav">Assistance</a></li>
+				<li <?php if ($donnees["type_compte"] != 'Administrateur' AND $donnees["type_compte"] != 'Maintenance') {echo 'style="font-size: 1.9em;"';} ?>><a href="default.php" class="link_nav">Panneau de contrôle</a></li>
+				<li <?php if ($donnees["type_compte"] != 'Administrateur' AND $donnees["type_compte"] != 'Maintenance') {echo 'style="font-size: 1.9em;"';} ?>><a href="camera.php" class="link_nav">Vidéosurveillance</a></li>
+				<li <?php if ($donnees["type_compte"] != 'Administrateur' AND $donnees["type_compte"] != 'Maintenance') {echo 'style="font-size: 1.9em;"';} ?>><a href="parametre.php" class="link_nav">Gestion du compte</a></li>
+				<li <?php if ($donnees["type_compte"] != 'Administrateur' AND $donnees["type_compte"] != 'Maintenance') {echo 'style="font-size: 1.9em;"';} ?>><a href="assistance.php" class="link_nav">Assistance</a></li>
 				<?php 
-				if(!@include_once('template/connexionbdd.php')) {
-  						include("template/connexionbdd.php");
-					}				
-				$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE mail='" . $_SESSION["user"] . "'");
-				$donnees = $reponse->fetch();
-				$reponse->closeCursor();
 				if ($donnees["type_compte"] == 'Administrateur') {
 					echo "<li><a href='create_user.php' class='link_nav'>Création utilisateur</a></li>";
 				}
