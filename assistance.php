@@ -29,7 +29,7 @@ echo $_SESSION['droit_maintenance'];
 		<link rel="stylesheet" href="assistance/style_Boite_Message.css">
 		<link rel="stylesheet" href="assistance/style_Boite_ticket.css">
 
-		<link rel="icon" href="../images/favicon.png" />
+		<link rel="icon" href="images/favicon.png" />
 
 		<script type="text/javascript" src="assistance/script_assistance.js"></script>
 
