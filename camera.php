@@ -43,7 +43,7 @@
 			<div>Désactiver vos caméras</div>
 			<div>Merci de tapper votre mot de passe pour confirmer</div>
 			<form method="post" action="camera.php">
-				<input type="password" name="mdp" class="field">
+				<input type="password" name="mdp" class="field" style="width: auto;">
 				<input type="submit" name="submi" value="Valider" id="bouton">
 			</form>
 
