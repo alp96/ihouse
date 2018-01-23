@@ -86,7 +86,7 @@
 				$compteur ++;
 				if($donnees["active"] == 'false')
 				{
-					$desactive++
+					$desactive++;
 					echo '<div class="ligne">Caméra n°' . $compteur . '   <a href="/git/camera.php?activate=' . $donnees["id_camera"] . '"><input type="button"  id="bouton" name="activate" value="Activer"></a></div></br>';
 				}
 			}
