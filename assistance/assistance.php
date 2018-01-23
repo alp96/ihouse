@@ -1,7 +1,7 @@
 <?php
 	session_start();
-/*
-	$_SESSION['id_utilisateur'] = 12;
+
+	//$_SESSION['id_utilisateur'] = 12;
 
 	//include("../template/connexionbdd.php");
 
@@ -15,6 +15,7 @@
 					if ($donnees["type_compte"] == 'Administrateur' OR $donnees["type_compte"] == 'Technicien') {
 						$_SESSION['droit_maintenance'] = 1;
 					}*/
+echo 'id = '.$_SESSION['id_utilisateur'].'';
 ?>
 
 <!DOCTYPE html>
