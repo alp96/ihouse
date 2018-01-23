@@ -54,7 +54,7 @@
 			while($donnees = $reponse->fetch())
 			{
 				$compteur ++;
-				echo '<div class="ligne">Caméra n°' . $compteur . '<input type="button" name="activate" value="' . $compteur . '"></div></br>';
+				echo '<div class="ligne">Caméra n°' . $compteur . '   <input type="button" name="' . $compteur . '" value="Activer"></div></br>';
 			}
 			$reponse->closeCursor();
 
