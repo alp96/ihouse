@@ -36,7 +36,7 @@
 			{
 				if ($donnees["active"] == 'true') 
 				{
-					echo '<iframe class="camera" width="560" height="315" src="' . $donnees["url"] . '" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>';				}
+					echo '<iframe class="camera" width="560" height="315" src="' . $donnees["url"] . '" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>';
 
 				}
 			}
