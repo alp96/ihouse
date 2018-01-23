@@ -1,6 +1,6 @@
 <?php
     session_start();
-    //include("template/connexionbdd.php");
+    include("template/connexionbdd.php");
 
     
     if(isset($_POST['ticket']))//On verifie que le post contient bien un sujet
