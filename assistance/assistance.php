@@ -1,7 +1,7 @@
 <?php
 	session_start();
 
-	$_SESSION['id_utilisateur'] = 11;
+	$_SESSION['id_utilisateur'] = 12;
 
 	include("../template/connexionbdd.php");
 
