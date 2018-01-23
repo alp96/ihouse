@@ -19,7 +19,7 @@
 	$id_user = $_SESSION['user'];
 	$reponse2 = $bdd->query("SELECT * FROM Utilisateur WHERE mail= '" . $id_user . "'");
 	$donnees2 = $reponse2->fetch();
-	$id_user = $donnees2["id_utilisateur"]
+	$id_user = $donnees2["id_utilisateur"];
 
 
 	if ($_SERVER["REQUEST_METHOD"] == "GET") 
