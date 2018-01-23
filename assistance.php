@@ -53,7 +53,8 @@
   		}	
 
 		#container{
-		    display: flex;
+		    	display: flex;
+    			justify-content: space-around;
 		}
 
 	</style>
