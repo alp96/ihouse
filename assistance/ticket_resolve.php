@@ -1,7 +1,7 @@
 <?php
 	session_start();
 
-	//include("../template/connexionbdd.php");
+	include("../template/connexionbdd.php");
 
 
 	/*Mise à 1 de la valeur "résolu" dans la BDD à l'aide d'une requête préparée*/
