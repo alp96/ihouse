@@ -68,6 +68,7 @@
 				if (password_verify($_POST["password"], $donnees["password"]))
 				{
 					$_SESSION['user'] = $_POST['mail'];
+					$_SESSION['id_utilisateur']=$donnees["id_utilisateur"];
 					die("<script>location.href = 'https://www.ihouse-panel.com/git/default.php'</script>");
 				}
 				else 
