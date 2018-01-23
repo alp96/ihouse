@@ -37,6 +37,19 @@
 				}
 			}
 		}
+		if (!empty($_GET["desactivate"]))
+		{
+			if (is_numeric($_GET["desactivate"])) 
+			{
+				$id_camera = $_GET["desactivate"];
+				$reponse3 = $bdd->query("SELECT * FROM camera WHERE id_utilisateur='" . $id_user . "' AND id_camera = '" . $id_camera . "' AND active = 'true'");
+				$donnees3 = ($reponse3->fetchColumn()==0)?1:0;
+				if ($donnees3 == 0) 
+				{
+					$new_camera = $bdd->query("UPDATE camera SET active = 'false' WHERE id_camera ='$id_camera'");
+				}
+			}
+		}
 	}
 
 	?>
@@ -54,13 +67,13 @@
 				$compteur ++;
 				if($donnees["active"] == 'true')
 				{
-					echo '<div class="ligne">Caméra n°' . $compteur . '<br><iframe class="camera" width="560" height="315" src="' . $donnees["url"] . '" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></div>';
+					echo '<div class="ligne">Caméra n°' . $compteur . '<a href="/git/camera.php?desactivate=' . $donnees["id_camera"] . '"><input type="button" name="activate" value="Activer"></a><br><iframe class="camera" width="560" height="315" src="' . $donnees["url"] . '" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></div>';
 				}
 			}
 			$reponse->closeCursor();
 
 			?>
-			<div style="padding: 20px;">Vos caméras désactivés :</div>
+			<div style="padding: 20px;">Vos caméras désactivées :</div>
 
 			<?php 
 
@@ -73,17 +86,6 @@
 				echo '<div class="ligne">Caméra n°' . $compteur . '   <a href="/git/camera.php?activate=' . $donnees["id_camera"] . '"><input type="button" name="activate" value="Activer"></a></div></br>';
 			}
 			$reponse->closeCursor();
-
-			?>
-
-			<div style="padding-top: 20px;">Désactiver vos caméras :</div>
-			<div>Merci de tapper votre mot de passe pour confirmer</div>
-			<form method="post" action="camera.php">
-				<input type="password" name="mdp" class="field" style="width: auto;">
-				<input type="submit" name="submi" value="Valider" id="bouton">
-			</form>
-
-			<?php 
 
 			if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				if (empty($_POST["mdp"])) {
