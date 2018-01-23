@@ -90,7 +90,7 @@ echo 'droit= '.$_SESSION['droit_maintenance'].'';*/
 				</thead>
 				<tbody id="tbodysujet">		
 					<?php
-						include("getTicket.php");
+						//include("getTicket.php");
 					?>
 			    </tbody>
 			</table>
