@@ -69,7 +69,7 @@
 				if($donnees["active"] == 'true')
 				{
 					$active++;
-					echo '<div class="ligne">Caméra n°' . $compteur . '   <a href="/git/camera.php?desactivate=' . $donnees["id_camera"] . '"><input type="button" name="activate" value="Désactiver" id="bouton"></a><br><iframe class="camera" width="560" height="315" src="' . $donnees["url"] . '" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></div>';
+					echo '<div class="ligne">Caméra n°' . $compteur . '   <a href="/git/camera.php?desactivate=' . $donnees["id_camera"] . '"><input type="button" name="activate" value="Désactiver" id="bouton" style="margin-top: 10px;"></a><br><iframe class="camera" width="560" height="315" src="' . $donnees["url"] . '" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></div>';
 				}  
 			}
 			if ($active == 0) 
@@ -93,7 +93,7 @@
 				if($donnees["active"] == 'false')
 				{
 					$desactive++;
-					echo '<div class="ligne">Caméra n°' . $compteur . '   <a href="/git/camera.php?activate=' . $donnees["id_camera"] . '"><input type="button"  id="bouton" name="activate" value="Activer"></a></div></br>';
+					echo '<div class="ligne">Caméra n°' . $compteur . '   <a href="/git/camera.php?activate=' . $donnees["id_camera"] . '"><input type="button"  id="bouton" style="margin-top: 10px;" name="activate" value="Activer"></a></div></br>';
 				}
 			}
 
