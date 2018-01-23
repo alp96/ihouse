@@ -67,7 +67,7 @@
 				$compteur ++;
 				if($donnees["active"] == 'true')
 				{
-					echo '<div class="ligne">Caméra n°' . $compteur . '   <a href="/git/camera.php?desactivate=' . $donnees["id_camera"] . '"><input type="button" name="activate" value="Désactiver"></a><br><iframe class="camera" width="560" height="315" src="' . $donnees["url"] . '" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></div>';
+					echo '<div class="ligne">Caméra n°' . $compteur . '   <a href="/git/camera.php?desactivate=' . $donnees["id_camera"] . '"><input type="button" name="activate" value="Désactiver" class="button"></a><br><iframe class="camera" width="560" height="315" src="' . $donnees["url"] . '" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></div>';
 				}  
 			}
 			$reponse->closeCursor();
@@ -83,7 +83,7 @@
 			while($donnees = $reponse->fetch())
 			{
 				$compteur ++;
-				echo '<div class="ligne">Caméra n°' . $compteur . '   <a href="/git/camera.php?activate=' . $donnees["id_camera"] . '"><input type="button" name="activate" value="Activer"></a></div></br>';
+				echo '<div class="ligne">Caméra n°' . $compteur . '   <a href="/git/camera.php?activate=' . $donnees["id_camera"] . '"><input type="button"  class="button" name="activate" value="Activer"></a></div></br>';
 			}
 			$reponse->closeCursor();
 
