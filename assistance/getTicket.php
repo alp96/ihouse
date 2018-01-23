@@ -1,6 +1,6 @@
 <?php
 
-    include("../template/connexionbdd.php");
+    //include("../template/connexionbdd.php");
     
     /* Récupération des sujets*/
     if ($_SESSION['droit_maintenance']==0) {
