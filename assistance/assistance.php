@@ -13,7 +13,6 @@
 					if ($donnees["type_compte"] == 'Administrateur' OR $donnees["type_compte"] == 'Technicien') {
 						$_SESSION['droit_maintenance'] = 1;
 					}
-echo 'droit= '.$_SESSION['droit_maintenance'].'';
 ?>
 
 <!DOCTYPE html>
@@ -61,7 +60,7 @@ echo 'droit= '.$_SESSION['droit_maintenance'].'';
 	<body>
 
 		<?php
-			//include("../template/header.php");
+			include("../template/header.php");
 			//include("../template/nav.php");
 		?>
 
