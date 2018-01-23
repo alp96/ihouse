@@ -60,7 +60,7 @@
 
 			?>
 
-			<div>Désactiver vos caméras</div>
+			<div style="padding: 20px;">Désactiver vos caméras</div>
 			<div>Merci de tapper votre mot de passe pour confirmer</div>
 			<form method="post" action="camera.php">
 				<input type="password" name="mdp" class="field" style="width: auto;">
