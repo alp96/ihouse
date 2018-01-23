@@ -62,13 +62,19 @@
 
 			$reponse = $bdd->query("SELECT * FROM camera WHERE id_utilisateur='" . $id_user . "'");
 			$compteur = 0;
+			$active = 0;
 			while($donnees = $reponse->fetch())
 			{
 				$compteur ++;
 				if($donnees["active"] == 'true')
 				{
+					$active++;
 					echo '<div class="ligne">Caméra n°' . $compteur . '   <a href="/git/camera.php?desactivate=' . $donnees["id_camera"] . '"><input type="button" name="activate" value="Désactiver" id="bouton"></a><br><iframe class="camera" width="560" height="315" src="' . $donnees["url"] . '" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></div>';
 				}  
+			}
+			if ($active == 0) 
+			{
+				echo '<i>Aucune caméra n\'est activée pour le moment.</i><br>';
 			}
 			$reponse->closeCursor();
 
