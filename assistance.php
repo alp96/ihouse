@@ -1,9 +1,9 @@
 <?php
 	session_start();
 
-	//include("template/connexionbdd.php");
+	include("template/connexionbdd.php");
 
-/*Cette fonction vérifie le type de compte du client (simple-user ou technicien/admin)*//*
+/*Cette fonction vérifie le type de compte du client (simple-user ou technicien/admin)*/
 	$reponse = $bdd->query('SELECT type_compte FROM Utilisateur WHERE id_utilisateur='.$_SESSION['id_utilisateur'].'');
 					$donnees = $reponse->fetch();
 					$reponse->closeCursor();
@@ -12,7 +12,8 @@
 					}
 					if ($donnees["type_compte"] == 'Administrateur' OR $donnees["type_compte"] == 'Technicien') {
 						$_SESSION['droit_maintenance'] = 1;
-					}*/
+					}
+echo $_SESSION['droit_maintenance'];
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +29,7 @@
 		<link rel="stylesheet" href="assistance/style_Boite_Message.css">
 		<link rel="stylesheet" href="assistance/style_Boite_ticket.css">
 
-		<link rel="icon" href="../images/favicon.png" />
+		<link rel="icon" href="images/favicon.png" />
 
 		<script type="text/javascript" src="assistance/script_assistance.js"></script>
 
@@ -60,7 +61,7 @@
 	<body>
 
 		<?php
-			include("template/header.php");
+			//include("template/header.php");
 			//include("../template/nav.php");
 		?>
 
