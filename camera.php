@@ -16,7 +16,7 @@
 		die("<script>location.href = 'https://www.ihouse-panel.com/git/login.php'</script>");
 	}
 	include("template/header.php");
-	$id_user = $_SESSION['user'];
+	$id_user = $_SESSION['id'];
 	?>
 	<div id='wrap4'>
 		<?php
