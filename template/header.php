@@ -6,7 +6,7 @@
 				<li><a href="default.php" class="link_nav">Panneau de contrôle</a></li>
 				<li><a href="camera.php" class="link_nav">Vidéosurveillance</a></li>
 				<li><a href="parametre.php" class="link_nav">Gestion du compte</a></li>
-				<li><a href="../assistance/assistance.php" class="link_nav">Assistance</a></li>
+				<li><a href="../assistance.php" class="link_nav">Assistance</a></li>
 				<?php 
 				include("template/connexionbdd.php");
 				$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE mail='" . $_SESSION["user"] . "'");
