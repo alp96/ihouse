@@ -1,6 +1,6 @@
 <?php
 	session_start();
-
+/*
 	$_SESSION['id_utilisateur'] = 12;
 
 	//include("../template/connexionbdd.php");
@@ -14,7 +14,7 @@
 					}
 					if ($donnees["type_compte"] == 'Administrateur' OR $donnees["type_compte"] == 'Technicien') {
 						$_SESSION['droit_maintenance'] = 1;
-					}
+					}*/
 ?>
 
 <!DOCTYPE html>
@@ -106,7 +106,7 @@
 
 		<script>
 			//On simule un clique au chargement de la page pour que ajax charge les messages du dernier ticket consulté
-			ticket_clic(0);
+			//ticket_clic(0);
 		</script>
 
 	</body>
