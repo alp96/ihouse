@@ -27,7 +27,7 @@
 		?>
 		<div id="content">
 
-			<div>Vos caméras de surveillance disponibles :</div>
+			<div style="padding: 20px;">Vos caméras de surveillance disponibles :</div>
 
 			<?php 
 
