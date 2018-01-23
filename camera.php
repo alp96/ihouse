@@ -80,13 +80,16 @@
 			$reponse = $bdd->query("SELECT * FROM camera WHERE id_utilisateur='" . $id_user . "' AND active='false'");
 			$compteur = 0;
 
-			if ($reponse->fetchAll() !== false) {
+			if ($reponse->fetchAll() === false) {
 				echo "vide";
 			}
-			while($donnees = $reponse->fetch())
+			else
 			{
-				$compteur ++;
-				echo '<div class="ligne">Caméra n°' . $compteur . '   <a href="/git/camera.php?activate=' . $donnees["id_camera"] . '"><input type="button"  id="bouton" name="activate" value="Activer"></a></div></br>';
+				while($donnees = $reponse->fetch())
+				{
+					$compteur ++;
+					echo '<div class="ligne">Caméra n°' . $compteur . '   <a href="/git/camera.php?activate=' . $donnees["id_camera"] . '"><input type="button"  id="bouton" name="activate" value="Activer"></a></div></br>';
+				}
 			}
 			$reponse->closeCursor();
 
