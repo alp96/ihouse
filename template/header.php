@@ -50,7 +50,7 @@
 			?>
 
 
-			<div id="ID">ID client : FR 09 67 34 2C</div>
+			<div id="ID">ID client : FR 09 67 34 <?php echo $donnees["id_utilisateur"] ?></div>
 			<a href="logout.php" id="logout">Se déconnecter</a>
 		</div>
 	</div>
