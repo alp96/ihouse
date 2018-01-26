@@ -14,7 +14,7 @@
 	session_regenerate_id();
 	if(!isset($_SESSION['user']))
 	{
-		die("<script>location.href = 'http://localhost/ihouse-master/login.php'</script>");
+		die("<script>location.href = 'http://ihouse-panel.com/login.php'</script>");
 	}
 	include("template/header.php");
 	include("template/nav.php");
