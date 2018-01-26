@@ -102,7 +102,7 @@
 
 		</form>
 
-		<form action="" method="post">
+		<form action="" method="post" id="toutessalles">
 		<input type="hidden" name="action" value="submit" />
 
 
