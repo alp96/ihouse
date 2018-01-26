@@ -85,7 +85,7 @@
 
 				$id 
 
-				$bdd->query("INSERT INTO Utilisateur SET id_utilisateur = '$id', code = '$randomString', validite = NOW()");
+				$bdd->exec("INSERT INTO Utilisateur SET id_utilisateur = '$id', code = '$randomString', validite = NOW()");
 
 				mail($to, $subject, $message, $headers);
 
