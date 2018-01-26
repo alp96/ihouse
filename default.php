@@ -14,23 +14,49 @@
 	session_regenerate_id();
 	if(!isset($_SESSION['user']))
 	{
-		die("<script>location.href = 'https://www.ihouse-panel.com/git/login.php'</script>");
+		die("<script>location.href = 'http://localhost/ihouse-master/login.php'</script>");
 	}
 	include("template/header.php");
-	//include("template/nav.php");
+	include("template/nav.php");
 	?>
 	<div id="container">
 		
 		<form method="post" id='ajouter_salle' action="default.php">
 
-		<div id="ajoutsallebox">
+
+
+		<div id="modifiersalles">
 			<span class="big">Pièces :</span> 
 			<span class="right">
-				<input class="fieldsalle" type="text" name="salle">
-				<input id="bouton" type="submit" value="Ajouter la pièce">
+				<input id="bouton" type="button" value="Modifier salles" onclick=cacherbouton()>
+				<input id="fieldsalle" class="fieldsalle" type="text" name="salle">
+				<input id="bouton1" type="submit" value="Ajouter la pièce" name="btnsalle">
+				<input id="bouton2" type="submit" value="Retour">
 			</span>
 		</div>
 
+
+		 <script>  
+		 	document.getElementById("bouton1").style.display= 'none' ;
+		 	document.getElementById("bouton2").style.display= 'none' ;      
+		 	document.getElementById("fieldsalle").style.display= 'none' ;      
+		  
+     		function cacherbouton() { 
+            document.getElementById("bouton").style.display= 'none' ;          
+            document.getElementById("fieldsalle").style.display= 'inline-block' ;
+            document.getElementById("bouton1").style.display= 'inline-block' ;
+            document.getElementById("bouton2").style.display= 'inline-block' ;
+
+ 
+			var tab = document.getElementsByClassName("submitcross");
+			for(var i = 0; i<tab.length;i++)
+			{
+				tab[i].style.visibility= 'visible' ;
+			}
+			
+
+      		}
+         </script>
 
 
 		<?php
@@ -41,7 +67,10 @@
 					$_POST["salle"] = verification($_POST["salle"]);
 					if($_POST["salle"] == '')
 					{
-						echo '<div class="error">Cette salle n\'a pas de nom !</div>';
+						if(isset($_POST["btnsalle"])) 
+						{			
+							echo '<div class="error">Cette salle n\'a pas de nom !</div>';
+						}
 					}
 					else {
 						$new_salle = $_POST["salle"];
@@ -55,17 +84,6 @@
 		<?php	
 		if($_SERVER["REQUEST_METHOD"] == "POST") 
 		{
-			/*
-			foreach ($_POST as $key => $value) {
-				echo "<tr>";
-				echo "<td>";
-				echo $key;
-				echo "</td>";
-				echo "<td>";
-				echo $value;
-				echo "</td>";
-				echo "</tr>";
-			}*/
 			if(isset($_POST["action"])) 
 			{
 					$_POST["submit"] = verification($_POST["submit"]);
@@ -86,7 +104,7 @@
 
 		<form action="" method="post">
 		<input type="hidden" name="action" value="submit" />
-    	
+
 
 		<?php
 			$maison = $donnees["id_maison"];
@@ -96,12 +114,15 @@
 				while($row = $liste->fetch()) {
 					$nom = $row["nom"];
 					$id = $row["id_salle"];
+						
+					
+
 					echo("
 					<div class=\"piece\">
 					<div class=\"titresalle\">$nom : 
 					<span class=\"right\">
-						<input id=\"$id\" class=\"submitcross\" type=\"submit\" name=\"submit\" value=\"$id\" onclick=\"return confirm('Voulez-vous vraiment supprimer cette salle?')\">
-					</span>	
+						<input id=\"$id\"  class=\"submitcross\" type=\"submit\" name=\"submit\" value=\"$id\" onclick=\"return confirm('Voulez-vous vraiment supprimer cette salle?')\">
+					</span>
 					</div>
 					<div class=\"capteurbox\">
 						
@@ -110,6 +131,11 @@
 						
 					</div>
 					</div>
+					");
+
+					echo ("<script>
+					document.getElementById(\"$id\").style.visibility= 'hidden' ;
+					</script>
 					");
 				}
 			}
