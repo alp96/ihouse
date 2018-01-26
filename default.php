@@ -29,6 +29,8 @@
 			<span class="big">Pièces :</span> 
 			<span class="right">
 				<input id="bouton" type="button" value="Modifier salles" onclick=cacherbouton()>
+			</span>
+			<span id="ajout_boutons">
 				<input id="fieldsalle" class="fieldsalle" type="text" name="salle">
 				<input id="bouton1" type="submit" value="Ajouter la pièce" name="btnsalle">
 				<input id="bouton2" type="submit" value="Retour">

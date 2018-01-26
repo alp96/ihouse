@@ -68,6 +68,7 @@ input{
 	padding: 5px 10px;
 	box-shadow: 2px 2px 20px #1f1f4a;
 	font-size: 16px;
+	margin-left: 50%;
 }
 #bouton:hover{
 	box-shadow: 0px 0px 20px white;
@@ -456,4 +457,8 @@ table {
 #toutessalles{
 	margin-top: 60px;
 	padding-left: 15%;
+}
+
+#ajout_boutons{
+	margin-left: 50%
 }
