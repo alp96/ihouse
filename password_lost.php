@@ -84,6 +84,7 @@
 				'X-Mailer: PHP/' . phpversion();
 
 				$id = $donnees["id_utilisateur"];
+				echo $message;
 
 				$bdd->exec("INSERT INTO password_lost SET id_utilisateur = '$id', code = '$randomString', validite = NOW()");
 
