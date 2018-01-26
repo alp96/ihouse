@@ -29,6 +29,8 @@
 	</div>
 
 	<?php 
+	include("template/connexionbdd.php");
+
 	if(isset($_POST["mail"]))
 	{
 		if($_POST["mail"] == '')
@@ -41,7 +43,54 @@
 		}
 		else
 		{
-			echo '<div class="ok">Un lien de réinitialisation vous a été envoyé par email.</div>';
+			echo '<div class="ok">Un code de réinitialisation vous a été envoyé par email.</div>';
+			$to      = verification($_POST["mail"]);
+
+			$reponse = $bdd->query("SELECT * FROM Utilisateur WHERE mail= '" . $to . "'");
+			$reponse2 = $bdd->query("SELECT * FROM Utilisateur WHERE mail= '" . $to . "'");
+			$donnees = $reponse->fetch();
+			$mail_existant=($reponse2->fetchColumn()==0)?1:0;
+
+
+			if (!$mail_existant) 
+			{
+
+				$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+				$charactersLength = strlen($characters);
+				$randomString = '';
+				for ($i = 0; $i < 10; $i++) 
+				{
+					$randomString .= $characters[rand(0, $charactersLength - 1)];
+				}
+
+				$subject = '[iHouse] Mot de passe perdu';
+
+				if ($donnees["genre"] ==  "homme") 
+				{
+					$genre = 'M.';
+				}
+				elseif ($donnees["genre"] ==  "femme")
+				{
+					$genre = 'Mme';
+				}
+
+				$message = 'Bonjour ' . $genre . ' ' . $donnees["prenom"] . ' ' . $donnees["nom"] . ',<br><br>
+				Vous avez signalé sur le site Web d\'iHouse que vous avez
+				oublié votre mot de passe.<br><br>
+				Vous avez maintenant la possibilité de modifier votre mot
+				de passe en saisissant le code généré ci-dessous dans la page de réinitialisation de mot de passe : <br>' . $randomString;
+				$headers = 'From: password_lost@ihouse-panel.com' . "\r\n" .
+				'Reply-To: password_lost@ihouse-panel.com' . "\r\n" .
+				'X-Mailer: PHP/' . phpversion();
+
+				$id 
+
+				$bdd->exec("INSERT INTO Utilisateur SET id_utilisateur = '$id', code = '$randomString', validite = NOW()");
+
+				mail($to, $subject, $message, $headers);
+
+			}
+			
 
 		}
 	}
