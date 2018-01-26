@@ -444,3 +444,9 @@ table {
 #bouton2 :hover {
 	box-shadow: 0px 0px 20px white;
 }
+
+#modifiersalles {
+	position: fixed;
+    background-color: white;
+    width: 100%;
+}
