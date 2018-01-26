@@ -450,7 +450,7 @@ table {
 	position: fixed;
     background-color: white;
     width: 100%;
-    top: 120px;
+    top: 110px;
     padding-left: 15%;
 }
 
@@ -460,5 +460,5 @@ table {
 }
 
 #ajout_boutons{
-	margin-left: 50%
+	margin-left: 33%
 }
