@@ -68,7 +68,6 @@ input{
 	padding: 5px 10px;
 	box-shadow: 2px 2px 20px #1f1f4a;
 	font-size: 16px;
-	margin-left: 50%;
 }
 #bouton:hover{
 	box-shadow: 0px 0px 20px white;
@@ -125,13 +124,38 @@ input{
 .error{
 	font-weight: bold;
 	font-size: 20px;
-	color: #cc0000;
-	background-color: rgba(247, 64, 64, 0.42);
+	color: #FFFFFF;
+	background-color: rgba(115, 33, 33, 0.84);
 	border-radius: 5px;
 	display: inline-block;
 	padding: 10px 50px;
-	top: 5%;
+	top: 130px;
+	z-index:1000000;
 	position: fixed;
+	width:50vw;
+	left: 50%;
+	transform: translateX(-50%);
+	animation-name : fadeInFromNone;
+	animation-delay: 5s;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	transition-timing-function: ease-in-out;
+	opacity: 1;
+}
+
+.confirm{
+	font-weight: bold;
+	width:60vw;
+	font-size: 20px;
+	color: rgba(0, 87, 62, 0.89);
+	background-color: rgba(208, 255, 218, 0.83);
+	border-radius: 5px;
+	display: inline-block;
+	padding: 10px 50px;
+	top: 130px;
+	z-index:1000000;
+	position: fixed;
+	width:50vw;
 	left: 50%;
 	transform: translateX(-50%);
 	animation-name : fadeInFromNone;
@@ -207,6 +231,7 @@ input{
 
 
 #menu{
+	
 	justify-content: center;
 	/* text-align: center; */
 	/* background-color: #cecece; */
@@ -235,12 +260,13 @@ input{
 
 #menu > li{
 	text-align: center;
+	margin-top:35px;
 	/* border-width: 2px; */
 	/* border-style: solid; */
 	/* border-color: #283152; */
 	/* border-width: 0px 0px 2px 0px; */
 	height: 100px;
-	line-height: 100px;
+	/*line-height: 100px;*/
 	padding: 0px 20px;
 	font-size: 1.3em;
 }
@@ -330,6 +356,8 @@ input{
 	color: white;
 	padding: 5px;
 	border-radius: 5px;
+	overflow:hidden;
+	height:70px;
 }
 .link_nav:hover{
 	background-color: #283152;
@@ -444,21 +472,4 @@ table {
 
 #bouton2 :hover {
 	box-shadow: 0px 0px 20px white;
-}
-
-#modifiersalles {
-	position: fixed;
-    background-color: white;
-    width: 100%;
-    top: 110px;
-    padding-left: 15%;
-}
-
-#toutessalles{
-	margin-top: 60px;
-	padding-left: 15%;
-}
-
-#ajout_boutons{
-	margin-left: 33%
 }
