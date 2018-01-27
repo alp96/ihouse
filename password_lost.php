@@ -17,11 +17,11 @@
 		<form method="post" id='lostpassword' class="formulaire" action="password_lost.php">
 
 			<div id="titre">Mot de passe oublié</div>
-
-			<div class="texte">Adresse e-mail</div>
-
-			<input class="field" type="text" name="mail">
-			<?php 
+			<?php
+			if (empty($_GET["code"])) 
+			{
+			 	echo '<div class="texte">Adresse e-mail</div><input class="field" type="text" name="mail">';
+			} 
 			if (!empty($_GET["code"])) 
 			{
 			 	echo '<br><div class="texte">Code de réinitialisation</div><input class="field" type="text" name="code">';
