@@ -24,7 +24,7 @@
 			} 
 			if (!empty($_GET["code"])) 
 			{
-			 	echo '<div class="texte">Code de réinitialisation</div><input class="field" type="text" name="code"><input type="hidden" name="mail" value="ok">';
+			 	echo '<div class="texte">Code de réinitialisation</div><input class="field" type="text" name="code"><input type="hidden" name="mail" value="' . $_GET["mail"] . '">';
 			} 
 			?>
 			<br>
