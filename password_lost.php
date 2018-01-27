@@ -14,7 +14,7 @@
 
 
 	<div class="wrap">
-		<form method="post" id='lostpassword' action="password_lost.php">
+		<form method="post" id='lostpassword' class="formulaire" action="password_lost.php">
 
 			<div id="titre">Mot de passe oublié</div>
 
