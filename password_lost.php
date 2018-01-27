@@ -24,7 +24,7 @@
 			} 
 			if (!empty($_GET["code"])) 
 			{
-			 	echo '<div class="texte">Code de réinitialisation</div><input class="field" type="text" name="code">';
+			 	echo '<div class="texte">Code de réinitialisation</div><input class="field" type="text" name="code"><input type="hidden" name="mail" value="ok">';
 			} 
 			?>
 			<br>
@@ -95,12 +95,16 @@
 
 				mail($to, $subject, $message, $headers);
 
-				die("<script>location.href = 'https://www.ihouse-panel.com/git/password_lost.php?code=1'</script>");
+				die("<script>location.href = 'https://www.ihouse-panel.com/git/password_lost.php?code=1&mail=" . $to . "</script>");
 
 			}
 			
 
 		}
+	}
+	if (!empty($_POST["mail"]) AND !empty($_POST["code"])) 
+	{
+		# code...
 	}
 
 	?>
