@@ -21,14 +21,14 @@
 			<div class="texte">Adresse e-mail</div>
 
 			<input class="field" type="text" name="mail">
-			<br>
-			<input id="bouton" type="submit" value="Générer un nouveau mot de passe">
 			<?php 
 			if (!empty($_GET["code"])) 
 			{
 			 	echo '<br><div class="texte">Code de réinitialisation</div><input class="field" type="text" name="code">';
 			} 
 			?>
+			<br>
+			<input id="bouton" type="submit" value="Réinitialisation du mot de passe">
 		</form>
 		
 		<div id="forget"><a class="link" href="login.php">Retour à l'écran de connexion</a></div>
