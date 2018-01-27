@@ -115,7 +115,7 @@
 		}
 		else
 		{
-			$code = $donnees2["code"]
+			$code = $donnees2["code"];
 			if (time() > mktime($donnees2["validite"]) + 1800) 
 			{
 				echo '<div class="error">Le code saisi a expiré.</div>';
@@ -123,7 +123,7 @@
 			}
 			else
 			{
-				
+
 			}
 		}
 	}
