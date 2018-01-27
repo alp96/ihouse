@@ -20,11 +20,11 @@
 			<?php
 			if (empty($_GET["code"])) 
 			{
-			 	echo '<div class="texte">Adresse e-mail</div><input class="field" type="text" name="mail">';
+				echo '<div class="texte">Adresse e-mail</div><input class="field" type="text" name="mail">';
 			} 
 			if (!empty($_GET["code"])) 
 			{
-			 	echo '<div class="texte">Code de réinitialisation</div><input class="field" type="text" name="code"><input type="hidden" name="mail" value="' . $_GET["mail"] . '">';
+				echo '<div class="texte">Code de réinitialisation</div><input class="field" type="text" name="code"><input type="hidden" name="mail" value="' . $_GET["mail"] . '">';
 			} 
 			?>
 			<br>
@@ -104,7 +104,28 @@
 	}
 	if (!empty($_POST["mail"]) AND !empty($_POST["code"])) 
 	{
-		# code...
+		$to = verification($_POST["mail"]);
+
+		$reponse2 = $bdd->query("SELECT t2.id_utilisateur, t2.code, t2.validite FROM Utilisateur t1 LEFT JOIN password_lost t2 on t1.id_utilisateur = t2.id_utilisateur WHERE t1.mail= '" . $to . "'");
+		$donnees2 = $reponse2->fetch();
+
+		if ($_POST["code"] != $donnees2["code"]) 
+		{
+			echo '<div class="error">Le code saisi est incorrect</div>';
+		}
+		else
+		{
+			$code = $donnees2["code"]
+			if (time() > mktime($donnees2["validite"]) + 1800) 
+			{
+				echo '<div class="error">Le code saisi a expiré.</div>';
+				$bdd->exec("DELETE FROM password_lost WHERE code= '" . $code . "'");
+			}
+			else
+			{
+				
+			}
+		}
 	}
 
 	?>
