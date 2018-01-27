@@ -23,6 +23,12 @@
 			<input class="field" type="text" name="mail">
 			<br>
 			<input id="bouton" type="submit" value="Générer un nouveau mot de passe">
+			<?php 
+			if (!empty($_GET["code"])) 
+			{
+			 	echo '<br><div class="texte">Code de réinitialisation</div><input class="field" type="text" name="code">';
+			} 
+			?>
 		</form>
 		
 		<div id="forget"><a class="link" href="login.php">Retour à l'écran de connexion</a></div>
@@ -31,7 +37,7 @@
 	<?php 
 	include("template/connexionbdd.php");
 
-	if(isset($_POST["mail"]))
+	if(isset($_POST["mail"]) AND empty($_POST["code"]))
 	{
 		if($_POST["mail"] == '')
 		{
@@ -88,6 +94,8 @@
 				$bdd->exec("INSERT INTO password_lost SET id_utilisateur = '$id', code = '$randomString', validite = NOW()");
 
 				mail($to, $subject, $message, $headers);
+
+				die("<script>location.href = 'https://www.ihouse-panel.com/git/password_lost.php?code=1'</script>");
 
 			}
 			
