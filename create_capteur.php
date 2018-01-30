@@ -64,8 +64,8 @@
 				if ($_POST["name"] != ""){
 
                     $cap = verification($_POST["cap"]);
-                    if ($cap == "")$cap="DEFAULT"
-                    else $cap="'"+$cap+"'"
+                    if ($cap == "")$cap="DEFAULT";
+                    else $cap="'"+$cap+"'";
 					$name = verification($_POST["name"]);
 					$genre = verification($_POST["genre"]);
 					
