@@ -46,7 +46,7 @@
 
 									$tableau = array('id_user' => $donnees['id_utilisateur']);
 
-									$url = "http://ihouse-panel.com/git/resultat.php?" . http_build_query($tableau, '', "&");
+									$url = "/resultat.php?" . http_build_query($tableau, '', "&");
 
 									echo "<tr><td class='cellule'>";
 									echo $counter . "</td><td class='cellule'>" . $donnees['nom'] . "</td><td class='cellule'>" . $donnees['prenom'] . "</td><td class='cellule'>" . $donnees['mail'] . "</td><td class='cellule'><a href='" . $url . "'>Modifier</a>";
