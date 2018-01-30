@@ -13,7 +13,7 @@
 	session_regenerate_id();
 	if(!isset($_SESSION['user']))
 	{
-		die("<script>location.href = 'https://www.ihouse-panel.com/git/login.php'</script>");
+		die("<script>location.href = '/login.php'</script>");
 	}
 	include("template/header.php");
 	
@@ -83,7 +83,7 @@
 	<?php 
 }
 else{
-	die("<script>location.href = 'https://www.ihouse-panel.com/git/index.php'</script>");
+	die("<script>location.href = '/index.php'</script>");
 }	?>
 </body>
 </html>

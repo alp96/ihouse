@@ -19,11 +19,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
 			$bdd->exec("INSERT INTO Utilisateur(id_utilisateur, nom, prenom, genre, mail, password, telephone, type_compte, id_maison) VALUES (DEFAULT, '$name', '$last_name', '$genre','$mail', '$password', '$phone', '$account_type', '$id_house')");
 
-			die("<script>location.href = 'https://www.ihouse-panel.com/git/create_user.php'</script>");
+			die("<script>location.href = '/create_user.php'</script>");
 		}
 		else
 		{
-			die("<script>location.href = 'https://www.ihouse-panel.com/git/create_user.php'</script>");
+			die("<script>location.href = '/create_user.php'</script>");
 		}
 	}
 }

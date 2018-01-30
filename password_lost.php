@@ -95,7 +95,7 @@
 
 				mail($to, $subject, $message, $headers);
 
-				die("<script>location.href = 'https://www.ihouse-panel.com/git/password_lost.php?code=1&mail=" . $to . "'</script>");
+				die("<script>location.href = '/password_lost.php?code=1&mail=" . $to . "'</script>");
 
 			}
 			
