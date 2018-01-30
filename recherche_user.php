@@ -83,7 +83,7 @@
 	<?php 
 }
 else{
-	die("<script>location.href = 'https://www.ihouse-panel.com/git/default.php'</script>");
+	die("<script>location.href = 'https://www.ihouse-panel.com/git/index.php'</script>");
 }	?>
 </body>
 </html>

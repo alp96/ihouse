@@ -13,7 +13,7 @@
 			?>
 
 			<ul id="menu">
-				<li <?php if ($donnees["type_compte"] != 'Administrateur' AND $donnees["type_compte"] != 'Maintenance') {echo 'style="font-size: 1.9em;"';} ?>><a href="default.php" class="link_nav">Panneau de contrôle</a></li>
+				<li <?php if ($donnees["type_compte"] != 'Administrateur' AND $donnees["type_compte"] != 'Maintenance') {echo 'style="font-size: 1.9em;"';} ?>><a href="index.php" class="link_nav">Panneau de contrôle</a></li>
 				<li <?php if ($donnees["type_compte"] != 'Administrateur' AND $donnees["type_compte"] != 'Maintenance') {echo 'style="font-size: 1.9em;"';} ?>><a href="camera.php" class="link_nav">Vidéosurveillance</a></li>
 				<li <?php if ($donnees["type_compte"] != 'Administrateur' AND $donnees["type_compte"] != 'Maintenance') {echo 'style="font-size: 1.9em;"';} ?>><a href="parametre.php" class="link_nav">Gestion du compte</a></li>
 				<li <?php if ($donnees["type_compte"] != 'Administrateur' AND $donnees["type_compte"] != 'Maintenance') {echo 'style="font-size: 1.9em;"';} ?>><a href="assistance.php" class="link_nav">Assistance</a></li>

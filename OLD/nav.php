@@ -14,7 +14,7 @@
 	<!--</ul>-->
 
 	<ul id="menu">
-		<li><a href="default.php" class="link_nav">Panneau de contrôle</a></li>
+		<li><a href="index.php" class="link_nav">Panneau de contrôle</a></li>
 		<li><a href="camera.php" class="link_nav">Vidéosurveillance</a></li>
 		<li><a href="parametre.php" class="link_nav">Gestion du compte</a></li>
 		<?php 
