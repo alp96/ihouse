@@ -36,10 +36,21 @@
                         <option>Humidite</option>
                         <option>Pression</option>
 					</select>
+                    <br>
 
 					<div class="texte">ID maison associé</div>
 					<input class="field" type="text" name="name">
 					<br>
+                    <br>
+
+                    <div class="texte">ID du capteur (optionnel)</div>
+					<input class="field" type="text" name="cap">
+					<br>
+                    <br>
+
+					<input id="bouton" type="submit" value="Ajouter un capteur">
+
+                    
 					<input id="bouton" type="submit" value="Ajouter un capteur">
 				</form>
 			</div>
@@ -48,14 +59,17 @@
 
 		if($_SERVER["REQUEST_METHOD"] == "POST") 
 		{
-			if (isset($_POST["name"]) AND isset($_POST["genre"])) {
+			if (isset($_POST["name"]) AND isset($_POST["cap"]) AND isset($_POST["genre"])) {
 
 				if ($_POST["name"] != ""){
 
+                    $cap = verification($_POST["cap"]);
+                    if ($cap == "")$cap="DEFAULT"
+                    else $cap="'"+$cap+"'"
 					$name = verification($_POST["name"]);
 					$genre = verification($_POST["genre"]);
 					
-					$bdd->exec("INSERT INTO Capteur(id_maison, type_capteur) VALUES (DEFAULT, '$name', '$genre')");
+					$bdd->exec("INSERT INTO Capteur(id_maison, id_capteur, type_capteur) VALUES ('$name',$cap '$genre')");
 
 					echo '<div class="ok">Capteur ajouté avec succès !</div>';
 				}
