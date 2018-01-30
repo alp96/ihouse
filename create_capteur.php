@@ -28,7 +28,7 @@
 				<form method="post" id='create_user' class="formulaire" action="create_capteur.php">
 
 					<div id="titre">Ajout de capteur</div>
-
+                    <br>
 					<div class="texte">Type</div>
 					<select name="genre" size = "1" class="selection">
 						<option>Temperature</option>
@@ -36,6 +36,7 @@
                         <option>Humidite</option>
                         <option>Pression</option>
 					</select>
+                    <br>
                     <br>
 
 					<div class="texte">ID maison associé</div>
@@ -51,7 +52,6 @@
 					<input id="bouton" type="submit" value="Ajouter un capteur">
 
                     
-					<input id="bouton" type="submit" value="Ajouter un capteur">
 				</form>
 			</div>
 		</div>
