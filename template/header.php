@@ -22,7 +22,10 @@
 					echo "<li><a href='create_user.php' class='link_nav'>Création utilisateur</a></li>";
 				}
 				if ($donnees["type_compte"] == 'Administrateur' OR $donnees["type_compte"] == 'Maintenance') {
-					echo "<li><a href='modif_user.php' class='link_nav'>Modification utilisateur</a></li>";
+					echo "<li><a href='modif_user.php' class='link_nav'>Recherche d'utilisateur</a></li>";
+				}
+				if ($donnees["type_compte"] == 'Administrateur' OR $donnees["type_compte"] == 'Maintenance') {
+					echo "<li><a href='create_capteur.php' class='link_nav'>Ajout capteur</a></li>";
 				}
 				?>
 			</ul>

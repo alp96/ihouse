@@ -39,7 +39,7 @@
 							{
 								$counter = 0;
 								echo "<div class='titre_recherche'>Résultat de la recherche pour le " . $colonne . " " . $champs . "</div><br>";
-								echo "<table><tr><td class='cellule gras'>N°</td><td class='cellule gras'>Nom</td><td class='cellule gras'>Prénom</td><td class='cellule gras'>Adresse email</td><td class='cellule'></td>";
+								echo "<table><tr><td class='cellule gras'>N°</td><td class='cellule gras'>Nom</td><td class='cellule gras'>Prénom</td><td class='cellule gras'>Adresse email</td><td class='cellule gras'>ID maison</td><td class='cellule gras'>ID utilisateur</td><td class='cellule'></td>";
 								do 
 								{
 									$counter = $counter + 1;
@@ -49,7 +49,7 @@
 									$url = "/resultat.php?" . http_build_query($tableau, '', "&");
 
 									echo "<tr><td class='cellule'>";
-									echo $counter . "</td><td class='cellule'>" . $donnees['nom'] . "</td><td class='cellule'>" . $donnees['prenom'] . "</td><td class='cellule'>" . $donnees['mail'] . "</td><td class='cellule'><a href='" . $url . "'>Modifier</a>";
+									echo $counter . "</td><td class='cellule'>" . $donnees['nom'] . "</td><td class='cellule'>" . $donnees['prenom'] . "</td><td class='cellule'>" . $donnees['mail']  . "</td><td class='cellule'>" . $donnees['id_maison']  . "</td><td class='cellule'>" . $donnees['id_utilisateur']  . "</td><td class='cellule'><a href='" . $url . "'>Modifier</a>";
 									echo '</td></tr>';
 								}while($donnees = $reponse->fetch());
 								echo "</table>";
