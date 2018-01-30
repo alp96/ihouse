@@ -25,7 +25,7 @@
 			?>
 
 			<div id="content">
-				<form method="post" id='create_user' class="formulaire" action="create_capteur.php">
+				<form method="post" id='create_user2' class="formulaire" action="create_capteur.php">
 
 					<div id="titre">Ajout de capteur</div>
                     <br>
