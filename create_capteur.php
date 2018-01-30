@@ -69,7 +69,7 @@
 					$name = verification($_POST["name"]);
 					$genre = verification($_POST["genre"]);
 					
-					$bdd->exec("INSERT INTO Capteur(id_maison, id_capteur, type_capteur) VALUES ('$name',$cap '$genre')");
+					$bdd->exec("INSERT INTO Capteur(id_maison, id_capteur, type_capteur) VALUES ('$name',$cap,'$genre')");
 
 					echo '<div class="ok">Capteur ajouté avec succès !</div>';
 				}
