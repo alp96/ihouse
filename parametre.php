@@ -104,7 +104,7 @@
 				{
 					$new_phone = $_POST["phone"];
 					$bdd->exec("UPDATE Utilisateur SET telephone = '$new_phone' WHERE mail = '$mail'");
-					echo '<div class="ok">Téléphone avec succès</div>';
+					echo '<div class="ok">Téléphone mis à jour avec succès</div>';
 				}
 			}
 			if (isset($_POST["mdp_old"]) AND isset($_POST["mdp1"]) AND isset($_POST["mdp2"]))
