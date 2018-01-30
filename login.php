@@ -69,7 +69,7 @@
 				{
 					$_SESSION['user'] = $_POST['mail'];
 					$_SESSION['id_utilisateur']=$donnees["id_utilisateur"];
-					die("<script>location.href = '/default.php'</script>");
+					die("<script>location.href = '/index.php'</script>");
 				}
 				else 
 				{

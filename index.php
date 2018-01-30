@@ -25,7 +25,7 @@
 		</div>
 		<div id="formajoutcapteur">
 			<p>Liste des capteurs disponibles pour votre maison:</p>
-			<form method="post" id='ajouter_capteur' action="default.php">
+			<form method="post" id='ajouter_capteur' action="index.php">
 			<input type="hidden" id="capsalle" name="capsalle" value="" />
 				<nav class=listecapteurs>
 					<ul>
@@ -58,7 +58,7 @@
 	<!-- #####################################################################-->
 	<div id="container">
 		
-		<form method="post" id='ajouter_salle' action="default.php">
+		<form method="post" id='ajouter_salle' action="index.php">
 
 
 

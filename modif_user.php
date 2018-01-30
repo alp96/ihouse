@@ -47,7 +47,7 @@
 		<?php 
 	}
 	else{
-		die("<script>location.href = '/default.php'</script>");
+		die("<script>location.href = '/index.php'</script>");
 	}	?>
 </body>
 </html>

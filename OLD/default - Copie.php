@@ -21,7 +21,7 @@
 	?>
 	<div id="container">
 		
-		<form method="post" id='ajouter_salle' action="default.php">
+		<form method="post" id='ajouter_salle' action="index.php">
 
 		<div id="ajoutsallebox">
 			<span class="big">Pièces :</span> 
