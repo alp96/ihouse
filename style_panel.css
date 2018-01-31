@@ -112,7 +112,7 @@
 
 #formajoutcapteur{
     display: block;
-    position: absolute;
+    position: fixed;
     left: 50%;
     top: 50vh;
     margin-top:-300px;
