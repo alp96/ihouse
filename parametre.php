@@ -40,25 +40,25 @@
 					<input class="field" type="text" name="mail">
 
 					<br>
-					<input id="bouton" type="submit" value="Modifier Email">
+					<input id="bouton" type="submit" autocomplete="off" value="Modifier Email">
 				</form>
 				<form method="post" id='modif_phone' action="parametre.php">
 					<div class="texte">Numéro de téléphone actuel :
 						<br>
 						<?php echo $donnees["telephone"]; ?>
 					</div>
-					<input class="field" type="text" name="phone">
+					<input class="field" autocomplete="off" type="text" name="phone">
 					<br>
 					<input id="bouton" type="submit" value="Modifier le numéro">
 				</form>
 				<form method="post" id='modif_mdp' action="parametre.php">
 					<div class="texte">Mot de passe :</div>
 
-					<input class="field" type="password" name="mdp_old" placeholder="Ancien mot de passe">
+					<input class="field" type="password" name="mdp_old" autocomplete="off" placeholder="Ancien mot de passe">
 					<br>
-					<input class="field" type="password" name="mdp1" placeholder="Nouveau mot de passe">
+					<input class="field" type="password" name="mdp1" autocomplete="off" placeholder="Nouveau mot de passe">
 					<br>
-					<input class="field" type="password" name="mdp2" placeholder="Confirmer mot de passe">
+					<input class="field" type="password" name="mdp2" autocomplete="off" placeholder="Confirmer mot de passe">
 					<br>
 					<input id="bouton" type="submit" value="Modifier mot de passe">
 				</form>
