@@ -27,7 +27,7 @@
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="style_panel.css">
 		<link rel="stylesheet" href="assistance/style_Boite_Message.css">
-		<link rel="stylesheet" href="assistance/style_Boite_ticket.css">
+		<link rel="stylesheet" href="assistance/style_Boite_ticke.css">
 
 		<link rel="icon" href="images/favicon.png" />
 
