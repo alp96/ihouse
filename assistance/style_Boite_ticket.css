@@ -22,7 +22,6 @@
 }
 
 #theadsujet th {
-  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   font-weight: 400;
   color: #44538a;
@@ -46,7 +45,6 @@
 }
 
 #tbodysujet tr td {
-  font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   color: #5f6062;
   font-size: 13px;
