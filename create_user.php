@@ -72,7 +72,7 @@
 				if ($_POST["name"] != "" AND $_POST["last_name"] != "" AND $_POST["mail"] != "" AND $_POST["phone"] != "" AND $_POST["maison"] != ""){
 
 					$name = verification($_POST["name"]);
-					$genre = verification($_POST["genre"]);
+					$genre = strtolower(verification($_POST["genre"]));
 					$id_house = verification($_POST["maison"]);
 					$last_name = verification($_POST["last_name"]);
 					$mail = verification($_POST["mail"]);
