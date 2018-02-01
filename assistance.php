@@ -36,7 +36,7 @@
 	</head>
 
 	<style>
-		#buton_assistance
+		#button_assistance
 		{
 			border-color: #283152;
 			color: white;
