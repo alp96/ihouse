@@ -36,6 +36,9 @@
 	</head>
 
 	<style>
+		#buton_assistance
+		{
+		}
 
 		#ticket_inbox
 		{
