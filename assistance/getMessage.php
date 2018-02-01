@@ -140,7 +140,7 @@
                     <div class="txt">
                     <p class="name alt">Répondez:<p>
                         <input type="text" id="message" placeholder="Ecrivez ici votre message..." />
-                        <input type="submit" value="Envoyer" onclick="post_message()" />
+                        <input id="bouton" type="submit" value="Envoyer" onclick="post_message()" />
                     </div>
                     <div class="bubble-arrow alt"></div>';
     }else
