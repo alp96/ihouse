@@ -42,8 +42,7 @@
 			color: white;
 			background-color: #283152;
 			border-radius: 5px;
-			border: 0px;
-					
+			border: 0px;					
 			padding: 5px 10px;
 			box-shadow: 2px 2px 20px #1f1f4a;
 			font-size: 16px;
@@ -51,7 +50,7 @@
 
 		#ticket_inbox
 		{
-			width: 40%;
+			width: 55%;
 		}
 
 		.ticket_box
