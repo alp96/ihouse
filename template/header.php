@@ -19,7 +19,7 @@
 				<li <?php if ($donnees["type_compte"] != 'Administrateur' AND $donnees["type_compte"] != 'Maintenance') {echo 'style="font-size: 1.9em;"';} ?>><a href="assistance.php" class="link_nav">Assistance</a></li>
 				<?php 
 				if ($donnees["type_compte"] == 'Administrateur') {
-					echo "<li><a href='create_user.php' class='link_nav'>Création utilisateur</a></li>";
+					echo "<li><a href='create_user.php' class='link_nav'>Création d'utilisateur</a></li>";
 				}
 				if ($donnees["type_compte"] == 'Administrateur' OR $donnees["type_compte"] == 'Maintenance') {
 					echo "<li><a href='modif_user.php' class='link_nav'>Recherche d'utilisateur</a></li>";
