@@ -28,7 +28,10 @@
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
   text-align: center;
   padding: 20px;
-  background-color: #44538a;
+  background-image: -moz-linear-gradient(#646f7f, #4a5564);
+  background-image: -webkit-linear-gradient(#646f7f, #4a5564);
+  background-image: linear-gradient(#646f7f, #4a5564);
+  background-color: #4a5564;
   background-size: 100%;
   border-top: 1px solid #858d99;
 }
