@@ -1,5 +1,5 @@
 	<div id="wrap2">
-		<img id="logo_mini" src="images/iHouse_logo_blanc.png">
+		<a href="/index.php"><img id="logo_mini" src="images/iHouse_logo_blanc.png"></a>
 		<div class="info">
 
 			<?php 
