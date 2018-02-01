@@ -25,7 +25,7 @@
             echo "Résolu";
         }else
         {
-            echo '  <input type="button" onClick="resolve_ticket('.$donnees['id_ticket'].')" value="Classer &quot;résolu&quot;" /></td>';
+            echo '  <input id="bouton" type="button" onClick="resolve_ticket('.$donnees['id_ticket'].')" value="Classer &quot;résolu&quot;" /></td>';
         }
         
         echo '  </tr>';
