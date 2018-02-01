@@ -50,7 +50,7 @@
 
 		#ticket_inbox
 		{
-			width: 55%;
+			width: 50%;
 		}
 
 		.ticket_box
