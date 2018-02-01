@@ -84,8 +84,8 @@
 							<th colspan="3">
 								<label for="sujet">Nouveau sujet :</label>
 								<input type="text" name="ticket" id="ticket_inbox" />
-								<input id="submit_ticket" type="submit" value="Envoyer" onclick="post_sujet()" />
-							</th>';
+								<input id="bouton" type="submit" value="Envoyer" onclick="post_sujet()" />
+							</th>'; //id=submit_ticket
 						}
 						?>
 					</tr>
