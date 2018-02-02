@@ -60,7 +60,7 @@
 
   		.message_box
 		{
-	  		overflow-y: scroll;
+	  		overflow: auto;
   		}	
 
 		#container{
