@@ -152,7 +152,7 @@
 
 						$new_salle = $_POST["salle"];
 
-						$liste = $bdd->query("SELECT * FROM Salle WHERE nom = '$new_salle' ORDER BY nom");
+						$liste = $bdd->query("SELECT * FROM Salle WHERE nom = '$new_salle' AND id_utilisateur = '$_SESSION["id_utilisateur"]' ORDER BY nom");
 						if($liste && $liste->fetch()){
 							echo '<div class="error">Cette salle existe déjà</div>';
 						}
