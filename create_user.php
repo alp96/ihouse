@@ -50,7 +50,6 @@
 					<div class="texte">Type de compte</div>
 					<select name="account_type" size="1" class="selection">
 						<option>Client</option>
-						<option>Technicien</option>
 						<option>Maintenance</option>
 						<option>Administrateur</option>
 					</select>
