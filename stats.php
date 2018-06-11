@@ -91,8 +91,6 @@ if(!isset($_SESSION['user']))
 	include("template/header.php");
 	?>
 
-<h1>My Web Page</h1>
-ma bite dans le cul d'émile
 <div id="piechart"></div>
 
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -121,7 +119,3 @@ function drawChart() {
   chart.draw(data, options);
 }
 </script>
-ma bite dans le cul d'émile
-
-	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-	<div id="chart_div"></div>
