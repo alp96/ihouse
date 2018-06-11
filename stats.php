@@ -120,8 +120,8 @@ function drawChart() {
   var chart = new google.visualization.PieChart(document.getElementById('piechart'));
   chart.draw(data, options);
 }
-</script
+</script>
 ma bite dans le cul d'émile
 
-	<!--<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-	<div id="chart_div"></div>-->
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<div id="chart_div"></div>
