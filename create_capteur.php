@@ -32,7 +32,7 @@
 					<div class="texte">Type</div>
 					<select name="genre" size = "1" class="selection">
 						<option>Temperature</option>
-						<option>Lunimosite</option>
+						<option>Lunimosité</option>
                         <option>Humidite</option>
                         <option>Pression</option>
 					</select>

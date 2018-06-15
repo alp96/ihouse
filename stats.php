@@ -116,10 +116,15 @@ function drawChart() {
 		]);
 
   // Optional; add a title and set the width and height of the chart
-  var options = {'title':'Humidité dans les salles', 'width':800, 'height':600};
+  var options = {
+  	title:'Humidité dans les salles',
+  	width:800,
+  	height:600,
+  	legend: position: 'bottom' 
+  };
 
   // Display the chart inside the <div> element with id="piechart"
-  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
   chart.draw(data, options);
 }
 </script>
