@@ -56,7 +56,7 @@ function drawChart() {
   // Optional; add a title and set the width and height of the chart
   var options = {
         hAxis: {
-          title: 'Time'
+          title: 'TitreCapteur'
         },
         vAxis: {
           title: 'Popularity'
