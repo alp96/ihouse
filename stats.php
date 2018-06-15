@@ -120,7 +120,7 @@ function drawChart() {
   	title:'Humidité dans les salles',
   	width:800,
   	height:600,
-  	legend: position: 'bottom' 
+  	legend: {position: 'bottom'}
   };
 
   // Display the chart inside the <div> element with id="piechart"
