@@ -307,7 +307,7 @@
 					SET commande = $comm
 					WHERE id_capteur = $new_cap
 					");
-					$bdd->exec("INSERT INTO donnees_capteur VALUES('$new_cap', NOW(), '$comm')");
+					$bdd->exec("INSERT INTO donnees_capteur VALUES(NULL, $new_cap', NOW(), '$comm')");
 				}
 				
 				
