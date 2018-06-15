@@ -30,7 +30,7 @@ if(!isset($_SESSION['user']))
 			<script type="text/javascript">
 // Load google charts 
 google.charts.load('current', {packages: ['corechart', 'line']});
-google.charts.setOnLoadCallback(drawBasic);
+google.charts.setOnLoadCallback(drawChart);
 
 // Draw the chart and set the chart values
 function drawChart() {
