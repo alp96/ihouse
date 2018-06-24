@@ -28,30 +28,30 @@
 				<form method="post" id='create_user2' class="formulaire" action="create_capteur.php">
 
 					<div id="titre">Ajout de capteur</div>
-                    <br>
+					<br>
 					<div class="texte">Type</div>
 					<select name="genre" size = "1" class="selection">
-						<option>Temperature</option>
+						<option>Température</option>
 						<option>Lunimosité</option>
-                        <option>Humidite</option>
-                        <option>Pression</option>
+						<option>Humidité</option>
+						<option>Pression</option>
 					</select>
-                    <br>
-                    <br>
+					<br>
+					<br>
 
 					<div class="texte">ID maison associé</div>
 					<input class="field" type="text" name="name">
 					<br>
-                    <br>
+					<br>
 
-                    <div class="texte">ID du capteur (optionnel)</div>
+					<div class="texte">ID du capteur (optionnel)</div>
 					<input class="field" type="text" name="cap">
 					<br>
-                    <br>
+					<br>
 
 					<input id="bouton" type="submit" value="Ajouter un capteur">
 
-                    
+					
 				</form>
 			</div>
 		</div>
@@ -63,9 +63,9 @@
 
 				if ($_POST["name"] != ""){
 
-                    $cap = verification($_POST["cap"]);
-                    if ($cap == "")$cap="DEFAULT";
-                    else $cap="'"+$cap+"'";
+					$cap = verification($_POST["cap"]);
+					if ($cap == "")$cap="DEFAULT";
+					else $cap="'"+$cap+"'";
 					$name = verification($_POST["name"]);
 					$genre = verification($_POST["genre"]);
 					
@@ -81,7 +81,7 @@
 		}
 	}
 	else{
-	die("<script>location.href = '/index.php'</script>");
-}	?>
+		die("<script>location.href = '/index.php'</script>");
+	}	?>
 </body>
 </html>
