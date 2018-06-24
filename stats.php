@@ -27,9 +27,9 @@ if(!isset($_SESSION['user']))
 				<div id="titre">Graphique à afficher :</div>
 
 				<select name="genre" size = "1" class="selection">
-					<option value="Temperature" <?php if (isset($_POST["genre"])) {echo "selected";}?>>Température</option>
+					<option value="Temperature"  >Température</option>
 					<option value="Lunimosite">Lunimosité</option>
-					<option value="Humidite">Humidité</option>
+					<option value="Humidite" <?php if (isset($_POST["genre"])) {echo "selected";}?>>Humidité</option>
 					<option value="Pression">Pression</option>
 				</select>
 
