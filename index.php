@@ -302,7 +302,11 @@
 				{
 					$new_cap = $_POST["idcapteur"];
 					$comm = $_POST["commande"];
-					$bdd->exec("UPDATE Capteur SET commande = $comm	WHERE id_capteur = $new_cap");
+					$bdd->exec("
+						UPDATE Capteur 
+						SET commande = $comm	
+						WHERE id_capteur = $new_cap
+						");
 					$bdd->exec("INSERT INTO donnees_capteur(id_capteur, date_donnee, donnees) VALUES('$new_cap', NOW(), '$comm')");
 				}
 				
