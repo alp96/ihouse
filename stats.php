@@ -22,16 +22,18 @@ if(!isset($_SESSION['user']))
 	<div id='wrap4'>
 		<div id="content">
 
-			<form method="post" id='create_user2' class="formulaire" action="stats.php">
+			<form method="post" class="formulaire" action="stats.php">
 
-				<div id="titre">Choisissez un graphique à afficher :</div>
+				<div id="titre">Graphique à afficher :</div>
 
 				<select name="genre" size = "1" class="selection">
-					<option>Température</option>
-					<option>Lunimosité</option>
-					<option>Humidité</option>
-					<option>Pression</option>
+					<option value="Temperature">Température</option>
+					<option value="Lunimosite">Lunimosité</option>
+					<option value="Humidite">Humidité</option>
+					<option value="Pression">Pression</option>
 				</select>
+
+				<br>
 
 				<input id="bouton" type="submit" value="Choisir ce capteur">
 
