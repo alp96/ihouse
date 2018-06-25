@@ -39,8 +39,8 @@ if(!isset($_SESSION['user']))
 						<option>Actuelle</option>
 						<option>Dans le temps</option>
 						<?php 
-						$bdd = new PDO('mysql:host=localhost;dbname=db701520246;charset=utf8', 'root', 'ihousebddISEP');
 						$reponse = $bdd->query("SELECT id_maison FROM Maison");
+						echo $reponse;
 						while ($donnees == $reponse->fetch()) {
 							echo "<option>Maison " + $donnees["id_maison"] + "</option>";
 						}
