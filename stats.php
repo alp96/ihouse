@@ -72,7 +72,7 @@ if(!isset($_SESSION['user']))
 			$titre = "";
 			$titre_colonne2 = "";
 			$chart = "line";
-			$option = "";
+			$option_chart = "";
 			$chart_name = "LineChart";
 
 			if ((!empty($_POST["genre"]) && !empty($_POST["choix"]))) {
