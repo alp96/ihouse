@@ -93,7 +93,7 @@ if(!isset($_SESSION['user']))
 				if ($_POST["genre"] == "Luminosite") {
 					$resultat = "Luminosite";
 					$titre = "Luminosité";
-					$titre_colonne2 = "";
+					$titre_colonne2 = "Allumé/éteint";
 
 				}
 			}
