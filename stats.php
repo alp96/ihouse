@@ -39,7 +39,7 @@ if(!isset($_SESSION['user']))
 						<option>Actuelle</option>
 						<option>Dans le temps</option>
 						<?php 
-						$reponse = $bdd->query("SELECT id_maison FROM Maison");
+						$reponse = $bdd->query("SELECT * FROM Maison");
 						var_dump($reponse);
 						while ($donnees == $reponse->fetch()) {
 							echo "<option>Maison " + $donnees["id_maison"] + "</option>";
