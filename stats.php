@@ -71,11 +71,15 @@ if(!isset($_SESSION['user']))
 			<?php 
 			$titre = "";
 			$titre_colonne2 = "";
+			$chart = "line";
+			$option = "";
 			if ((!empty($_POST["genre"]) && !empty($_POST["choix"]))) {
 				if ($_POST["genre"] == "Temperature") {
 					$resultat = "Temperature";
 					$titre = "Température";
 					$titre_colonne2 = "°C";
+					$chart = "bar";
+					$option_chart = "isStacked: true,";
 
 				}
 				if ($_POST["genre"] == "Pression") {
@@ -105,7 +109,7 @@ if(!isset($_SESSION['user']))
 
 			<script type="text/javascript">
 				// Load google charts 
-				google.charts.load('current', {packages: ['corechart', 'line']});
+				google.charts.load('current', {packages: ['corechart', '<?php echo $chart; ?>']});
 				google.charts.setOnLoadCallback(drawChart);
 
 				// Draw the chart and set the chart values
@@ -137,6 +141,7 @@ if(!isset($_SESSION['user']))
 				  	vAxis: {
 				  		title: '<?php echo $titre; ?>'
 				  	}
+				  	<?php echo $option_chart; ?>
 				  };
 
 				  // Display the chart inside the <div> element with id="piechart"
