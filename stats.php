@@ -26,12 +26,27 @@ if(!isset($_SESSION['user']))
 
 				<div id="titre">Graphique à afficher :</div>
 
+				<?php  if (!empty($_POST["genre"])) {
+					?>
+					<select name="genre" size = "1" class="selection">
+					<option value="Temperature" <?php if ($_POST["genre"]) == "Temperature") {echo "selected";}?>>Température</option>
+					<option value="Lunimosite" <?php if ($_POST["genre"]) == "Luminosite") {echo "selected";}?>>Lunimosité</option>
+					<option value="Humidite" <?php if ($_POST["genre"]) == "Humidite") {echo "selected";}?>>Humidité</option>
+					<option value="Pression" <?php if ($_POST["genre"]) == "Pression") {echo "selected";}?>>Pression</option>
+				</select>
+					<?php
+				}
+				else{
+					?>
 				<select name="genre" size = "1" class="selection">
-					<option value="Temperature"  >Température</option>
+					<option value="Temperature">Température</option>
 					<option value="Lunimosite">Lunimosité</option>
-					<option value="Humidite" <?php if (isset($_POST["genre"])) {echo "selected";}?>>Humidité</option>
+					<option value="Humidite">Humidité</option>
 					<option value="Pression">Pression</option>
 				</select>
+					<?php
+				}
+				?>
 
 				<br>
 
