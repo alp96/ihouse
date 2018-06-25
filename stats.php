@@ -29,10 +29,10 @@ if(!isset($_SESSION['user']))
 				<?php  if (!empty($_POST["genre"])) {
 					?>
 					<select name="genre" size = "1" class="selection">
-					<option value="Temperature" <?php if ($_POST["genre"]) == "Temperature") {echo "selected";}?>>Température</option>
-					<option value="Lunimosite" <?php if ($_POST["genre"]) == "Luminosite") {echo "selected";}?>>Lunimosité</option>
-					<option value="Humidite" <?php if ($_POST["genre"]) == "Humidite") {echo "selected";}?>>Humidité</option>
-					<option value="Pression" <?php if ($_POST["genre"]) == "Pression") {echo "selected";}?>>Pression</option>
+					<option value="Temperature" <?php if ($_POST["genre"] == "Temperature")) {echo "selected";}?>>Température</option>
+					<option value="Lunimosite" <?php if ($_POST["genre"] == "Luminosite")) {echo "selected";}?>>Lunimosité</option>
+					<option value="Humidite" <?php if ($_POST["genre"] == "Humidite")) {echo "selected";}?>>Humidité</option>
+					<option value="Pression" <?php if ($_POST["genre"] == "Pression")) {echo "selected";}?>>Pression</option>
 				</select>
 					<?php
 				}
