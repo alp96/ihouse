@@ -40,12 +40,10 @@ if(!isset($_SESSION['user']))
 						<option>Dans le temps</option>
 						<?php 
 
-						$reponse = $bdd->query("SELECT * FROM Maison ORDER BY id_maison");
+						$reponse = $bdd->query("SELECT * FROM Maison");
 						while ($donnees == $reponse->fetch()) {
 							echo "<option>Maison " + $donnees["id_maison"] + "</option>";
 						}
-
-
 						?>
 						
 					</select>
