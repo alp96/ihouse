@@ -35,12 +35,12 @@ if(!isset($_SESSION['user']))
 						<option value="Pression" <?php if ($_POST["genre"] == "Pression") {echo "selected";}?>>Pression</option>
 					</select>
 					<br>
-					<select name="choix" size="1">
+					<select name="choix" size="1" class="selection">
 						<option>Actuelle</option>
 						<option>Dans le temps</option>
 						<?php 
 
-						$reponse = $bdd->query("SELECT * FROM Maison");
+						$reponse = $bdd->query("SELECT id_maison FROM Maison");
 						while ($donnees == $reponse->fetch()) {
 							echo "<option>Maison " + $donnees["id_maison"] + "</option>";
 						}
