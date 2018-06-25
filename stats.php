@@ -73,6 +73,8 @@ if(!isset($_SESSION['user']))
 			$titre_colonne2 = "";
 			$chart = "line";
 			$option = "";
+			$chart_name = "LineChart";
+
 			if ((!empty($_POST["genre"]) && !empty($_POST["choix"]))) {
 				if ($_POST["genre"] == "Temperature") {
 					$resultat = "Temperature";
@@ -80,6 +82,7 @@ if(!isset($_SESSION['user']))
 					$titre_colonne2 = "°C";
 					$chart = "bar";
 					$option_chart = "isStacked: true,";
+					$chart_name = "ColumnChart";
 
 				}
 				if ($_POST["genre"] == "Pression") {
@@ -98,7 +101,6 @@ if(!isset($_SESSION['user']))
 					$resultat = "Luminosite";
 					$titre = "Luminosité";
 					$titre_colonne2 = "I/O";
-
 				}
 			}
 			 ?>
@@ -145,7 +147,7 @@ if(!isset($_SESSION['user']))
 				  };
 
 				  // Display the chart inside the <div> element with id="piechart"
-				  var chart = new google.visualization.LineChart(document.getElementById('piechart'));
+				  var chart = new google.visualization.<?php echo $chart_name; ?>(document.getElementById('piechart'));
 				  chart.draw(data, options);
 				}
 			</script>
