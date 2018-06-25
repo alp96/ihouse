@@ -70,6 +70,7 @@ if(!isset($_SESSION['user']))
 
 			<?php 
 			$titre = "";
+			$titre_colonne2 = "";
 			if ((!empty($_POST["genre"]) && !empty($_POST["choix"]))) {
 				if ($_POST["genre"] == "Temperature") {
 					$resultat = "Temperature";
@@ -111,7 +112,7 @@ if(!isset($_SESSION['user']))
 				function drawChart() {
 					var data = new google.visualization.DataTable();
 					data.addColumn('number', 'X');
-					data.addColumn('number', 'Dogs');
+					data.addColumn('number', '<?php echo $titre_colonne2 ?>');
 
 					data.addRows([
 						[0, 0],   [1, 10],  [2, 23],  [3, 17],  [4, 18],  [5, 9],
