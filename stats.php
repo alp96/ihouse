@@ -29,21 +29,36 @@ if(!isset($_SESSION['user']))
 				<?php  if (!empty($_POST["genre"])) {
 					?>
 					<select name="genre" size = "1" class="selection">
-					<option value="Temperature" <?php if ($_POST["genre"] == "Temperature") {echo "selected";}?>>Température</option>
-					<option value="Lunimosite" <?php if ($_POST["genre"] == "Luminosite") {echo "selected";}?>>Lunimosité</option>
-					<option value="Humidite" <?php if ($_POST["genre"] == "Humidite") {echo "selected";}?>>Humidité</option>
-					<option value="Pression" <?php if ($_POST["genre"] == "Pression") {echo "selected";}?>>Pression</option>
-				</select>
+						<option value="Temperature" <?php if ($_POST["genre"] == "Temperature") {echo "selected";}?>>Température</option>
+						<option value="Lunimosite" <?php if ($_POST["genre"] == "Luminosite") {echo "selected";}?>>Lunimosité</option>
+						<option value="Humidite" <?php if ($_POST["genre"] == "Humidite") {echo "selected";}?>>Humidité</option>
+						<option value="Pression" <?php if ($_POST["genre"] == "Pression") {echo "selected";}?>>Pression</option>
+					</select>
+					<br>
+					<select name="choix" size="1">
+						<option>Actuelle</option>
+						<option>Dans le temps</option>
+						<?php 
+
+						$reponse = $bdd->query("SELECT * FROM Maison ORDER BY id_maison");
+						while ($donnees == $reponse->fetch()) {
+							echo "<option>Maison " + $donnees["id_maison"] + "</option>";
+						}
+
+
+						?>
+						
+					</select>
 					<?php
 				}
 				else{
 					?>
-				<select name="genre" size = "1" class="selection">
-					<option value="Temperature">Température</option>
-					<option value="Lunimosite">Lunimosité</option>
-					<option value="Humidite">Humidité</option>
-					<option value="Pression">Pression</option>
-				</select>
+					<select name="genre" size = "1" class="selection">
+						<option value="Temperature">Température</option>
+						<option value="Lunimosite">Lunimosité</option>
+						<option value="Humidite">Humidité</option>
+						<option value="Pression">Pression</option>
+					</select>
 					<?php
 				}
 				?>
