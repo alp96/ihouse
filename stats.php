@@ -77,6 +77,24 @@ if(!isset($_SESSION['user']))
 					$titre_colonne2 = "°C";
 
 				}
+				if ($_POST["genre"] == "Pression") {
+					$resultat = "Pression";
+					$titre = "Pression";
+					$titre_colonne2 = "bar";
+
+				}
+				if ($_POST["genre"] == "Humidite") {
+					$resultat = "Humidite";
+					$titre = "Humidité";
+					$titre_colonne2 = "%";
+
+				}
+				if ($_POST["genre"] == "Luminosite") {
+					$resultat = "Luminosite";
+					$titre = "Luminosité";
+					$titre_colonne2 = "";
+
+				}
 			}
 			 ?>
 
