@@ -142,7 +142,7 @@ if(!isset($_SESSION['user']))
 				  	},
 				  	vAxis: {
 				  		title: '<?php echo $titre; ?>'
-				  	}
+				  	},
 				  	<?php echo $option_chart;?>
 				  };
 
