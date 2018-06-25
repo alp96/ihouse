@@ -143,7 +143,7 @@ if(!isset($_SESSION['user']))
 				  	vAxis: {
 				  		title: '<?php echo $titre; ?>'
 				  	}
-				  	<?php echo $option_chart + "<br>"; ?>
+				  	<?php echo $option_chart;?>
 				  };
 
 				  // Display the chart inside the <div> element with id="piechart"
