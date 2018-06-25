@@ -112,7 +112,7 @@ if(!isset($_SESSION['user']))
 				function drawChart() {
 					var data = new google.visualization.DataTable();
 					data.addColumn('number', 'X');
-					data.addColumn('number', '<?php echo $titre_colonne2 ?>');
+					data.addColumn('number', '<?php echo $titre_colonne2 ?> ');
 
 					data.addRows([
 						[0, 0],   [1, 10],  [2, 23],  [3, 17],  [4, 18],  [5, 9],
@@ -132,10 +132,10 @@ if(!isset($_SESSION['user']))
 				  // Optional; add a title and set the width and height of the chart
 				  var options = {
 				  	hAxis: {
-				  		title: '<?php echo $titre; ?>'
+				  		title: 'Capteur'
 				  	},
 				  	vAxis: {
-				  		title: 'Popularity'
+				  		title: '<?php echo $titre; ?>'
 				  	}
 				  };
 
